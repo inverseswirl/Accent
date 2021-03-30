@@ -20,11 +20,17 @@
   color:rgb(12, 10, 10);
 }
 
+@mixin font($font-weight,$font-size){
+   font-weight: $font-weight;
+   font-size: $font-size;
+}
 
-
+@mixin center(){
+  text-align: center;
+}
 
 .App {
-  text-align: center;
+  @include center();
   
   
 }
@@ -35,7 +41,7 @@
   
   .title{
     @include color();
-    font-size: 3rem;
+    @include font(500, 3rem);
     @include fresh-font();
     text-align: left;
     margin: 2vw 0 0 3vw;
@@ -289,12 +295,12 @@ color:$color;
     
     padding: 1% 2%;
     @include color();
-    
     font-weight: 700;
     font-size: 1.1rem;
     text-align: left;
     
   }
+    
    
 
 
@@ -383,5 +389,7 @@ color:$color;
 ///about-us section..............
 
 .about-para{
-  font-size: 1rem;
+  @include font(600, 1rem);
+  text-align: center;
+  
 }

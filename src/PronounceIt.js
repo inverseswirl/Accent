@@ -26,7 +26,7 @@ render(){
             <Background />
                 <Title />
                 {/* <Navbar /> */}
-            <About />
+            {/* <About /> */}
             
              
                 {/* <Home >

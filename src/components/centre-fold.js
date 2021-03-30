@@ -22,8 +22,9 @@ function right(state,props){
        }
    }
 }
+
         
-  function left (state,{i}){
+function left (state,{i}){
     var arr= [ 'Be understood easily, the first time','Feel confident speaking to locals','Get the job you are qualified for','Prepare for job interviews, meetings and presentations', 'Prepare for IELTs, PTE, medical exams and others!'];
   
 
@@ -31,12 +32,11 @@ function right(state,props){
  
     if (state.id ===5 ){
 
-
         return {
             id: state.id-i,
             sentence: 'Prepare for job interviews, meetings and presentations'
         }
-      
+
     } else if(state.id >=0 && state.id<=4){
         
         return  {
@@ -44,16 +44,17 @@ function right(state,props){
             sentence: arr[state.id]
         }
     }
+    else {
+        return {
+           
+            sentence: "Correct your Australian Accent"
+        }
+    }
+}      
       
-      else {
-          return {
-             
-              sentence: "Correct your Australian Accent"
-          }
-      }
 
 
-  }      
+      
 
 
    
