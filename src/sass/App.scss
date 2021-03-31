@@ -17,7 +17,7 @@
 }
 
 @mixin color(){
-  color:rgb(12, 10, 10);
+  color:rgb(21, 110, 184);
 }
 
 @mixin font($font-weight,$font-size){
@@ -40,7 +40,7 @@
   
   
   .title{
-    @include color();
+    color: black;
     @include font(500, 3rem);
     @include fresh-font();
     text-align: left;
@@ -57,7 +57,8 @@
      display: inline-block;
      line-height: 65%;
      border-radius: 50%;
-     background-image: radial-gradient(transparent 10%, rgb(41, 163, 233) 60%);
+    //  background-image: radial-gradient(transparent 10%, rgb(41, 163, 233) 60%);
+    background-image: radial-gradient(transparent 10%, rgb(21, 110, 184) 60%);
     }
   
   }
@@ -112,7 +113,6 @@ color:$color;
     background-color: transparent;
     
     &:hover{
-      @include color();
       opacity: 0.7;
     }
   }
@@ -293,7 +293,7 @@ color:$color;
   .slider-item{
     
     padding: 1% 2%;
-    @include color();
+   
     font-weight: 700;
     font-size: 1.1rem;
     text-align: left;
@@ -333,19 +333,19 @@ color:$color;
 .background{
 
   position:absolute;
-  // background-image:linear-gradient(180deg,transparent 24%,#e9e9e9 24.1%,transparent),url('../img/Screen\ Shot\ 2021-03-30\ at\ 2.08.31\ pm.png');
-  background-size: cover, contain ;
-  background-position:  0%;
+  background-image:linear-gradient(90deg,transparent 35%,rgb(21, 110, 184) 35%,transparent );
+  background-size: cover, cover ;
   background-repeat: no-repeat,no-repeat;
-  height: 50%;
+  height: 100%;
   width:100%;
-  top:0%;
   z-index:-2;
+  @media (max-width: 1150px){
+    background-image:linear-gradient(90deg,transparent 42%,rgb(21, 110, 184) 42%,transparent );
+  }
+}
 
   
   
-  
-}
 
 
 ///img section center...............
@@ -388,13 +388,21 @@ color:$color;
 ///about-us section..............
 
 .about-para{
-  @include font(600, 1.4rem);
-  line-height: 1.8rem;
+  @include font(600, 1.5rem);
+  // line-height: 1.8rem;
   text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
+  background-color: white;
+  box-sizing: border-box;
+  padding: 1.5% 3.5%;
+  border-radius: 23px;
+  box-shadow: 2px 2px 5px 1px rgb(21, 110, 184);
+   width: 88vw;
+   height: 80vh;
+   margin: auto;
+   transform: t
 }
  
  

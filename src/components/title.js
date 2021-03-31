@@ -3,16 +3,6 @@ import About from '../components/about-us';
 
 
 
-function slow(){
-  
-  return {
-    opacity:1
-  }
-}
-
-
-
-
 class Title extends React.Component{
   constructor(props){
     super(props)
@@ -21,17 +11,12 @@ class Title extends React.Component{
   }
 
 
+  handleAboutus(){
+      this.setState({buttonClick: true,dot: '<---- ',opacity: 1});
+     
+    }
 
   
-handleAboutus(){
-    this.setState({buttonClick: true,dot: '< ----',opacity: 1});
-   
-  }
-
-  
-  
- 
-
   render(){
 
     const{buttonClick,dot,opacity}=this.state
@@ -54,8 +39,24 @@ handleAboutus(){
         </nav>
          
          
+</div>       
+                  
+  )
+}
+}
        
+export default Title;
+
+
+
+
+
        
+
+  
+  
+ 
+
       
            
        
@@ -69,13 +70,7 @@ handleAboutus(){
 
 
 
-</div>       
-                  
-  )
-}
-}
           
-export default Title;
             
 
 
