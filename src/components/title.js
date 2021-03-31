@@ -6,7 +6,14 @@ import About from '../components/about-us';
 class Title extends React.Component{
   constructor(props){
     super(props)
-   this.state={ buttonClick: false,  dot:"",opacity: 0,width: '0vw',height: '0%',boxShadow: '0'}
+   this.state={ 
+     buttonClick: false,  
+     dot:"",
+     opacity: 0,
+     width: '0vw',
+     height: '0%',
+     boxShadow: '0'
+    }
    this.handleAboutus=this.handleAboutus.bind(this);
   }
 
@@ -27,8 +34,7 @@ class Title extends React.Component{
   render(){
 
     const{buttonClick,dot,opacity,width,height,boxShadow}=this.state
-    console.log(width);
-    console.log(height);
+
     return(
 
 <div className="main">
