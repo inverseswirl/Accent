@@ -30,8 +30,8 @@
 }
 
 .App {
-  @include center();
   
+  @include center();
   
 }
  
@@ -331,17 +331,20 @@ color:$color;
 
 
 .background{
-
+  
   position:absolute;
-  background-image:linear-gradient(90deg,transparent 35%,rgb(21, 110, 184) 35%,transparent );
+  top:0%;
+  background-image:linear-gradient(90deg,transparent 35%,rgb(21, 110, 184) 35%, rgb(255, 255, 255)  );
   background-size: cover, cover ;
-  background-repeat: no-repeat,no-repeat;
+  background-repeat: repeat,repeat;
+  background-attachment: scroll;
   height: 100%;
   width:100%;
   z-index:-2;
-  @media (max-width: 1150px){
-    background-image:linear-gradient(90deg,transparent 42%,rgb(21, 110, 184) 42%,transparent );
-  }
+  // @media (max-width: 1150px){
+  //   background-image:linear-gradient(90deg,transparent 42%,rgb(21, 110, 184) 42%,transparent );
+  // }
+
 }
 
   
@@ -389,18 +392,21 @@ color:$color;
 
 
 .about-para-wrapper{
-   background-image: linear-gradient(10deg, rgba(255, 255, 255, 0.849) 30%,transparent), url('../img/paper-1074131_1920.jpg') ;
+   background-image: linear-gradient(30deg, rgba(255, 255, 255, 0.993) 30%,transparent), url('../img/pexels-jess-bailey-designs-1119794.jpg');
+   background-size: cover,cover,cover;
+   background-position-x: 95%;
    margin: auto;
+  
 
 
    .about-para{
-     @include font(600, 1.3rem);
+     @include font(600, 1.4rem);
      text-align: justify;
      position: relative;
      padding: 3% 5%;
      
      @media (max-width: 1345px){
-       @include font(600, 1.2rem);
+       @include font(700, 1.2rem);
      }
    }
  }
