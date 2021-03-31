@@ -388,17 +388,17 @@ color:$color;
 ///about-us section..............
 
 .about-para{
-  @include font(500, 1.4rem);
+  @include font(600, 1.4rem);
   line-height: 1.8rem;
   text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  // background-color:rgba(2, 162, 255, 0.685) ;
+  
+}
  
  
 
   
   
   
-}

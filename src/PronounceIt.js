@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './components/nav';
 // import Centreleft from './components/centre-fold';
 import Title from './components/title';
 import './sass/App.scss';

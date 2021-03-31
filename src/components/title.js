@@ -48,7 +48,7 @@ handleAboutus(){
               { buttonClick ? null: <button type="button" className="button nav-bg ">Testimonials</button>}
                { buttonClick ? null:<button type="button" className="button nav-bg ">Contact us</button>}
                { buttonClick ? null: <button type="button" className="button nav-bg ">FAQs</button>}
-               <About  style={{opacity:opacity,transition: 'opacity 1s linear 0.1s'}}/>
+               <About  style={{opacity:opacity,transition: 'opacity 0.3s linear 0.1s'}}/>
               
              
         </nav>

@@ -1,22 +1,19 @@
 import React from 'react';
 
 
-class  About extends React.Component{
-constructor(props){
-    super(props)
+const About =({style})=>{
+
+
+
+
+
    
-}
-
-
-
-render(){
-    console.log(this.props.style)
     return (
 
         
-    <div  className="about-para" style={this.props.style} >
+    <div  className="about-para" style={style} >
             
-            <h2 className="h2  text-center">Hi, my name's Claudia.</h2>
+            <h2 className="h2  text-center ">Hi, my name's Claudia.</h2>
             <h4 className="h4  text-center" >I'm a specialised Speech Pathologist and the founder of Pronounce It.</h4>
             <p><br/>I've been working in the area of English Pronunciation and Accent for over thirteen years. <br/>Many people know that a Speech Pathologist is someone who works with children with speech difficulties or someone who works in hospitals with people who are ill. Yes, they certainly do this. However, after graduating with a Bachelor of Speech Pathology in 2003 and initially working in both of the above areas, I decided that working with accent and pronunciation was where my passion lied and studied further to specialise in this area. </p>
             <p> <br/>I have a great love of traveling and have travelled all over the world. Some of the places include: Peru, Brazil, Bolivia, Chile, Turkey, Spain, Holland, Italy, France, England, Morocco and more! I have a passion for travel because I love meeting people from other cultures and traditions and seeing and hearing about their history and stories. I therefore count myself lucky to work in the area I do. Now, instead of travelling myself, these wonderful people and their cultures come to me!</p>
@@ -29,6 +26,6 @@ render(){
        
   )
  }
-}
+
 
 export default About;
