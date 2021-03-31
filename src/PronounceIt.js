@@ -5,7 +5,7 @@ import './sass/App.scss';
 import Background from './style/background';
 import Home from './components/home';
 import Homecontent from './components/content-home';
-import About from './components/about-us'
+import About from './components/about-page'
 
 
 class Pronounce extends React.Component{
