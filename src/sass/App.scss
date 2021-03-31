@@ -112,9 +112,8 @@ color:$color;
     background-color: transparent;
     
     &:hover{
-      // transform: translate(1px,5px);
       @include color();
-      opacity: 0.6;
+      opacity: 0.7;
     }
   }
     
@@ -389,7 +388,17 @@ color:$color;
 ///about-us section..............
 
 .about-para{
-  @include font(600, 1rem);
-  text-align: center;
+  @include font(500, 1.4rem);
+  line-height: 1.8rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  // background-color:rgba(2, 162, 255, 0.685) ;
+ 
+ 
+
+  
+  
   
 }

@@ -24,7 +24,7 @@ render(){
 
     <div className="App">
             <Background />
-                <Title />
+            <Title />
                 {/* <Navbar /> */}
             {/* <About /> */}
             
