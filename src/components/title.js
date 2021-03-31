@@ -21,7 +21,7 @@ class Title extends React.Component{
   handleAboutus(){
       this.setState({
         buttonClick: true,
-        dot: '<---- ',
+        dot: " ...",
         opacity: 1,
         width: '70vw',
         height: '100%', 
@@ -55,15 +55,15 @@ class Title extends React.Component{
        
 </div>    
         
+    )
+  }
+  }
                
               
              
          
          
                   
-  )
-}
-}
        
 export default Title;
 

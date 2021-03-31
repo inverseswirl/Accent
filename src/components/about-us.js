@@ -2,12 +2,7 @@ import React from 'react';
 
 
 const About =({styleText,styleWrap})=>{
-
-
-
-
-
-   
+    
     return (
 
 <div className="about-para-wrapper" style={styleWrap} >
@@ -25,7 +20,13 @@ const About =({styleText,styleWrap})=>{
         </div>
     </div> 
   )
- }
+}
+
+
+
+
+
+   
 
 
 export default About;

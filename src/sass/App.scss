@@ -29,14 +29,36 @@
   text-align: center;
 }
 
+
 .App {
-  
+   
   @include center();
   
 }
  
+
+
+//style components...................
+
+
+
+.background{
+ 
+  background-image:linear-gradient(90deg,transparent 38%,rgb(21, 110, 184) 35%, rgb(255, 255, 255)  );
+  background-size: cover, cover ;
+  // z-index:-2;
+
+  // @media (max-width: 1150px){
+  //   background-image:linear-gradient(90deg,transparent 42%,rgb(21, 110, 184) 42%,transparent );
+  // }
+
+}
+
+
+
+/////Title.............
+
 .main{
-  margin-top: 0.5vh;
   
   
   .title{
@@ -44,8 +66,7 @@
     @include font(500, 3rem);
     @include fresh-font();
     text-align: left;
-    margin: 2vw 0 0 3vw;
-    
+    padding: 2% 0 0 2%;
    
   }
     
@@ -57,8 +78,7 @@
      display: inline-block;
      line-height: 65%;
      border-radius: 50%;
-    //  background-image: radial-gradient(transparent 10%, rgb(41, 163, 233) 60%);
-    background-image: radial-gradient(transparent 10%, rgb(21, 110, 184) 60%);
+     background-image: radial-gradient(transparent 10%, rgb(21, 110, 184) 60%);
     }
   
   }
@@ -100,11 +120,13 @@
 
 ///navbar section..................
 .navbar{
+
 display: flex;
 flex-direction: column;
 justify-content:flex-end;
 align-items:flex-end;
 color:$color;
+margin-top: -5vh;
 
 
 
@@ -122,8 +144,8 @@ color:$color;
   .button{
     outline: none;
     border: none;
-    font-size: 1.4rem;
-    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-transform:uppercase;
     margin-right:10px;
     color: rgb(0, 0, 0);
     @include fresh-font();
@@ -326,26 +348,6 @@ color:$color;
 
 
 
-//style components...................
-
-
-
-.background{
-  
-  position:absolute;
-  top:0%;
-  background-image:linear-gradient(90deg,transparent 35%,rgb(21, 110, 184) 35%, rgb(255, 255, 255)  );
-  background-size: cover, cover ;
-  background-repeat: repeat,repeat;
-  background-attachment: scroll;
-  height: 100%;
-  width:100%;
-  z-index:-2;
-  // @media (max-width: 1150px){
-  //   background-image:linear-gradient(90deg,transparent 42%,rgb(21, 110, 184) 42%,transparent );
-  // }
-
-}
 
   
   
@@ -404,6 +406,7 @@ color:$color;
      text-align: justify;
      position: relative;
      padding: 3% 5%;
+   
      
      @media (max-width: 1345px){
        @include font(700, 1.2rem);
