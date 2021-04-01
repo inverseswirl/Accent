@@ -4,47 +4,44 @@ import Title from './components/title';
 import './sass/App.scss';
 import Background from './style/background';
 import Home from './components/home';
-import Homecontent from './components/content-home';
-import About from './components/about-page'
+import Services from './components/service-page';
+import Footer from './components/footer';
+
+const  Pronounce=()=>{
+ 
 
 
-class Pronounce extends React.Component{
- constructor(props){
-     super(props)
+ 
 
+
+
+
+
+    return(
+
+  <div className="App">
+    <Background >
+    <Title />
+    
+
+    {/* <Footer /> */}
+
+    </Background>
+    
+        {/* <Navbar /> */}
+    {/* <About /> */}
+    
+             
+  
+  
+
+</div>
+  )
 
  }
 
-
-
-
-render(){
-    return(
-
-    <div className="App">
-            <Background >
-            <Title />
-            </Background>
-            
-                {/* <Navbar /> */}
-            {/* <About /> */}
-            
-             
-                {/* <Home >
-                <Homecontent />
-                </Home> */}
+ export default Pronounce;
    
   
   
-  
-  
-  
-  </div>
-  )
- }
-}
-  
-  
 
-
-export default Pronounce;

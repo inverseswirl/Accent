@@ -5,6 +5,7 @@ const Background=(props)=>{
 return(
       <div className="background">
          <div>{props.children}</div>
+       
       </div>
    )
 }
