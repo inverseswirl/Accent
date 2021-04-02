@@ -39,7 +39,7 @@ console.log(opacity);
     return(
 
 <div className="main">
-        <h1 className="title">pr<span className="letter">o</span>n<span className="letter">o</span>unce it! </h1>
+        <h1 className="title">A<span className="letter">c</span><span className="letter">c</span>ent Group </h1>
         
         <nav className="navbar ">
               <button type="button" className="button nav-bg ">Home</button>

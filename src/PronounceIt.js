@@ -24,7 +24,7 @@ const  Pronounce=()=>{
     <Title />
     
 
-    {/* <Footer /> */}
+    <Footer />
 
     </Background>
     
