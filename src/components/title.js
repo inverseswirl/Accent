@@ -1,7 +1,34 @@
 import React from 'react';
 import About from './about-page';
 import {GoComment} from 'react-icons/go';
+import { BsCardList} from 'react-icons/bs'
 import Services from '../components/service-page';
+import Navbar from './navbar';
+
+
+class Tagline extends React.Component{
+   constructor(props){
+     super(props)
+     this.state={display: ''}
+     this.handleBtn=this.handleBtn.bind(this);
+   }
+
+handleBtn(){
+  this.setState({display: 'none'})
+}
+  render(){
+  const{display}=this.state
+  return(
+    <div>
+       <h2  style={{display: display}}className="tagline"> " We help you communicate better "</h2> 
+       <button style={{display: display}}className="tagline-btn" onClick={this.handleBtn}>Menu</button>
+     {display? <Navbar />: null}
+    </div>
+  
+        
+  )
+  }
+}
 
 
 
@@ -9,56 +36,71 @@ class Title extends React.Component{
   constructor(props){
     super(props)
     this.state={ 
-      buttonClick: false,  
+      aboutClick: false, 
+      serviceClick: false, 
       dot:"",
+      services: "",
       opacity: 0,
       width: '0vw',
-      boxShadow: '0'
+      boxShadow: '0',
+      display: ''
      }
    this.handleAboutus=this.handleAboutus.bind(this);
+   this.handleServicepage=this.handleServicepage.bind(this);
+
   }
 
 
   handleAboutus(){
     this.setState({
-      buttonClick: true,
+     aboutClick: true,
       dot: <GoComment /> ,
       opacity: 1,
       width: '70vw',
-      boxShadow: '1px 1px 10px rgb(21, 110, 184)'
+      boxShadow: '1px 1px 10px rgb(21, 110, 184)',
+      display: 'none'
     })
      
     }
         
-
+handleServicepage(){
+ this.setState({
+  serviceClick: true,
+   display: 'none',
+   services: < BsCardList/>
+})
+}
   
   render(){
-
-    const{buttonClick,dot,opacity,width,boxShadow}=this.state
-console.log(opacity);
+ 
+  const{aboutClick,serviceClick,dot,opacity,width,boxShadow ,display,services}=this.state
+ console.log(aboutClick,serviceClick);
     return(
-
+<>
 <div className="main">
         <h1 className="title">A<span className="letter">c</span><span className="letter">c</span>ent Group </h1>
-        
-        <nav className="navbar ">
-              <button type="button" className="button nav-bg ">Home</button>
-              <button onClick={this.handleAboutus}  type="button" className="button nav-bg ">{dot} About us</button>
-              
-              { buttonClick ? null :<button type="button" className="button nav-bg ">Services</button>}
-              { buttonClick ? null: <button type="button" className="button nav-bg ">Testimonials</button>}
-               { buttonClick ? null:<button type="button" className="button nav-bg ">Contact us</button>}
-               { buttonClick ? null: <button type="button" className="button nav-bg ">FAQs</button>}
-        </nav>
+    
+         
+       
            <br />
-           {buttonClick ?null : <h2  className="bungee"> "We help you communicate better "</h2> }
+          
+           {serviceClick ? <h2  style={{display: display}} className="tagline"> "We help you communicate better "</h2>: null }
            
-           <About  styleText={{opacity:opacity, transition : 'opacity 0.5s ease 0.39s'}}
-             styleWrap={{width: width,  transition:  'width 0.4s ease 0s', boxShadow: boxShadow }}
-           /> 
+          {aboutClick? <About  styleText={{opacity:opacity}}
+             styleWrap={{width: width,   boxShadow: boxShadow }}
+           /> : null}
+
+           { serviceClick ? <Services  />  : null }
+           {/* { serviceClick ? null:  <h3>Find out more  </h3> } */}
+           
+              { serviceClick ?  <button type="button" style={{display: display}}className="button nav-bg ">Testimonials</button> : null}
+               { serviceClick? <button type="button" style={{display: display}} className="button nav-bg ">Contact us</button>: null}
+               { serviceClick ?  <button type="button" style={{display: display}} className="button nav-bg ">FAQs</button>: null }
         
 </div>    
-        
+      
+      <Tagline /> 
+</>
     )
   }
   }

@@ -7,7 +7,7 @@ import Home from './components/home';
 import Services from './components/service-page';
 import Footer from './components/footer';
 
-const  Pronounce=()=>{
+const  Accent=()=>{
  
 
 
@@ -21,11 +21,12 @@ const  Pronounce=()=>{
 
   <div className="App">
     <Background >
+
     <Title />
     
 
-    <Footer />
-
+  
+    {/* <Footer /> */}
     </Background>
     
         {/* <Navbar /> */}
@@ -40,7 +41,7 @@ const  Pronounce=()=>{
 
  }
 
- export default Pronounce;
+ export default Accent;
    
   
   

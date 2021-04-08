@@ -1,5 +1,5 @@
 import React from 'react';
-import Pronounce from './PronounceIt'
+import Accent from './Accent'
 import './sass/App.scss';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
    
   
   <div>
-     <Pronounce />
+     <Accent />
   </div>
     
     );

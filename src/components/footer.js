@@ -5,9 +5,10 @@ const Footer=()=>{
 
     return (
         <div className="bg-footer">
-        <div className="footer"></div>
-        <span className="bgg"></span>
-        <div className="footer1"></div>
+            <div className="footer"></div>
+            {/* <span className="bgg"></span> */}
+            <div className="footer1"></div>
+       
         </div>
     )
 }
