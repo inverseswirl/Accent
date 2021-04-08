@@ -9,26 +9,32 @@ import Navbar from './navbar';
 class Tagline extends React.Component{
    constructor(props){
      super(props)
-     this.state={display: ''}
-     this.handleBtn=this.handleBtn.bind(this);
+     this.state={button: false}
    }
 
-handleBtn(){
-  this.setState({display: 'none'})
-}
   render(){
-  const{display}=this.state
+  const{button}=this.state
+  
+  if(button===true){
+    return <Navbar/>
+  }
   return(
     <div>
-       <h2  style={{display: display}}className="tagline"> " We help you communicate better "</h2> 
-       <button style={{display: display}}className="tagline-btn" onClick={this.handleBtn}>Menu</button>
-     {display? <Navbar />: null}
+       <h2  className="tagline"> " We help you communicate better "</h2> 
+       <button className="tagline-btn" onClick={()=>this.setState({button:true})}>Menu</button>
     </div>
+  )
+ }
+}
+
   
         
-  )
-  }
-}
+    
+    
+ 
+
+
+
 
 
 
