@@ -12,6 +12,9 @@
 @mixin   serif-font(){
   font-family: 'EB Garamond', serif;
 }
+@mixin   sansserif-font(){
+  font-family: 'Oswald', sans-serif;
+}
   
 @mixin color(){
   
@@ -94,13 +97,12 @@ html,body{
 
 
   .tagline{
-    @include serif-font();
+    @include sansserif-font();
     @include center();
-    @include font(700, 3rem);
-    display: block;
-    margin-top: 14%;
+    @include font(600, 3rem);
+    margin-top: 10%;
     animation: highlight;
-    animation-duration: 0.6s;
+    animation-duration: 0.4s;
     animation-timing-function: linear;
     animation-iteration-count:1;
      @keyframes highlight{

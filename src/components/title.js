@@ -1,7 +1,7 @@
 import React from 'react';
 import About from './about-page';
 import {GoComment} from 'react-icons/go';
-import { BsCardList} from 'react-icons/bs'
+import { BsCardList} from 'react-icons/bs';
 import Services from '../components/service-page';
 import Navbar from './navbar';
 
@@ -20,8 +20,9 @@ class Tagline extends React.Component{
    }
    return(
      <div className="firsttag">
-        <h2  className="tagline"> " We help you communicate better "</h2> 
+        <h2  className="tagline">" We help you communicate better "</h2> 
         <button className="tagline-btn" onClick={()=>this.setState({button:true})}>Menu</button>
+       
      </div>
    )
   }
