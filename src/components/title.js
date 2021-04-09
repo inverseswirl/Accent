@@ -11,21 +11,21 @@ class Tagline extends React.Component{
      super(props)
      this.state={button: false}
    }
-
+   
   render(){
-  const{button}=this.state
-  
-  if(button===true){
-    return <Navbar/>
+   const{button}=this.state
+   
+   if(button){
+     return <Navbar/>
+   }
+   return(
+     <div>
+        <h2  className="tagline"> " We help you communicate better "</h2> 
+        <button className="tagline-btn" onClick={()=>this.setState({button:true})}>Menu</button>
+     </div>
+   )
   }
-  return(
-    <div>
-       <h2  className="tagline"> " We help you communicate better "</h2> 
-       <button className="tagline-btn" onClick={()=>this.setState({button:true})}>Menu</button>
-    </div>
-  )
  }
-}
 
   
         
