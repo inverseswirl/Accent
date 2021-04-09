@@ -14,8 +14,8 @@
 }
   
 @mixin color(){
-  // color:rgb(65, 238, 180);
-  color: (179, 112, 179);
+  
+  color: rgb(179, 112, 179);
 }
   
   
@@ -33,9 +33,6 @@
 
 html,body{
   height: 100%;
-  // background: linear-gradient(180deg, rgb(102, 1, 102),rgb(112, 57, 112)) ;
-  
-
   // overflow: hidden;
  
 }
@@ -43,19 +40,20 @@ html,body{
 .App{
   height: 100vh;
   background: linear-gradient(180deg, rgb(184, 183, 184),rgb(179, 112, 179),rgb(138, 123, 138)) ;
-  
 }
+ 
+ 
 
-//style components...................
+
+//background components...................
 
 
 
 .background{
  
-  // background-image:linear-gradient(90deg,transparent 38%,rgb(21, 110, 184) 35%, rgb(255, 255, 255)  );
+  background-image:linear-gradient(98deg,transparent 40%,rgb(21, 110, 184) 38%, rgb(255, 255, 255)  );
   background-size: cover;
   height: 100vh;
-
 
 }
 
@@ -67,33 +65,35 @@ html,body{
   
   
   .title{
-    @include color();
-    @include font(600, 3.5rem);
-    font-family: 'EB Garamond', serif;
+   
+    color:transparent;
+    background: url('https://images.pexels.com/photos/1439226/pexels-photo-1439226.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-position: 25% 70%;
+    @include font(600, 3rem);
+    font-family: 'Pacifico', cursive;
     text-align: left;
     padding: 2% 0 0 2%;
+    background-clip: text;
    
   }
     
 
   .letter{
     
-     @include font(400, 3.2rem);
-     @include fresh-font();
-     color: rgb(228, 255, 246);
+     @include font(400, 3rem);
+     font-family: 'Pacifico', cursive;
+     color: whitesmoke;
      display: inline-block;
-     line-height: 65%;
-     border-radius: 50%;
-     background-image: radial-gradient(transparent , rgb(201, 161, 218) 50%);
-     
     }
-  
   }
      
+     
+   
+    
   ////tagline.......
-  
+
+
   .tagline{
-    // font-family: 'Bungee Shade', cursive;
     @include serif-font();
     @include center();
     @include font(700, 3rem);
@@ -105,7 +105,7 @@ html,body{
     animation-iteration-count:1;
      @keyframes highlight{
        0%{
-        color:rgb(0, 0, 0);
+        color:black;
         opacity:0;
       }
       50%{
@@ -115,7 +115,7 @@ html,body{
        opacity:0;
      }
       100%{
-        color:rgb(0, 0, 0);
+        color:black;
       }
     }
     
@@ -129,7 +129,7 @@ html,body{
        justify-content: center;
        margin: auto;
        margin-top: 3%;
-       background: rgba(175, 127, 182, 0.8);
+       background-color: rgb(175, 121, 206);
        border: 2px solid rgb(201, 161, 218);
        color: white;
        width: 110px;
@@ -184,10 +184,11 @@ html,body{
 
 display: flex;
 flex-direction: column;
-justify-content:space-evenly;
-align-items:center;
+justify-content:flex-end;
+align-items:flex-end;
 color:$color;
-margin-top: 5vh;
+margin: 7vh 0%;
+width: 90%;
 
 
 
@@ -204,39 +205,32 @@ margin-top: 5vh;
     border: none;
     @include font(400, 2.5rem);
     text-transform:uppercase;
-    margin-right:10px;
     color: rgb(0, 0, 0);
     @include fresh-font();
-    //   @media (max-width: 910px){
-    //     font-size: 1.4rem;
-    //     margin-right:1rem;
-    //   }
-    //   @media (max-width: 700px){
-    //     font-size: 1.1rem;
-    //     margin-right: 0.5rem;
-    //   }
-    // } 
-
+  }
+     
  }
-    
-}
+   
 
- .line1{
+
+ .line{
   background: rgb(255, 255, 255);
-  width: 50%;
+  width: 25%;
   height: 3px;
   float:left;
   animation: wide;
-  animation-delay: 0s;
-  animation-duration: 0.4s;
+  animation-duration: 0.7s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
   @keyframes wide{
     0%{
       width: 0%;
+      
     }
+    
     100%{
-      width: 50%;
+      width: 25%;
+     
     }
   }
 }
@@ -244,27 +238,6 @@ margin-top: 5vh;
 
   
 
-
- .line2{
-  background: rgb(255, 255, 255);
-  width: 50%;
-  height: 3px;
-  float:right;
-  animation: wide;
-  animation-delay: 0s;
-  animation-duration: 0.4s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  @keyframes wide{
-    0%{
-      width: 0%;
-    }
-    100%{
-      width: 50%;
-    }
-    
-  }
-}
 
   
   

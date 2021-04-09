@@ -19,7 +19,7 @@ class Tagline extends React.Component{
      return <Navbar/>
    }
    return(
-     <div>
+     <div className="firsttag">
         <h2  className="tagline"> " We help you communicate better "</h2> 
         <button className="tagline-btn" onClick={()=>this.setState({button:true})}>Menu</button>
      </div>
@@ -84,7 +84,7 @@ handleServicepage(){
     return(
 <>
 <div className="main">
-        <h1 className="title">A<span className="letter">c</span><span className="letter">c</span>ent Group </h1>
+        <h1 className="title">A<span className="letter">c</span><span className="letter">c</span>ent  </h1>
     
          
        
