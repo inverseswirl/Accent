@@ -34,16 +34,17 @@
 
 
 
-html,body{
-  height: 100%;
-  // overflow: hidden;
+// html,body{
  
-}
+//   overflow: scroll;
+ 
+// }
  
 .App{
   height: 100vh;
-  background: linear-gradient(180deg, rgb(184, 183, 184),rgb(179, 112, 179),rgb(138, 123, 138)) ;
 }
+ 
+
  
  
 
@@ -54,11 +55,18 @@ html,body{
 
 .background{
  
-  background-image:linear-gradient(98deg,transparent 40%,rgb(21, 110, 184) 38%, rgb(255, 255, 255)  );
+  background-image:linear-gradient(98deg,transparent 40%,rgb(21, 110, 184) 38%, rgb(255, 255, 255)),linear-gradient(180deg, rgb(184, 183, 184),rgb(179, 112, 179),rgb(138, 123, 138));
+  background-repeat: no-repeat,
+  no-repeat;
   background-size: cover;
   height: 100vh;
-
+  
 }
+
+
+
+  
+
 
 
 
@@ -100,26 +108,24 @@ html,body{
     @include sansserif-font();
     @include center();
     @include font(600, 3rem);
-    margin-top: 10%;
-    animation: highlight;
-    animation-duration: 0.4s;
-    animation-timing-function: linear;
-    animation-iteration-count:1;
-     @keyframes highlight{
-       0%{
-        color:black;
-        opacity:0;
-      }
-      50%{
-       
-       transform:translate(0px,-20px);
-       color: rgb(78, 70, 85);
+    margin-top: 15%;
+    animation: highlight 0.4s linear 1;
+    @keyframes highlight{
+      0%{
+       color:black;
        opacity:0;
      }
-      100%{
-        color:black;
-      }
+     50%{
+      
+      transform:translate(0px,-20px);
+      color: rgb(78, 70, 85);
+      opacity:0;
     }
+     100%{
+       color:black;
+     }
+   }
+    
     
       &-btn{
        border-radius: 50%;
@@ -175,50 +181,68 @@ html,body{
 
 ///navbar section..................
 
-
+.flexbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  
+}
 
 .navbar{
 
 display: flex;
 flex-direction: column;
-justify-content:flex-end;
-align-items:flex-end;
+justify-content:flex-start;
+align-items:flex-start;
 color:$color;
-margin: 10vh 5% 0 0;
-width: 92%;
+margin: 7vh 0 0 0;
+width: 100%;
+// background-image: linear-gradient(90deg, rgba(122, 122, 122,0.2) 30%,transparent 30%);
+// animation: expand 1s ease 0s 1 ;
 
+// @keyframes expand {
+//   0%{
+//     background-image: linear-gradient(90deg, rgba(122, 122, 122,0) 30%,transparent 30%);
+
+//   }
+//   100%{
+//     background-image: linear-gradient(90deg, rgba(122, 122, 122,0.2) 30%,transparent 30%);
+
+//   }
+// }
+
+
+ 
 
 
 .nav-bg{
     background-color: transparent;
     &:hover{
       opacity: 0.6;
+     
     }
   }
-
 
   .button{
     outline: none;
     border: none;
-    @include font(400, 2.2rem);
+    @include font(400, 1.9rem);
     text-transform:uppercase;
     color: rgb(0, 0, 0);
     @include fresh-font();
   }
      
  }
+
+
    
-
-
  .line{
   background: rgb(255, 255, 255);
   width: 310px;
-  height: 3px;
+  height: 2px;
   float:left;
-  animation: wide;
-  animation-duration: 0.7s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
+  animation: wide 0.7s ease 1;
   @keyframes wide{
     0%{
       width: 0%;
@@ -231,7 +255,6 @@ width: 92%;
     
   }
 }
-    
 
 
 
@@ -473,20 +496,21 @@ width: 92%;
    background-size: cover,cover;
    background-position-x: 40%;
    margin: auto;
+   padding: 10%;
  
-
-
    .about-para{
      @include font(600, 1.5rem);
      text-align: justify;
      padding: 4% 5%;
-     
-     
+     @include sansserif-font();
      @media (max-width: 1345px){
        @include font(700, 1.2rem);
      }
    }
  }
+     
+
+
 
 
 

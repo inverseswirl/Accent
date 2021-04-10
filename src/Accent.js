@@ -1,11 +1,13 @@
 import React from 'react';
 // import Centreleft from './components/centre-fold';
-import Title from './components/title';
+
 import './sass/App.scss';
 import Background from './style/background';
 import Home from './components/home';
 import Services from './components/service-page';
 import Footer from './components/footer';
+import About from './components/about-page';
+
 
 const  Accent=()=>{
  
@@ -19,24 +21,22 @@ const  Accent=()=>{
 
     return(
 
-  <div className="App">
-    <Background >
+<div className="App">
+    <Background />
 
-    <Title />
+   <About/>
     
-
+   
+  <Services/>
+   
+   
   
-    {/* <Footer /> */}
-    </Background>
-    
-        {/* <Navbar /> */}
-    {/* <About /> */}
     
              
   
   
 
-</div>
+    </div>
   )
 
  }
