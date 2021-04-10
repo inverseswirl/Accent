@@ -34,11 +34,11 @@
 
 
 
-// html,body{
+html,body{
  
-//   overflow: scroll;
+  scroll-behavior: smooth;
  
-// }
+}
  
 .App{
   height: 100vh;
@@ -51,19 +51,43 @@
 
 //background components...................
 
-
+// 98deg, transparent 40%,rgb(21, 110, 184) 38%, rgb(255, 255, 255)
+  
 
 .background{
  
-  background-image:linear-gradient(98deg,transparent 40%,rgb(21, 110, 184) 38%, rgb(255, 255, 255)),linear-gradient(180deg, rgb(184, 183, 184),rgb(179, 112, 179),rgb(138, 123, 138));
-  background-repeat: no-repeat,
-  no-repeat;
-  background-size: cover;
+  background-image:linear-gradient(180deg, rgb(184, 183, 184),rgb(179, 112, 179),rgb(138, 123, 138));
+   
+
+  
+   background-size: cover;
+  background-position-y: 60%;
   height: 100vh;
+ 
+  
+
   
 }
 
+.sidebar{
+  width: 50%;
+  height: 100vh;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0,0.1) 30%,transparent 30%);
+  animation: expand 0.8s ease 0s 1 ;
+  position: absolute;
+  z-index:2;
+  @keyframes expand {
+    0%{
+      width: 0%;
+      opacity:0;
+    }
+    100%{
+      width: 50%;
+    }
+  }
+  
 
+}
 
   
 
@@ -181,13 +205,7 @@
 
 ///navbar section..................
 
-.flexbox{
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: flex-start;
-  
-}
+
 
 .navbar{
 
@@ -196,21 +214,9 @@ flex-direction: column;
 justify-content:flex-start;
 align-items:flex-start;
 color:$color;
-margin: 7vh 0 0 0;
+margin: 5vh 0 5vh 0;
 width: 100%;
-// background-image: linear-gradient(90deg, rgba(122, 122, 122,0.2) 30%,transparent 30%);
-// animation: expand 1s ease 0s 1 ;
 
-// @keyframes expand {
-//   0%{
-//     background-image: linear-gradient(90deg, rgba(122, 122, 122,0) 30%,transparent 30%);
-
-//   }
-//   100%{
-//     background-image: linear-gradient(90deg, rgba(122, 122, 122,0.2) 30%,transparent 30%);
-
-//   }
-// }
 
 
  
@@ -229,17 +235,23 @@ width: 100%;
     border: none;
     @include font(400, 1.9rem);
     text-transform:uppercase;
-    color: rgb(0, 0, 0);
+    color: white;
     @include fresh-font();
+   
   }
-     
+   
+  .button a:active{
+    outline:none;
+    text-decoration: none;
+    color:white;
+}
  }
 
 
    
  .line{
   background: rgb(255, 255, 255);
-  width: 310px;
+  width: 100%;
   height: 2px;
   float:left;
   animation: wide 0.7s ease 1;
@@ -249,7 +261,7 @@ width: 100%;
       
     }
     100%{
-      width: 310px;
+      width: 100%;
      
     }
     
@@ -393,30 +405,22 @@ width: 100%;
 
 ////list of items.................
 
-// .slider{
-  
- 
-
-
-// }
 
 
 
 
- .list{
+.list{
    text-decoration: none;
    list-style: none;
-   background-color: rgba(117, 115, 115, 0.4);
+   background-color: transparent;
   
 
   }
-  .slider-item{
+  .list-item{
     
     padding: 1% 2%;
-   
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-align: left;
+   @include font(700, 1.1rem);
+    text-align: center;
     
   }
     
@@ -424,21 +428,7 @@ width: 100%;
 
 
 
-.slider{
-  
 
-
-  &-button{
-    outline: none;
-    border: none;
-    background-color: transparent;
-    font-size: 5rem;
-    padding:0;
-   
-   
-  }
-}
-  
    
 
   
@@ -453,38 +443,40 @@ width: 100%;
 
 ///img section center...............
 
-.img-bg{
-  //  padding: 0px 2px;
-   margin-top: 0.5vh;
-   object-fit: cover;
-  //  border-left: 2px solid rgba(143, 87, 87,0.5);
-  //  border-right: 2px solid rgba(143, 87, 87,0.5);
-   opacity: 0.9;
-   position: relative;
-   z-index: -1;
+// .img-bg{
+//   //  padding: 0px 2px;
+//    margin-top: 0.5vh;
+//    object-fit: cover;
+//   //  border-left: 2px solid rgba(143, 87, 87,0.5);
+//   //  border-right: 2px solid rgba(143, 87, 87,0.5);
+//    opacity: 0.9;
+//    position: relative;
+//    z-index: -1;
  
+// }
+
+///home-content..............................
+
+.flexbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  
 }
 
-///home-content
-
-.flex{
-  position: absolute;
-  background-image:linear-gradient(45deg, rgba(226, 226, 226, 0.5),rgba(253, 231, 231, 0.2)),url('https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  background-size: cover, cover ;
-  background-position: left;
-  background-repeat: no-repeat,no-repeat;
-  height: 60%;
-  width:100%;
-  top: 200px;
-  z-index: -1;
+.home{
+     color: white;
+     @include font(400, 1.7rem);
+     @include sansserif-font();
+     background-color: grey;
+     padding: 3%;
+}
+ 
+ 
   
 
-}
 
-.home-content{
-     color: rgb(100, 40, 40) ;
-     @include fresh-font();
-}
 
 
 
@@ -492,11 +484,12 @@ width: 100%;
 
 
 .about-para-wrapper{
-   background-image: linear-gradient(30deg, rgba(255, 255, 255, 0.8) 35%,transparent), url('../img/pexels-jess-bailey-designs-1119794.jpg');
+   background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 30%,transparent 30%),linear-gradient(30deg, rgba(255, 255, 255, 0.8) 35%,transparent), url('../img/pexels-jess-bailey-designs-1119794.jpg');
    background-size: cover,cover;
    background-position-x: 40%;
-   margin: auto;
-   padding: 10%;
+ 
+   padding: 2% 5% 2% 30%;
+  
  
    .about-para{
      @include font(600, 1.5rem);

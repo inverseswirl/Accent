@@ -6,6 +6,7 @@ import {HiOutlineUsers} from 'react-icons/hi';
 import {IoCallOutline} from 'react-icons/io5';
 import {BsQuestionSquare} from 'react-icons/bs';
 import About from '../components/about-page';
+import Home from '../components/home';
 
 
 
@@ -29,33 +30,28 @@ handleClick(){
 render(){
   const{aboutClick,serviceClick,background}=this.state;
     
-//   if(aboutClick){
-//       return (
-//           <div>
-//           <About />
-//           </div>
-//       )
-     
-//   }
-      
+
 return(
- <div className="flexbox"> 
+ <div className=""> 
     
 
         <nav className="navbar" >
         
               <button type="button" className="button nav-bg ">
-                 <RiHome2Line className="bg-transparent" color='#ffffff' size={29} />  Home| </button>
-              <button type="button" className="button nav-bg ">
-                <BiComment className="bg-transparent"color='#ffffff' size={29}/> About us|</button>
+                 <RiHome2Line className="bg-transparent" color='#6699cc' size={29} />  Home| </button>
+              
+              <button onClick={this.handleClick} type="button" className="button nav-bg ">
+                <BiComment className="bg-transparent"color='#6699cc' size={29}/> About us|
+                </button>
+             
               <button type="button"  className="button nav-bg ">
-                  <CgList className="bg-transparent"color='#ffffff' size={28}/> Services|</button>
+                  <CgList className="bg-transparent"color='#6699cc' size={28}/> Services|</button>
               <button type="button" className="button nav-bg ">
-                 <IoCallOutline className="bg-transparent"color='#ffffff' size={30}/> Contact us|</button>
+                 <IoCallOutline className="bg-transparent"color='#6699cc' size={30}/> Contact us|</button>
                  <button type="button" className="button nav-bg ">
-              <BsQuestionSquare className="bg-transparent"color='#ffffff' size={28}/> FAQs|</button>
+              <BsQuestionSquare className="bg-transparent"color='#6699cc' size={28}/> FAQs|</button>
               <button type="button"  className="button nav-bg ">
-              <HiOutlineUsers className="bg-transparent"color='#ffffff' size={29}/> Testimonials|</button>
+              <HiOutlineUsers className="bg-transparent"color='#6699cc' size={29}/> Testimonials|</button>
               
               {/* { aboutClick ? <button type="button"  style={{display: display}}className="button nav-bg ">Services</button>: null}
               { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">Testimonials</button>}
@@ -63,15 +59,17 @@ return(
                { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">FAQs</button>} */}
       <span className="line"></span>
      </nav>
+    <Home/>
+   
+
     
-     {this.props.children}
-   
-   
+    </div>  
+       
+      
     
 
                
     
-        </div>  
         )
 
 

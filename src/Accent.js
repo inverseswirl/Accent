@@ -23,23 +23,23 @@ const  Accent=()=>{
 
 <div className="App">
     <Background />
+    
 
-   <About/>
     
    
-  <Services/>
+  
    
-   
+    </div>
+  )
+
+ }
+
   
     
              
   
   
 
-    </div>
-  )
-
- }
 
  export default Accent;
    
