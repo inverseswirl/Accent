@@ -17,7 +17,7 @@ const  Accent=()=>{
     return(
 
 <div className="App">
-   <Title/>
+
     <Background />
     
 

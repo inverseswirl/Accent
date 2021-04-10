@@ -9,7 +9,7 @@
 
 
 
-li, a, button {
+li, button {
     color: black;
    
 }
@@ -24,5 +24,14 @@ a:hover{
     text-decoration: none;
 }
 
+button:hover{
+    outline: none;
+    border:none;
+   
+}
+button:focus{
+    outline: none;
+    border:none;
+}
 
 

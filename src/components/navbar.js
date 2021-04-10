@@ -56,7 +56,10 @@ return(
         </nav>
         <span className="line"></span>
        <Home/>
+       <span className="line"></span>
        {aboutClick? <About/>: null}
+      
+      
               
               
 

@@ -11,7 +11,7 @@ class Tagline extends React.Component{
    
  handleBtn(){
    this.setState({button:true })
-   this.props.backStyle("linear-gradient(90deg, rgba(18,18,18,0.1) 30%,transparent 30%),url('https://images.pexels.com/photos/2952871/pexels-photo-2952871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')")
+   this.props.backStyle("linear-gradient(90deg, rgba(18,18,18,0.1) 25%,transparent 25%),url('https://images.pexels.com/photos/2952871/pexels-photo-2952871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')")
  }
   
  render(){
@@ -28,11 +28,13 @@ class Tagline extends React.Component{
  
     return(
     
-      <div className="firsttag">
-         <h2  className="tagline">" We help you communicate better "</h2> 
-         <button className="tagline-btn" onClick={this.handleBtn}>Menu</button>
-         
+      <div className="" >
+       
+         <h2  className="tagline" style={{display: this.props.dis}}>" We help you communicate better "</h2> 
+         <button className="tagline-btn" style={{display: this.props.dis}} onClick={this.handleBtn}>Menu</button>
+       
       </div>
+   
     )
  
  

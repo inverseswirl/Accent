@@ -37,7 +37,7 @@
 html,body{
  
   scroll-behavior: smooth;
-  overflow:hidden;
+  overflow:scroll;
  
 }
  
@@ -59,7 +59,6 @@ html,body{
  
 background-image:linear-gradient(180deg, rgb(202, 202, 202),rgb(179, 112, 179),rgb(138, 123, 138));
 background-size: cover;
-background-position-y: 60%;
 height: 100vh;
 }
    
@@ -106,13 +105,13 @@ height: 100vh;
     background: url('https://images.pexels.com/photos/1439226/pexels-photo-1439226.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
     background-clip: text;
     background-position: 30% 80%;
-    @include font(600, 3.5rem);
+    @include font(600, 3.2rem);
     font-family: 'Pacifico', cursive;
-    top:5%;
-    left: 3%;
-    right: 0%;
-    position :fixed;
-   
+    margin: 1% 0% 0% 1%;
+    right:0%;
+    outline: none;
+    border:none;
+
   
     
    
@@ -141,7 +140,7 @@ height: 100vh;
     @include center();
     @include font(600, 3rem);
     margin-top: 0;
-    padding-top: 20%;
+    padding-top: 12%;
     animation: highlight 0.4s linear 1;
     @keyframes highlight{
       0%{
@@ -171,34 +170,40 @@ height: 100vh;
        margin: auto;
        margin-top: 3%;
        background-color: rgb(175, 121, 206);
-       border: 2px solid rgb(201, 161, 218);
        color: white;
        width: 110px;
        @include fresh-font();
        
+       
       }
       
-    
+      
       &-btn:active{
        border: none;
        outline: none;
-      
        box-sizing: border-box;
-     
        background: black;
        transition: background 0.1s ease;
-  
+    
+     
       }
       &-btn:focus {
         outline:0;
+        
       }
+
+      &-btn:hover{
+        border: 2px solid rgb(201, 161, 218);
+       }
+    
+      
+  
        
        
   
   }
 
-
-
+  
 
   ///navbar section..................
   
@@ -211,7 +216,7 @@ height: 100vh;
   justify-content:flex-start;
   align-items:flex-start;
   color:$color;
-  padding: 10% 0 0 2%;
+  padding: 2% 0 1% 2%;
   width: 120%;
   
   
@@ -250,8 +255,9 @@ height: 100vh;
     background: rgb(255, 255, 255);
     width: 100%;
     height: 3px;
+    margin: 0% 0%;
     float:left;
-    animation: wide 1s ease 1;
+    animation: wide 0.7s ease 1;
     @keyframes wide{
       0%{
         width: 0%;
@@ -310,7 +316,7 @@ height: 100vh;
   
   .home{
         color: white;
-        @include font(400, 2.3rem);
+        @include font(400, 2.1rem);
         @include sansserif-font();
         background-color: grey;
         padding: 5%;

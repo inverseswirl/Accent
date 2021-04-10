@@ -10,8 +10,8 @@ import {BsQuestionSquare} from 'react-icons/bs';
 const About =()=>{
   
 return (
-   <div>
-    <span className="line"></span>
+  
+  
     
   
             
@@ -29,7 +29,7 @@ return (
           </div>
     </div> 
          
-</div>
+
     )
 }
   
