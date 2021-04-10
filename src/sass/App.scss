@@ -37,6 +37,7 @@
 html,body{
  
   scroll-behavior: smooth;
+  overflow:hidden;
  
 }
  
@@ -56,18 +57,18 @@ html,body{
 
 .background{
  
-  background-image:linear-gradient(180deg, rgb(184, 183, 184),rgb(179, 112, 179),rgb(138, 123, 138));
+background-image:linear-gradient(180deg, rgb(202, 202, 202),rgb(179, 112, 179),rgb(138, 123, 138));
+background-size: cover;
+background-position-y: 60%;
+height: 100vh;
+}
    
 
+
   
-   background-size: cover;
-  background-position-y: 60%;
-  height: 100vh;
- 
   
 
   
-}
 
 .sidebar{
   width: 50%;
@@ -103,22 +104,29 @@ html,body{
    
     color:transparent;
     background: url('https://images.pexels.com/photos/1439226/pexels-photo-1439226.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
-    background-position: 25% 70%;
-    @include font(600, 3rem);
-    font-family: 'Pacifico', cursive;
-    text-align: left;
-    padding: 2% 0 0 2%;
     background-clip: text;
+    background-position: 30% 80%;
+    @include font(600, 3.5rem);
+    font-family: 'Pacifico', cursive;
+    top:5%;
+    left: 3%;
+    right: 0%;
+    position :fixed;
+   
+  
+    
+   
+    
    
   }
     
 
   .letter{
     
-     @include font(400, 3rem);
+     @include font(400, 3.5rem);
      font-family: 'Pacifico', cursive;
      color: whitesmoke;
-     display: inline-block;
+     
     }
   }
      
@@ -132,7 +140,8 @@ html,body{
     @include sansserif-font();
     @include center();
     @include font(600, 3rem);
-    margin-top: 15%;
+    margin-top: 0;
+    padding-top: 20%;
     animation: highlight 0.4s linear 1;
     @keyframes highlight{
       0%{
@@ -191,224 +200,88 @@ html,body{
 
 
 
-
-
-
- 
-    
-
-
-
-
-
-
-
-///navbar section..................
-
-
-
-.navbar{
-
-display: flex;
-flex-direction: column;
-justify-content:flex-start;
-align-items:flex-start;
-color:$color;
-margin: 5vh 0 5vh 0;
-width: 100%;
-
-
-
- 
-
-
-.nav-bg{
-    background-color: transparent;
-    &:hover{
-      opacity: 0.6;
+  ///navbar section..................
+  
+  
+  
+  .navbar{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:flex-start;
+  color:$color;
+  padding: 10% 0 0 2%;
+  width: 120%;
+  
+  
+  
+   
+  
+  
+  .nav-bg{
+      background-color: transparent;
+      &:hover{
+        opacity: 0.6;
+       
+      }
+    }
+  
+    .button{
+      outline: none;
+      border: none;
+      @include font(400, 1.8rem);
+      text-transform:uppercase;
+      color: white;
+      @include fresh-font();
      
     }
-  }
-
-  .button{
-    outline: none;
-    border: none;
-    @include font(400, 1.9rem);
-    text-transform:uppercase;
-    color: white;
-    @include fresh-font();
-   
-  }
-   
-  .button a:active{
-    outline:none;
-    text-decoration: none;
-    color:white;
-}
- }
-
-
-   
- .line{
-  background: rgb(255, 255, 255);
-  width: 100%;
-  height: 2px;
-  float:left;
-  animation: wide 0.7s ease 1;
-  @keyframes wide{
-    0%{
-      width: 0%;
-      
-    }
-    100%{
-      width: 100%;
      
-    }
-    
+    .button a:active{
+      outline:none;
+      text-decoration: none;
+      color:white;
   }
-}
-
-
-
-  
-
-
+   }
   
   
-    
-
-
-
-
-    
-      
-   
-
-
-    
-
-
-
-
-
-
-
-
-   
-//////////icon section...................
-
-.container{
-  margin-top: 10%;
-
-  // @media (max-width: 995px){
-  //   //     margin-top: 10vh;
-  //   //     width: 800px;
-  //    }
-}
-
-
-
-
-
-
-.img-quote{
-  width: 90px;
-  height: 120px;
-  box-shadow: 2px 2px 10px 2px rgb(87, 62, 62);
-  border-radius: 50% 50% 50% 2px;
-  padding: 6% 6% 2% 5%;
-  position: relative;
-  top:10%;
-  left:30%;
-  color:rgb(100, 40, 40);
-  box-sizing:content-box;
-  transform:rotate(0deg);
-  font-size: 1.1rem;
-  @include fresh-font();
-  font-weight: 800;
-  display: inline-block;
-  
-
-//   @media (max-width: 995px){
-//     padding: 6%;
-//     width: 85px;
-//     height: 100px;
-//     font-size: 0.9;
-
-//  }
-
-//  @media (max-width: 600px){
-//     font-size: 0.9rem;
-//     width: 80px;
-//  }
- 
-}
-
-
-
-  .img-icon1{
-    position: relative;
-    top: 37%;
-    left: 0%;
-    height: 80px;
-    width: 80px;
-    display: inline-block;
-    border-radius: 50%;
-    box-shadow: 2px 4px 12px 3px rgb(83, 19, 19);
-    border: 1px solid brown;
-   
-
-
-    //  @media (max-width: 995px){
-    //      top: 32%;
-    //      left: -10%;
-    
      
-    // }
- 
-    // @media (max-width: 600px){
+   .line{
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 3px;
+    float:left;
+    animation: wide 1s ease 1;
+    @keyframes wide{
+      0%{
+        width: 0%;
         
-    // }
+      }
+      100%{
+        width: 100%;
+       
+      }
+      
+    }
+  }
+
+
+
  
-
-
-
-  }
-  .img-icon2{
-    border: 1px solid brown;
-    display: inline-block;
-     position: relative;
-     top: 0%;
-     left: 0%;
-     height: 70px;
-     width: 100px;
-     box-shadow: 2px 4px 12px 3px rgb(83, 19, 19);
-     border-radius: 60% 60% 4px 4px;
-     
-    //  @media (max-width: 995px){
-    //   top: 59%;
-    //   left: 37%;
-   
-    // }
-
-
-
-
-  }
     
-  
 
 
-   
+
+
+
+
 
 
 
 ////list of items.................
 
 
-
-
-
+   
 .list{
    text-decoration: none;
    list-style: none;
@@ -424,83 +297,113 @@ width: 100%;
     
   }
     
-   
 
-
-
-
-   
-
+  ///home-content..............................
   
-
-
-
-
-
+  .flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+  }
   
-  
-
-
-///img section center...............
-
-// .img-bg{
-//   //  padding: 0px 2px;
-//    margin-top: 0.5vh;
-//    object-fit: cover;
-//   //  border-left: 2px solid rgba(143, 87, 87,0.5);
-//   //  border-right: 2px solid rgba(143, 87, 87,0.5);
-//    opacity: 0.9;
-//    position: relative;
-//    z-index: -1;
- 
-// }
-
-///home-content..............................
-
-.flexbox{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  
-}
-
-.home{
-     color: white;
-     @include font(400, 1.7rem);
-     @include sansserif-font();
-     background-color: grey;
-     padding: 3%;
-}
- 
- 
-  
-
-
-
-
+  .home{
+        color: white;
+        @include font(400, 2.3rem);
+        @include sansserif-font();
+        background-color: grey;
+        padding: 5%;
+        margin:0;
+  }
+    
 
 ///about-us section..............
-
-
-.about-para-wrapper{
-   background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 30%,transparent 30%),linear-gradient(30deg, rgba(255, 255, 255, 0.8) 35%,transparent), url('../img/pexels-jess-bailey-designs-1119794.jpg');
-   background-size: cover,cover;
-   background-position-x: 40%;
- 
-   padding: 2% 5% 2% 30%;
   
+  
+.about-para-wrapper{
+  background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 30%,transparent 30%),linear-gradient(30deg, rgb(255, 255, 255) 10%,transparent), url('../img/pexels-jess-bailey-designs-1119794.jpg');
+  background-size: cover,cover;
+  background-position-x: 40%;
+  padding: 5% 5% 2% 30%;
+
  
-   .about-para{
-     @include font(600, 1.5rem);
-     text-align: justify;
-     padding: 4% 5%;
-     @include sansserif-font();
-     @media (max-width: 1345px){
-       @include font(700, 1.2rem);
-     }
-   }
- }
+
+  .about-para{
+    @include font(400, 2.5rem);
+    text-align: justify;
+    padding: 4% 5%;
+    color: grey;
+    @include sansserif-font();
+    // @media (max-width: 1345px){
+    //   @include font(700, 1.2rem);
+    // }
+    }
+   
+}
+
+
+
+
+
+
+  
+
+
+  
+  
+    
+
+
+
+
+    
+      
+   
+
+
+    
+
+
+
+
+
+
+
+  
+
+   
+
+
+
+    
+  
+   
+
+
+
+
+   
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
+
+
      
 
 

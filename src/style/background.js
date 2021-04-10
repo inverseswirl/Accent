@@ -1,7 +1,8 @@
 import React from 'react';
 import About from '../components/about-page';
 import Services from '../components/service-page';
-import Title from '../components/title';
+// import Title from '../components/title';
+import Tagline from '../components/tagline';
 
 
 class Background extends React.Component{
@@ -20,7 +21,7 @@ render(){
 return(
   
       <div className="background" style={{backgroundImage: background}}> 
-          <Title onTrigger={this.handleStyle}/>
+          <Tagline backStyle={this.handleStyle}/>
           {/* {background? <About/> :null}
           {background? <Services/> :null} */}
 

@@ -7,21 +7,17 @@ import Home from './components/home';
 import Services from './components/service-page';
 import Footer from './components/footer';
 import About from './components/about-page';
+import Title from './components/title';
 
 
 const  Accent=()=>{
  
 
 
- 
-
-
-
-
-
     return(
 
 <div className="App">
+   <Title/>
     <Background />
     
 
@@ -34,6 +30,13 @@ const  Accent=()=>{
 
  }
 
+ export default Accent;
+ 
+
+
+
+
+
   
     
              
@@ -41,7 +44,6 @@ const  Accent=()=>{
   
 
 
- export default Accent;
    
   
   

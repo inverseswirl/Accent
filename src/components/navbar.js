@@ -35,14 +35,14 @@ return(
  <div className=""> 
     
 
-        <nav className="navbar" >
         
+        <nav className="navbar" >
               <button type="button" className="button nav-bg ">
                  <RiHome2Line className="bg-transparent" color='#6699cc' size={29} />  Home| </button>
               
               <button onClick={this.handleClick} type="button" className="button nav-bg ">
-                <BiComment className="bg-transparent"color='#6699cc' size={29}/> About us|
-                </button>
+               <a href="#about"> <BiComment className="bg-transparent"color='#6699cc' size={29}/> About us|
+               </a></button>
              
               <button type="button"  className="button nav-bg ">
                   <CgList className="bg-transparent"color='#6699cc' size={28}/> Services|</button>
@@ -52,32 +52,35 @@ return(
               <BsQuestionSquare className="bg-transparent"color='#6699cc' size={28}/> FAQs|</button>
               <button type="button"  className="button nav-bg ">
               <HiOutlineUsers className="bg-transparent"color='#6699cc' size={29}/> Testimonials|</button>
+           
+        </nav>
+        <span className="line"></span>
+       <Home/>
+       {aboutClick? <About/>: null}
               
-              {/* { aboutClick ? <button type="button"  style={{display: display}}className="button nav-bg ">Services</button>: null}
-              { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">Testimonials</button>}
-               { aboutClick ? null:<button type="button" style={{display: display}} className="button nav-bg ">Contact us</button>}
-               { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">FAQs</button>} */}
-      <span className="line"></span>
-     </nav>
-    <Home/>
-   
+              
 
     
     </div>  
        
+ )
+
+
+}
+}
       
     
 
                
     
-        )
-
-
-    }
-}
 
 
 
 
 
 export default Navbar;
+
+{/* { aboutClick ? <button type="button"  style={{display: display}}className="button nav-bg ">Services</button>: null}
+              { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">Testimonials</button>}
+               { aboutClick ? null:<button type="button" style={{display: display}} className="button nav-bg ">Contact us</button>}
+               { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">FAQs</button>} */}
