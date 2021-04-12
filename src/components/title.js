@@ -33,7 +33,7 @@ render(){
     return(
 
    <div className="main" >
-     <button onClick={this.handletitleBtn} className="title">A<span className="letter">c</span><span className="letter">c</span>ent  </button>
+     <button style={this.props.styleTitle} onClick={this.handletitleBtn} className="title">A<span className="letter">c</span><span className="letter">c</span>ent  </button>
 
     {titleBtn?<Navbar/>:null}
       

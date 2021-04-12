@@ -37,7 +37,7 @@ return(
     
 
         
-        <nav className="navbar" >
+        <nav className="navbar" style={this.props.styleNav}>
               <button type="button" className="button nav-bg ">
                  <RiHome2Line className="bg-transparent" color='#6699cc' size={29} /> |Home </button>
               
@@ -56,10 +56,10 @@ return(
         </nav>
            
         <span className="line"></span>
-       <Home/>
-       <span className="line"></span>
+       {/* <Home/> */}
+       {/* <span className="line"></span>
        <About click={aboutClick}/>
-       <Services/>
+       <Services/> */}
        
        
       

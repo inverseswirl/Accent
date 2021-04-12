@@ -26,6 +26,7 @@ return (
         {click? <Back />:null}
     <div className="about-para-wrapper" id="about">
           <div  className="about-para" >
+                <h2 className="text-center h2 about-headline"> About us</h2>
                   <p className="text-center">Hi, we assist people with better communication </p>
                   <p>We have been working in the area of Communication and Coaching for about 20 years.  We aim to deliver best results for our clients.</p>
                   <br/>
