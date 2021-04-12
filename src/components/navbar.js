@@ -40,7 +40,7 @@ return(
         
         <nav className="navbar" style={this.props.styleNav}>
               <button type="button" className="button nav-bg ">
-                 <RiHome2Line className="bg-transparent" color='rgba(26, 72, 110, 0.8)' size={29} /> |Home </button>
+                <a href="#home"> <RiHome2Line className="bg-transparent" color='rgba(26, 72, 110, 0.8)' size={29} /> |Home </a> </button>
               
               <button  type="button" className="button nav-bg ">
                <a href="#about"> <BiComment className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |About us
@@ -51,7 +51,7 @@ return(
               <button type="button" className="button nav-bg ">
                  <IoCallOutline className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={30}/> |Contact us</button>
                  <button type="button" className="button nav-bg ">
-              <BsQuestionSquare className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |FAQs</button>
+              <a href="#pricing"><BsQuestionSquare className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |Pricing</a></button>
               <button type="button"  className="button nav-bg ">
               <HiOutlineUsers className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |Testimonials</button>
     

@@ -20,7 +20,7 @@ class Title extends React.Component{
      
 handletitleBtn(){
   this.setState({titleBtn: true})
-  this.props.backStyle("linear-gradient(90deg, rgba(18,18,18,0.1) 25%,transparent 25%),url('https://images.pexels.com/photos/2952871/pexels-photo-2952871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')")
+  this.props.backStyle("linear-gradient(90deg, rgba(18,18,18,0.1) 25%,transparent 25%),url('../img/pexels-engin-akyurt-2952871.jpg')")
    
  
 }

@@ -1,9 +1,11 @@
 import React from 'react';
+import {IoChatbubblesOutline} from 'react-icons/io'
+import {RiWechatLine } from 'react-icons/ri';
 
 
 const Services=()=>{
 
-    const arr= ['Individual sessions at Office', 'Online sessions at home', 'Communication group classes for organisations']
+    const arr= ['Individual sessions at Office', 'Online sessions at home', 'Leadership training in groups for organisations','Presentation skills for individual or groups']
     
     return (
 <div className="">
@@ -17,13 +19,13 @@ const Services=()=>{
             <div className="services">
                 <ul className="list">
                     { arr.map((item)=>{
-                        return <li key={item} className="list-item">{item}</li>
+                        return <li key={item} className="list-item"><RiWechatLine color="darkslategrey"/> {item}</li>
                         })
                     }
                 </ul>
             </div>
 
-            <div className="service-table">
+            {/* <div className="service-table">
                 <h3 className="h3 text-center">Pricing</h3>
             <table >
                 <tr>
@@ -44,9 +46,9 @@ const Services=()=>{
                 </tr>
             </table>
             </div>
-    </div>
-    <span className="line"></span> 
-           
+   
+            */}
+             </div>
     </div>
     )
 }
