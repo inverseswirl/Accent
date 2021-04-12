@@ -19,17 +19,18 @@ constructor(props){
         serviceClick: false
      
     }
-this.handleClick=this.handleClick.bind(this)
-}
-handleClick(){
-    this.setState({
-        aboutClick: true, 
-        serviceClick: true
-    })
+// this.handleClick=this.handleClick.bind(this)
 }
 
+// handleClick(){
+//     this.setState({
+//         aboutClick: true, 
+//         serviceClick: true
+//     })
+// }
+
 render(){
-  const{aboutClick,serviceClick}=this.state;
+//   const{aboutClick,serviceClick}=this.state;
     
 
 return(
@@ -39,27 +40,28 @@ return(
         
         <nav className="navbar" style={this.props.styleNav}>
               <button type="button" className="button nav-bg ">
-                 <RiHome2Line className="bg-transparent" color='#6699cc' size={29} /> |Home </button>
+                 <RiHome2Line className="bg-transparent" color='rgba(26, 72, 110, 0.8)' size={29} /> |Home </button>
               
-              <button  onClick={this.handleClick}type="button" className="button nav-bg ">
-               <a href="#about"> <BiComment className="bg-transparent"color='#6699cc' size={29}/> |About us
+              <button  type="button" className="button nav-bg ">
+               <a href="#about"> <BiComment className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |About us
                </a></button>
              
               <button type="button"  className="button nav-bg ">
-                  <a href="#services"><CgList className="bg-transparent"color='#6699cc' size={28}/> |Services</a></button>
+                  <a href="#services"><CgList className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |Services</a></button>
               <button type="button" className="button nav-bg ">
-                 <IoCallOutline className="bg-transparent"color='#6699cc' size={30}/> |Contact us</button>
+                 <IoCallOutline className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={30}/> |Contact us</button>
                  <button type="button" className="button nav-bg ">
-              <BsQuestionSquare className="bg-transparent"color='#6699cc' size={28}/> |FAQs</button>
+              <BsQuestionSquare className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |FAQs</button>
               <button type="button"  className="button nav-bg ">
-              <HiOutlineUsers className="bg-transparent"color='#6699cc' size={29}/> |Testimonials</button>
+              <HiOutlineUsers className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |Testimonials</button>
+    
         </nav>
            
-        <span className="line"></span>
-       {/* <Home/> */}
-       {/* <span className="line"></span>
-       <About click={aboutClick}/>
-       <Services/> */}
+           {/* <span className="line"></span> */}
+       <Home/>
+      
+       <About />
+       <Services/>
        
        
       

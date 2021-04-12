@@ -101,7 +101,7 @@ max-width: 100vw;
 /////Title.............
 
 .main{
-  
+    
   
   .title{
    
@@ -115,7 +115,7 @@ max-width: 100vw;
     outline: none;
     border:none;
     background-attachment: fixed;
-    
+  
    
     
    
@@ -261,7 +261,7 @@ max-width: 100vw;
     height: 4px;
     margin: 0% 0%;
     float:left;
-    animation: wide 0.9s ease 1;
+    animation: wide 1.5s ease 1;
     @keyframes wide{
       0%{
         width: 0%;
@@ -289,21 +289,7 @@ max-width: 100vw;
 
 
 ////service-page.................
-.service-btn{
-    position:sticky;
-    top: 85%;
-    left:0%;
-    bottom:0;
-    color:transparent;
-    background: url('https://images.pexels.com/photos/4710556/pexels-photo-4710556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-clip: text;
-    background-position: 52% 50%;
-    @include font(600, 3.1rem);
-    font-family: 'Pacifico', cursive;
-    margin: 1% 0% 0% 1%;
-    outline: none;
-    border:none;
-}
+
 .service-page{
   background:linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),linear-gradient(190deg,grey 20%,transparent),url('https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   padding: 2% 2% 2% 30%;
@@ -378,22 +364,16 @@ table{
 
   ///home-content..............................
   
-  // .flexbox{
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content:center ;
-  //   align-items: center;
-    
-  // }
   
   .home{
         color: white;
-        @include font(400, 1.6rem);
-       @include serif-font();
-        background-color: grey;
-        padding: 4% 5% 4% 5%;
-        margin-top:0%;
+        @include font(400, 2.2rem);
+        @include serif-font();
+        background-color:  rgba(26, 72, 110, 0.8);
+        padding: 4% 6% 5% 5%;
+        margin: 0% 0% 0% 25%;
         text-align: justify;
+        border: 1px solid rgba(18,18,18,0.2);
   }
     
 
@@ -401,33 +381,33 @@ table{
   
   
 .about-para-wrapper{
-  background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%), url('../img/pexels-jess-bailey-designs-1119794.jpg');
+  background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),
+  linear-gradient(270deg, rgb(221, 221, 221) 67%,transparent ),linear-gradient(80deg, rgba(155, 155, 155,1) 0.1%,transparent ),url('https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-size: cover,cover;
-  background-position: 40% 40%;
+  background-position: 0% 0%;
   padding: 2% 5% 2% 30%;
   background-attachment: fixed;
-
+  margin-top:0;
  
 
   .about-para{
     @include font(400, 2rem);
     text-align: justify;
     padding: 4% 5%;
-    color: grey;
+    color: rgba(26, 72, 110, 1);
     @include serif-font();
     // @media (max-width: 1345px){
     //   @include font(700, 1.2rem);
     // }
      p, li{
-      // @include font(400,1.9rem);
-      color: grey;
+      color: rgba(26, 72, 110, 1);
     }
     }
    
 
     .about-headline{
       padding: 2%;
-      color: grey;
+      color: rgba(26, 72, 110, 0.8);
       @include serif-font();
       @include font(500, 4rem);
     }

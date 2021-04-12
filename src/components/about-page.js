@@ -7,10 +7,10 @@ import {HiOutlineUsers} from 'react-icons/hi';
 import {IoCallOutline} from 'react-icons/io5';
 import {BsQuestionSquare} from 'react-icons/bs';
 import {FcBusinessman,FcBusinesswoman} from 'react-icons/fc';
-import Back from './Back-btn';
 
 
-const About =({click})=>{
+
+const About =()=>{
   
 return (
   
@@ -23,8 +23,10 @@ return (
     
 
     <div className="">
-        {click? <Back />:null}
+    
+    
     <div className="about-para-wrapper" id="about">
+  
           <div  className="about-para" >
                 <h2 className="text-center h2 about-headline"> About us</h2>
                   <p className="text-center">Hi, we assist people with better communication </p>
@@ -40,7 +42,7 @@ return (
                  <h3>Meet our Coaches</h3>
                  
                  <div className="about-coaches">
-                    <FcBusinesswoman clasName="" size={150}/>
+                    <FcBusinesswoman className="" size={150}/>
 
                     <FcBusinessman className="" size={150}/>
                     <br/>
@@ -54,7 +56,7 @@ return (
                 
                       
     </div> 
-    <span className="line"></span>
+   
           
     </div>   
 
