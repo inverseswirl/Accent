@@ -19,9 +19,9 @@ class Tagline extends React.Component{
      
     if(button){
        return (
-         <div className="flexbox">
+      
             <Navbar/> 
-         </div>  
+       
        ) 
      }
   

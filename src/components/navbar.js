@@ -7,6 +7,7 @@ import {IoCallOutline} from 'react-icons/io5';
 import {BsQuestionSquare} from 'react-icons/bs';
 import About from '../components/about-page';
 import Home from '../components/home';
+import Services from './service-page';
 
 
 
@@ -28,7 +29,7 @@ handleClick(){
 }
 
 render(){
-  const{aboutClick,serviceClick,background}=this.state;
+  const{aboutClick,serviceClick}=this.state;
     
 
 return(
@@ -38,27 +39,29 @@ return(
         
         <nav className="navbar" >
               <button type="button" className="button nav-bg ">
-                 <RiHome2Line className="bg-transparent" color='#6699cc' size={29} />  Home| </button>
+                 <RiHome2Line className="bg-transparent" color='#6699cc' size={29} /> |Home </button>
               
-              <button onClick={this.handleClick} type="button" className="button nav-bg ">
-               <a href="#about"> <BiComment className="bg-transparent"color='#6699cc' size={29}/> About us|
+              <button  onClick={this.handleClick}type="button" className="button nav-bg ">
+               <a href="#about"> <BiComment className="bg-transparent"color='#6699cc' size={29}/> |About us
                </a></button>
              
               <button type="button"  className="button nav-bg ">
-                  <CgList className="bg-transparent"color='#6699cc' size={28}/> Services|</button>
+                  <a href="#services"><CgList className="bg-transparent"color='#6699cc' size={28}/> |Services</a></button>
               <button type="button" className="button nav-bg ">
-                 <IoCallOutline className="bg-transparent"color='#6699cc' size={30}/> Contact us|</button>
+                 <IoCallOutline className="bg-transparent"color='#6699cc' size={30}/> |Contact us</button>
                  <button type="button" className="button nav-bg ">
-              <BsQuestionSquare className="bg-transparent"color='#6699cc' size={28}/> FAQs|</button>
+              <BsQuestionSquare className="bg-transparent"color='#6699cc' size={28}/> |FAQs</button>
               <button type="button"  className="button nav-bg ">
-              <HiOutlineUsers className="bg-transparent"color='#6699cc' size={29}/> Testimonials|</button>
-           
+              <HiOutlineUsers className="bg-transparent"color='#6699cc' size={29}/> |Testimonials</button>
         </nav>
+           
         <span className="line"></span>
        <Home/>
        <span className="line"></span>
-       {aboutClick? <About/>: null}
-      
+       <About click={aboutClick}/>
+       <Services/>
+       
+       
       
               
               
