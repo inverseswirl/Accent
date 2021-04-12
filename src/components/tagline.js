@@ -20,10 +20,10 @@ class Tagline extends React.Component{
      
     if(button){
        return (
-         <div>
-            <Title  styleTitle={{position: 'fixed',top:'1%',left:'1%'}}/>
-            <Navbar styleNav={{position: 'fixed',top:'11%',left:'1%'}}/> 
-            </div>
+      
+           
+            <Navbar styleNav={{position: 'fixed',top:'15%',left:'1%'}}/> 
+        
        
        ) 
      }

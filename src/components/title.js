@@ -34,7 +34,7 @@ render(){
 
    <div className="main" >
      <button style={this.props.styleTitle} onClick={this.handletitleBtn} className="title">A<span className="letter">c</span><span className="letter">c</span>ent  </button>
-
+    
     {titleBtn?<Navbar/>:null}
       
       

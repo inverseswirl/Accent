@@ -23,7 +23,7 @@ render(){
 return(
   
       <div className="background" style={{backgroundImage: background}}> 
-        {background?  null: <Title backStyle={this.handleStyle} />}  
+          <Title backStyle={this.handleStyle} />
           <Tagline  dis={display} backStyle={this.handleStyle}bg={background}/>
    
      
