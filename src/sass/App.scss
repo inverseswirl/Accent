@@ -399,7 +399,7 @@ table{
         color: white;
         @include font(500, 2rem);
         @include serif-font();
-        background:linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),linear-gradient(180deg, rgba(18,18,18,0.2) 1%,transparent 1%),linear-gradient(245deg,rgba(26, 72, 110, 1) 20%,transparent),linear-gradient(180deg,rgb(255, 255, 255) 20%,transparent);
+        background:linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),linear-gradient(245deg,rgba(26, 72, 110, 1) 20%,transparent),linear-gradient(180deg,rgb(255, 255, 255) 20%,transparent);
         background-size: cover;
         background-position: 10% 100%;
         background-attachment: fixed;

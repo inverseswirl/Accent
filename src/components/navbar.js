@@ -8,6 +8,7 @@ import {BsQuestionSquare} from 'react-icons/bs';
 import About from '../components/about-page';
 import Home from '../components/home';
 import Services from './service-page';
+import Pricing from './pricing';
 
 
 
@@ -54,14 +55,14 @@ return(
               <a href="#pricing"><BsQuestionSquare className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |Pricing</a></button>
               <button type="button"  className="button nav-bg ">
               <HiOutlineUsers className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |Testimonials</button>
-    
         </nav>
+    
            
-           {/* <span className="line"></span> */}
+        
        <Home/>
-      
        <About />
        <Services/>
+       <Pricing/>
        
        
       
