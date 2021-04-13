@@ -18,17 +18,22 @@ constructor(props){
     this.state={ 
         aboutClick: false, 
         serviceClick: false
-     
+       
     }
-// this.handleClick=this.handleClick.bind(this)
+    this.pricing = React.createRef();
+    this.handleClick=this.handleClick.bind(this)
+
 }
 
-// handleClick(){
-//     this.setState({
-//         aboutClick: true, 
-//         serviceClick: true
-//     })
-// }
+
+       
+handleClick(){
+
+   this.pricing.current.scrollIntoView({
+    behavior: "smooth", 
+    block: "nearest"
+   })
+}
 
 render(){
 //   const{aboutClick,serviceClick}=this.state;
@@ -43,26 +48,27 @@ return(
               <button type="button" className="button nav-bg ">
                 <a href="#home"> <RiHome2Line className="bg-transparent" color='rgba(26, 72, 110, 0.8)' size={29} /> |Home </a> </button>
               
-              <button  type="button" className="button nav-bg ">
-               <a href="#about"> <BiComment className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |About us
-               </a></button>
+              <button   type="button" className="button nav-bg ">
+               <BiComment className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |About us
+               </button>
              
               <button type="button"  className="button nav-bg ">
                   <a href="#services"><CgList className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |Services</a></button>
               <button type="button" className="button nav-bg ">
                  <IoCallOutline className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={30}/> |Contact us</button>
-                 <button type="button" className="button nav-bg ">
-              <a href="#pricing"><BsQuestionSquare className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |Pricing</a></button>
+              <button onClick={this.handleClick} type="button" className="button nav-bg ">
+                   <BsQuestionSquare className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |Pricing</button>
               <button type="button"  className="button nav-bg ">
               <HiOutlineUsers className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |Testimonials</button>
         </nav>
     
            
         
+      
        <Home/>
        <About />
        <Services/>
-       <Pricing/>
+       <Pricing referenceProp={this.pricing}/>
        
        
       

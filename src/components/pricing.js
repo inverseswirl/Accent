@@ -7,34 +7,31 @@ import {MdGrade} from 'react-icons/md';
 class  Pricing  extends React.Component{
 constructor(props){
   super(props)
-  this.state={animation:'none'}
+  this.state={color:''}
   this.handleAnime=this.handleAnime.bind(this);
 }
 
 
-componentDidMount() {
-  window.addEventListener('scroll', this.handleAnime);
-}
 
-componentWillUnmount() {
-  window.removeEventListener('scroll', this.handleAnime);
-}
-handleAnime(){
-  document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-
+handleAnime(e){
+  e.preventDefault();
+  // const {  scrollTop, clientHeight } = e.target;
+ console.log(e);
+  
+ 
 }
   render(){
   
   
     return(
-      <div className="pricing" id="pricing">
+      <div  ref={this.props.referenceProp}className="pricing" id="pricing">
 
-          <div className="pricing-card1">
+          <div    className="pricing-card1">
            <GiFlowerPot size={50}/>
             <h2>  Prep </h2>
             <h3>4 sessions</h3>
             <div>
-              <p >380<sup className="pricing-dollar">$</sup></p> 
+              <p className="shadows" onScroll={this.handleAnime}>380<sup className="pricing-dollar">$</sup></p> 
               </div>
           </div>
             

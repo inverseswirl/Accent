@@ -22,7 +22,7 @@ return (
 
     
 
-    <div className="">
+  
     
     
     <div className="about-para-wrapper" id="about">
@@ -58,7 +58,7 @@ return (
     </div> 
    
           
-    </div>   
+    
 
     )
 }
