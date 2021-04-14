@@ -9,6 +9,7 @@ import About from '../components/about-page';
 import Home from '../components/home';
 import Services from './service-page';
 import Pricing from './pricing';
+import Testimonials from './testimonials';
 
 
 
@@ -56,7 +57,7 @@ return(
               <button onClick={this.handleClick} type="button" className="button nav-bg ">
                    <BsQuestionSquare className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={28}/> |Pricing</button>
               <button type="button"  className="button nav-bg ">
-              <HiOutlineUsers className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |Testimonials</button>
+              <a href="#testimonials"><HiOutlineUsers className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |Testimonials</a></button>
         </nav>
     
            
@@ -66,7 +67,7 @@ return(
        <About />
        <Services/>
        <Pricing referenceProp={this.pricing}/>
-       
+       <Testimonials/>
        
       
               

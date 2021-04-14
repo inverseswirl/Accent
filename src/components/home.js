@@ -1,6 +1,7 @@
 import React from 'react';
 // import Toggle from '../style/togglebtn';
 
+
 const Home =(props)=>{
 
     return (
@@ -13,6 +14,8 @@ const Home =(props)=>{
         <br/>
         <br/>
         At Accent we help our clients build techniques and confidence for handling a range of communication styles, people and situations.</p>
+     
+
     </div>
            
            

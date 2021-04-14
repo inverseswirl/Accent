@@ -163,39 +163,42 @@ overflow-y: scroll;
      }
    }
     
-    
+   $width:120px;
+   $height:120px;
+  
       &-btn{
+        
        border-radius: 50%;
        @include font(400, 2.1rem);
        font-family: 'Pacifico', cursive;
-       padding: 2.4% 0.5%;
- 
+       padding: 1.6% 0.5%;
        justify-content: center;
        margin: auto;
        margin-top: 3%;
-      
        display: block;
        color: white;
-       width: 120px;
-       height:120px;
+       width: $width;
+       height:$height;
        background-color: rgb(175, 121, 206);
        border:none;
        outline: none;
        position: relative;
-       background-clip: padding-box;
       }
+ 
+      
+      
       
       &-btn::before{
         content:'';
         position: absolute;
         top:0%;
         left:0%;
-        border: 4px dotted rgb(229, 184, 255);
+        border: 3px dotted rgb(236, 203, 255) ;
         border-radius: 50%;
-        width: 120px;
-        height:120px;
+        width: $width;
+        height:$height;
+        animation: spin 1.5s ease-out 1;
 
-        animation: spin 1s linear 1;
       }
      
        
@@ -458,11 +461,11 @@ table{
   
 .about-para-wrapper{
   background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),
-  linear-gradient(300deg, rgb(221, 221, 221) 35%,transparent ),linear-gradient(180deg, rgba(155, 155, 155,1) 5%,transparent ),url('https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  linear-gradient(300deg, rgb(255, 255, 255) 66%,transparent ),linear-gradient(180deg, rgba(155, 155, 155,1) 5%,transparent ),url('https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-position-x: 50%;
   padding: 4% 6% 5% 27%;
   text-align: justify;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   margin-top:0;
   overflow-y:scroll;
  
@@ -491,10 +494,10 @@ table{
 /////pricing section............
 
 .pricing{
-  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),radial-gradient(circle at 100% 5%, rgb(206, 206, 206) 20%,transparent 20.1%),radial-gradient(circle at 94% 1%, rgb(87, 108, 133) 24%,transparent 24.1%),linear-gradient(180deg, rgb(214, 212, 212) 15%,transparent,rgb(214, 212, 212)),url('../img/pexels-fwstudio-129731.jpg') 10% 30%;
-   background-size: cover;
-  // background-attachment: fixed;
-  display: flex;
+  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),radial-gradient(circle at 100% 5%, rgb(206, 206, 206) 20%,transparent 20.1%),radial-gradient(circle at 94% 1%, rgb(87, 108, 133) 24%,transparent 24.1%),linear-gradient(180deg, rgb(214, 212, 212) 15%,transparent 70%,rgb(214, 212, 212)),url('../img/pexels-fwstudio-129731.jpg') 10% 100%;
+  //  background-size: cover;
+   background-attachment: fixed;
+   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
@@ -678,6 +681,123 @@ table{
 
 
 
+//////testimonials.............
+
+
+.testimonials-bg{
+  background-color:rgb(83, 102, 124);
+//   background-image:radial-gradient(circle, rgb(119, 119, 119) 3% ,transparent 3.1%),radial-gradient(circle, rgb(119, 119, 119)3% ,transparent 3.1%),radial-gradient(circle, rgb(119, 119, 119) 3% ,transparent 3.1%),radial-gradient(circle, rgb(119, 119, 119) 3% ,transparent 3.1%),radial-gradient(circle, rgb(119, 119, 119) 3% ,transparent 3.1%),radial-gradient(circle, rgb(119, 119, 119) 3% ,transparent 3.1%),radial-gradient(circle, rgb(119, 119, 119) 3% ,transparent 3.1%);
+  
+// background-size: 96px 70px;
+// background-position: 0% 0%, 0% 8%,0 16%,0 32%,0 40%,0 48%,0 56%;
+
+}
+
+
+.scroll-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  
+}
+
+ 
+  
+
+.left-btn{
+  border-radius: 4px;
+  @include font(400, 2rem);
+  font-family: 'Pacifico', cursive;
+  border:none;
+  outline: none;
+  color: orangered;
+  box-shadow: 1px 2px 5px 2px rgb(100, 100, 100);
+  margin-right: 5px;
+
+
+  &:active, &:focus{
+  border:none;
+  outline: none;
+  margin-top: 6px;
+  
+  }
+
+  &::after{
+    content:'<';
+   
+  }
+}
+
+
+  
+ 
+.right-btn{
+  border-radius: 4px;
+  @include font(400, 2rem);
+  font-family: 'Pacifico', cursive;
+  justify-content: center;
+  box-shadow: 2px 1px 5px 2px rgb(100, 100, 100);
+  border:none;
+  outline: none;
+  color: orangered;
+  margin-top: 5px;
+ 
+
+  &:active, &:focus{
+    border:none;
+    outline: none;
+    }
+    &::after{
+      content:'>'
+    }
+
+
+}
+
+
+
+.testimonials-wrapper{
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+
+
+  .card1{
+    box-shadow: 2px 1px 5px 2px rgb(100, 100, 100);
+    margin-right: 10px;
+    background-color: orangered;
+    border-top-left-radius: 4px; 
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px; 
+    border-bottom-left-radius: 200px; 
+   
+  
+    &-pic{
+      border-radius: 50%;
+       margin: 2% 2% 3% 5% ;
+       float:left;
+      &-pic::after{
+        content:'"'
+      }
+    }
+    &-comment{
+      
+      @include font(400, 1.2rem);
+      @include serif-font();
+      text-align: justify;
+      padding:5% 0% 2% 5%;
+    }
+    &-name{
+      
+      @include font(400, 1.2rem);
+      @include serif-font();
+      text-align: center;
+      padding:1% 0 0 1%;
+    }
+
+     
+  }
+
 
 
 
@@ -686,6 +806,10 @@ table{
 
 
   
+
+
+  
+}
 
 
   
