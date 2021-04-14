@@ -34,8 +34,9 @@ class Tagline extends React.Component{
       <div className="" >
        
          <h2  className="tagline" style={{display: this.props.dis}}>" We help you communicate better "</h2> 
-         <button className="tagline-btn" style={{display: this.props.dis}} onClick={this.handleBtn}>Menu</button>
-       
+        
+         <button className="tagline-btn r" style={{display: this.props.dis}} onClick={this.handleBtn}>Menu</button>
+         
       </div>
    
     )

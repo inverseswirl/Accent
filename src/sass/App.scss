@@ -169,46 +169,66 @@ overflow-y: scroll;
        @include font(400, 2.1rem);
        font-family: 'Pacifico', cursive;
        padding: 2.4% 0.5%;
-       border:none;
-       outline: none;
-       display: flex;
+ 
        justify-content: center;
        margin: auto;
        margin-top: 3%;
-       background-color: rgb(175, 121, 206);
+      
+       display: block;
        color: white;
-       width: 100px;
-       box-sizing: content-box;
-       border: 3px solid rgb(219, 180, 236);
-     
-       
-       
-      }
-      
-      
-      &-btn:active{
-       border: none;
+       width: 120px;
+       height:120px;
+       background-color: rgb(175, 121, 206);
+       border:none;
        outline: none;
-       background-color: rgb(26, 48, 109);
-       transition: background 0.5s ease;
-    
+       position: relative;
+       background-clip: padding-box;
+      }
+      
+      &-btn::before{
+        content:'';
+        position: absolute;
+        top:0%;
+        left:0%;
+        border: 4px dotted rgb(229, 184, 255);
+        border-radius: 50%;
+        width: 120px;
+        height:120px;
+
+        animation: spin 1s linear 1;
+      }
      
-      }
-      &-btn:focus {
-        outline:0;
-        
-      }
-
-      &-btn:hover{
+       
+      &-btn:active:focus{
+        color: blueviolet;
         border:none;
+        outline: none;
+      
+      }
 
-       }
-    
+      @keyframes spin {
+        100%{
+          transform: rotateZ(360deg);
+        }
+          
+      }
+        
+      
+       
+      
+      
 }
       
+     
+
+
+     
+      
+     
+    
+      
   
-       
-       
+ 
   
 
   
