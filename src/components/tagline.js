@@ -12,7 +12,9 @@ class Tagline extends React.Component{
    
  handleBtn(){
    this.setState({button:true,position:'fixed'})
-   this.props.backStyle("linear-gradient(90deg, rgba(18,18,18,0.1) 25%,transparent 25%),url('https://images.pexels.com/photos/2952871/pexels-photo-2952871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')")
+  this.props.backStyle(
+    "linear-gradient(grey,#0276FD)"
+  )
  }
   
  render(){
@@ -35,7 +37,7 @@ class Tagline extends React.Component{
        
          <h2  className="tagline" style={{display: this.props.dis}}>" We help you communicate better "</h2> 
         
-         <button className="tagline-btn r" style={{display: this.props.dis}} onClick={this.handleBtn}>Menu</button>
+         <button className="tagline-btn" style={{display: this.props.dis}} onClick={this.handleBtn}>Menu</button>
          
       </div>
    

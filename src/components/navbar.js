@@ -42,7 +42,7 @@ return(
     
 
         
-        <nav className="navbar" style={this.props.styleNav}>
+        <nav className="navbar bg" style={this.props.styleNav}>
               <button type="button" className="button nav-bg ">
                 <a href="#home"> <RiHome2Line className="bg-transparent" color='rgba(26, 72, 110, 0.8)' size={29} /> |Home </a> </button>
               
@@ -59,11 +59,12 @@ return(
               <button type="button"  className="button nav-bg ">
               <a href="#testimonials"><HiOutlineUsers className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |Testimonials</a></button>
         </nav>
-    
+       
            
         
       
        <Home/>
+      
        <About />
        <Services/>
        <Pricing referenceProp={this.pricing}/>

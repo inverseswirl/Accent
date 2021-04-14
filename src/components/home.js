@@ -5,9 +5,10 @@ import React from 'react';
 const Home =(props)=>{
 
     return (
-      <div>
-        <p className="home" id="home">Why effective communication skills training?
+      <div className="home" id="home">
+        <h1>Why effective communication skills training?</h1>
         <span><button className="toggle">ON</button></span>
+        <p className="home-para">
         <br/>
         <br/>
         It is proven that success both personally and professionally is about effective communication skills. Such skills are highly prized in creative, knowledge-based workforces. As technology shifts the working landscape, and teams become increasingly diverse, good communication in all its forms becomes more than a nice to have. Bloomberg’s Annual Skills Report regularly places Communication as the number one skill actively considered by recruiting firms.
