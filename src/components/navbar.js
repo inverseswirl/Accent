@@ -12,14 +12,11 @@ import Pricing from './pricing';
 
 
 
+
 class Navbar extends React.Component{
 constructor(props){
     super(props)
-    this.state={ 
-        aboutClick: false, 
-        serviceClick: false
-       
-    }
+   
     this.pricing = React.createRef();
     this.handleClick=this.handleClick.bind(this)
 
@@ -30,9 +27,9 @@ constructor(props){
 handleClick(){
 
    this.pricing.current.scrollIntoView({
-    behavior: "smooth", 
-    block: "nearest"
-   })
+       behaviour:"auto",
+       block:"nearest"
+    });
 }
 
 render(){
@@ -48,7 +45,7 @@ return(
               <button type="button" className="button nav-bg ">
                 <a href="#home"> <RiHome2Line className="bg-transparent" color='rgba(26, 72, 110, 0.8)' size={29} /> |Home </a> </button>
               
-              <button   type="button" className="button nav-bg ">
+              <button  onClick={this.handleClick} type="button" className="button nav-bg ">
                <BiComment className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |About us
                </button>
              

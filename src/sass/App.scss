@@ -35,7 +35,7 @@
 
 
 html,body{
- 
+  scroll-behavior: smooth;
   overflow-y:scroll;
   overflow-x: hidden;
  
@@ -179,7 +179,7 @@ overflow-y: scroll;
        color: white;
        width: 100px;
        box-sizing: content-box;
-      
+       border: 3px solid rgb(219, 180, 236);
      
        
        
@@ -190,7 +190,7 @@ overflow-y: scroll;
        border: none;
        outline: none;
        background-color: rgb(26, 48, 109);
-       transition: background 0.1s ease;
+       transition: background 0.5s ease;
     
      
       }
@@ -200,7 +200,7 @@ overflow-y: scroll;
       }
 
       &-btn:hover{
-        border: 3px solid rgb(219, 180, 236);
+        border:none;
 
        }
     
@@ -246,15 +246,11 @@ overflow-y: scroll;
       text-transform:uppercase;
       color: white;
       @include fresh-font();
-      animation: fadeout 0.3s linear 1;
+      animation: fadeout 0.4s linear 1;
       @keyframes fadeout{
         0%{
           transform: translate(-3rem,0px)
         }
-         
-      50%{
-        // opacity:0.5;
-      }
       100%{
         transform: translate(0px,0px)
       }
@@ -410,6 +406,31 @@ table{
         text-align: justify;
         
   }
+
+  .toggle{
+     border:none;
+     outline: none;
+
+     &:active{
+      border: none;
+      outline: none;
+      background-color: rgb(26, 48, 109);
+    
+   
+    
+     }
+     &:focus {
+       outline:none;
+       
+     }
+
+     &:hover{
+       border:none;
+
+      }
+
+
+  }
     
 
 ///about-us section..............
@@ -457,7 +478,7 @@ table{
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding: 4% 2% 6% 25%;
+  padding: 2% 2% 4% 25%;
   overflow-y:scroll;
   
   
@@ -478,7 +499,7 @@ table{
         padding-bottom: 5%;
       }
        h3{
-        @include font(700, 2.2rem);
+        @include font(900, 2.2rem);
         color: rgb(9, 50, 66);
         @include serif-font();
         padding-bottom: 10%;
@@ -487,6 +508,8 @@ table{
        p{
         @include sansserif-font();
         @include font(900, 2.6rem);
+        padding:2% 10%;
+        color: rgb(59, 52, 52);
         
       }
       .pricing-dollar{
@@ -513,7 +536,7 @@ table{
         padding-bottom: 5%;
       }
        h3{
-        @include font(700, 2.2rem);
+        @include font(900, 2.2rem);
         color: rgb(9, 50, 66);
         @include serif-font();
         padding-bottom: 10%;
@@ -522,6 +545,8 @@ table{
        p{
         @include sansserif-font();
         @include font(900, 2.6rem);
+        padding:2% 10%;
+        color: rgb(59, 52, 52);
       }
       .pricing-dollar{
          color:black;
@@ -535,10 +560,9 @@ table{
   background-color: rgba(26, 72, 110, 0.8);
   border-radius: 23px;
   border:2px solid white;
-  padding: 4% 3%;
+  padding: 3% 3%;
   color:white;
   text-align: center;
-  margin-top: 0%;
  
   
        h2{
@@ -547,15 +571,17 @@ table{
         padding-bottom: 3%;
       }
        h3{
-        @include font(700, 2.2rem);
+        @include font(900, 2.2rem);
         color: rgb(9, 50, 66);
         @include serif-font();
-        padding-bottom: 3%;
+        padding-bottom: 2%;
        
       }
        p{
         @include sansserif-font();
         @include font(900, 2.6rem);
+        padding:2% 4%;
+        color: rgb(59, 52, 52);
       }
       
       .pricing-dollar{
@@ -570,26 +596,28 @@ table{
   background-color: rgba(26, 72, 110, 0.8);
   border-radius: 23px;
   border:2px solid white;
-  padding: 4% 10%;
+  padding: 3% 3%;
   color:white;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 1%;
   
        h2{
         font-family: 'Pacifico', cursive;
         @include font(400, 3.2rem);
-        padding-bottom: 5%;
+        padding-bottom: 3%;
       }
        h3{
-        @include font(700, 2.2rem);
+        @include font(900, 2.2rem);
         color: rgb(9, 50, 66);
         @include serif-font();
-        padding-bottom: 6%;
+        padding-bottom: 4%;
        
       }
        p{
         @include sansserif-font();
         @include font(900, 2.6rem);
+        padding:2% 4%;
+        color: rgb(59, 52, 52);
       }
       .pricing-dollar{
          color:black;
@@ -604,32 +632,27 @@ table{
 
 .shadows{
   display: inline-block;
-  animation: shadow 0.4s linear 3s 1;
   border-radius: 23px;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
-  padding:3% 4%;
- 
-  @keyframes shadow {
-    0%{
-      background-image: linear-gradient(90deg,rgb(253, 205, 83) 30%,transparent);
+  background-image: linear-gradient(90deg,rgb(238, 183, 42),rgb(255, 240, 204),hsl(44, 85%, 66%),rgb(255, 199, 56),whitesmoke,rgb(255, 216, 117));
+  background-position: 0 50%;  
+  background-size: 300% 300%;
+  animation: moveGradient 2s ease-in-out 2.5s infinite;
 
+  @keyframes moveGradient {
+      0%{
+          background-position: 0 50%;  
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100%{
+          background-position: 0% 50%;
+      }
     }
-    25%{
-      background-image: linear-gradient(90deg,transparent 10%,rgb(253, 205, 83) 40%,transparent);
-    }
-    50%{
-      background-image: linear-gradient(90deg,transparent  35%,rgb(253, 205, 83) 68%,transparent);
-      
-    }
-    75%{
-      background-image: linear-gradient(90deg,transparent 45%,rgb(253, 205, 83)74%,transparent);
-     
-    }
-    
-    100%{
-     background: linear-gradient(90deg,transparent 55%,rgb(251, 193, 45) 92%,transparent);
-    }
-  }
+  
+  
+  
   
 }
 
