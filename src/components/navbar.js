@@ -25,8 +25,8 @@ constructor(props){
 
 
        
-handleClick(){
-
+handleClick(e){
+console.log(e.view)
    this.pricing.current.scrollIntoView({
        behaviour:"auto",
        block:"nearest"
@@ -63,7 +63,7 @@ return(
            
         
       
-       <Home/>
+       <Home />
       
        <About />
        <Services/>

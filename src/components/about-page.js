@@ -14,17 +14,6 @@ const About =()=>{
   
 return (
   
-  
-    
-  
-            
-
-
-    
-
-  
-    
-    
     <div className="about-para-wrapper" id="about">
   
           <div  className="about-para" >

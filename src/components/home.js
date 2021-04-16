@@ -1,13 +1,31 @@
 import React from 'react';
-// import Toggle from '../style/togglebtn';
+import Toggle from '../style/togglebtn';
+import Navbar from './navbar';
 
 
-const Home =(props)=>{
+
+
+class Home extends React.Component{
+constructor(props){
+  super(props)
+   this.state={toggle: false}
+  this.handleToggle=this.handleToggle.bind(this);
+}
+
+handleToggle(){
+     this.setState({toggle:true})
+     this.props.backStyle("linear-gradient(darkslategrey,black)")
+   
+}
+  render(){
+    
+
 
     return (
       <div className="home" id="home">
-        <h1>Why effective communication skills training?</h1>
-        <span><button className="toggle">ON</button></span>
+        <Toggle/>
+        <h1 className="home-headline">Why effective communication skills training? <span><button onClick={this.handleToggle} className="toggle">ON</button></span></h1>
+        
         <p className="home-para">
         <br/>
         <br/>
@@ -23,7 +41,7 @@ const Home =(props)=>{
             
 )
 }
-
+}
 
 export default Home;
  
