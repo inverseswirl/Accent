@@ -16,9 +16,9 @@ render(){
     return(
  
       
-      <div  ref={this.props.referenceProp}className="pricing" id="pricing">
+      <div  ref={this.props.referenceProp} className="pricing-wrapper" id="pricing">
       <h1 className="pricing-headline">Plans for You</h1>
-
+        <div className="pricing">
           <PriceCard
           packageName="Prep"
           sessions="4 sessions"
@@ -51,7 +51,7 @@ render(){
        </div>
        
 
-      
+       </div>
 
    
     )

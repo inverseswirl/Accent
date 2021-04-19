@@ -10,6 +10,7 @@ import Home from '../components/home';
 import Services from './service-page';
 import Pricing from './pricing';
 import Testimonials from './testimonials';
+import Prepricing from '../mini-components/pre-pricing';
 
 
 
@@ -67,7 +68,8 @@ return(
       
        <About />
        <Services/>
-       <Pricing referenceProp={this.pricing}/>
+     <Prepricing/>
+       {/* <Pricing referenceProp={this.pricing}/> */}
        <Testimonials/>
        
       
