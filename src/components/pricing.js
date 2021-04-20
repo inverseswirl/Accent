@@ -16,14 +16,14 @@ render(){
     return(
  
       
-      <div  ref={this.props.referenceProp} className="pricing-wrapper" id="pricing">
+      <div className="pricing-wrapper" id="pricing">
       <h1 className="pricing-headline">Plans for You</h1>
         <div className="pricing">
           <PriceCard
           packageName="Prep"
           sessions="4 sessions"
           price="380">
-            <GiFlowerPot size={50}/>
+            <GiFlowerPot size={53}/>
           </PriceCard>
          
 

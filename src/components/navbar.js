@@ -27,10 +27,10 @@ constructor(props){
 
        
 handleClick(e){
-console.log(e.view)
+
    this.pricing.current.scrollIntoView({
-       behaviour:"auto",
-       block:"nearest"
+       behaviour:"smooth",
+       block:"start"
     });
 }
 
@@ -68,8 +68,8 @@ return(
       
        <About />
        <Services/>
-     <Prepricing/>
-       {/* <Pricing referenceProp={this.pricing}/> */}
+     <Prepricing reference={this.pricing}/>
+      
        <Testimonials/>
        
       

@@ -615,14 +615,15 @@ table{
     @include font(500, 3rem);
     font-family: 'Pacifico', cursive;
     color: $color;
-    margin-left: 27%;
+    margin:10% 0% 0% 27%;
+   
   }
   &-para{
     @include sansserif-font();
     @include font(500, 1.1rem);
     padding:1% 2%;
     color: $color;
-
+    padding:10% 2% 4% 2%;
   }
   &-button{
     border-radius: 12px;
@@ -635,7 +636,7 @@ table{
     cursor: pointer;
     color: orangered;
     box-shadow: 1px 2px 5px 2px rgb(100, 100, 100);
-    
+    margin-bottom: 10%;
   }
    
   &-button:active, &-button:focus{
@@ -652,8 +653,8 @@ table{
 
 /////pricing section............
 .pricing-wrapper{
-  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),
-  linear-gradient(grey,#0276FD);
+  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
+ 
 
 }
 
@@ -662,6 +663,9 @@ table{
   @include font(500, 3rem);
   font-family: 'Pacifico', cursive;
   color: $color;
+  @include center();
+  display: flex;
+  justify-content: space-evenly;
 
 }
 .pricing{
@@ -672,7 +676,7 @@ table{
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2% 2% 4% 25%;
+  padding: 4% 2% 4% 25%;
   overflow-y:scroll;
   
   
@@ -680,42 +684,51 @@ table{
   &-card{
   
 
-  border-radius: 12px;
-  border:2px solid white;
-  padding: 4% 3%;
+  border-radius: 23px;
+  box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.5);
+  margin:3% 1% 1% 1%;
+  padding: 3% 5%;
   color:white;
   text-align: center;
+  
+  
 
   
 
   h2{
     @include sansserif-font();
-    @include font(400, 3.2rem);
+    @include font(400, 1.8rem);
     padding-bottom: 2%;
   }
 
   h3{
-    @include font(700, 2.2rem);
-    color: rgb(9, 50, 66);
+    @include font(700, 1.4rem);
+    color: rgba(18,18,18,1);
     @include sansserif-font();
-    padding-bottom: 2%;
+    padding-bottom: 5%;
     
   }
 
   p {
     @include sansserif-font();
-    @include font(900, 2.6rem);
-    padding:2% 2%;
-    color: rgb(59, 52, 52);
+    @include font(900, 2rem);
+    padding:1% 2%;
+    color: rgba(18,18,18,1);
     
   }
   &-dollar{
       color:black;
-      @include font(200, 1.8rem);
+      @include font(200, 1.5rem);
     }
   }
       
 }
+
+
+
+
+
+
  
   
   
