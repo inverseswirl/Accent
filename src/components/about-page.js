@@ -1,11 +1,5 @@
 import React from 'react';
 
-import {BiComment} from 'react-icons/bi';
-import {RiHome2Line} from 'react-icons/ri';
-import { CgList} from 'react-icons/cg';
-import {HiOutlineUsers} from 'react-icons/hi';
-import {IoCallOutline} from 'react-icons/io5';
-import {BsQuestionSquare} from 'react-icons/bs';
 import {FcBusinessman,FcBusinesswoman} from 'react-icons/fc';
 
 

@@ -1,7 +1,4 @@
 import React from 'react';
-import About from '../components/about-page';
-import Services from '../components/service-page';
-// import Title from '../components/title';
 import Tagline from '../components/tagline';
 import Title from '../components/title';
 

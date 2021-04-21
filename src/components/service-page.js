@@ -1,5 +1,4 @@
 import React from 'react';
-import {IoChatbubblesOutline} from 'react-icons/io'
 import {RiWechatLine } from 'react-icons/ri';
 
 

@@ -8,7 +8,6 @@ import {BsQuestionSquare} from 'react-icons/bs';
 import About from '../components/about-page';
 import Home from '../components/home';
 import Services from './service-page';
-import Pricing from './pricing';
 import Testimonials from './testimonials';
 import Prepricing from '../mini-components/pre-pricing';
 
@@ -96,7 +95,3 @@ return(
 
 export default Navbar;
 
-{/* { aboutClick ? <button type="button"  style={{display: display}}className="button nav-bg ">Services</button>: null}
-              { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">Testimonials</button>}
-               { aboutClick ? null:<button type="button" style={{display: display}} className="button nav-bg ">Contact us</button>}
-               { aboutClick ? null: <button type="button" style={{display: display}}className="button nav-bg ">FAQs</button>} */}

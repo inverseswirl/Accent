@@ -1,8 +1,5 @@
 import React from 'react';
 
-import {GoComment} from 'react-icons/go';
-import { BsCardList} from 'react-icons/bs';
-// import Services from '../components/service-page';
 import Navbar from './navbar';
 // import Background from '../style/background';
 // import Home from '../components/home';

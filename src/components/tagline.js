@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './navbar';
-import Title from '../components/title';
+import Footer from './footer';
 
 
 class Tagline extends React.Component{
@@ -23,10 +23,11 @@ class Tagline extends React.Component{
     if(button){
        return (
       
-           
+           <div>
             <Navbar styleNav={{position: 'fixed',top:'15%',left:'1%'}}
                 /> 
-        
+            <Footer/>
+          </div>
        
        ) 
      }

@@ -77,15 +77,12 @@ overflow-y: scroll;
   
   .title{
    
-    color:transparent;
-    background:url('../img/pexels-ricardo-esquivel-1802268.jpg');
-    background-clip: text;
-    background-position: 50% 100%;
+    color: rgba(18,18,18,0.9);
+    background:transparent;
     @include font(600, 3.2rem);
     font-family: 'Pacifico', cursive;
     outline: none;
     border:none;
-    background-attachment: fixed;
     position: fixed;
     top:1%;
     left:1%;
@@ -692,6 +689,7 @@ table{
   text-align: center;
   
   
+  
 
   
 
@@ -766,16 +764,23 @@ table{
 
 
 .testimonials-bg{
-  background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),
-  linear-gradient(grey,#0276FD);
+  background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
 }
 
-
+.testimonials-headline{
+  @include font(500, 3rem);
+  font-family: 'Pacifico', cursive;
+  color: $color;
+  // @include center();
+  display: flex;
+  justify-content: space-evenly;
+}
 .scroll-buttons{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   width:60%;
+  margin-bottom: -1%;
 }
 
  
@@ -791,6 +796,7 @@ table{
   box-shadow: 1px 2px 5px 2px rgb(100, 100, 100);
   margin-right: 5px;
   margin-top: 10px;
+  margin-bottom: 5%;
 
   &:active, &:focus{
   border:none;
@@ -818,7 +824,7 @@ table{
   outline: none;
   color: orangered;
   margin-top: 10px;
-  
+  margin-bottom: 5%;
 
   &:active, &:focus{
     border:none;
@@ -850,12 +856,25 @@ table{
     width:50%;
     border: 2px solid $color;
     border-radius: 12px;
-   
+    // animation: ghost 1s linear 1;
+    @keyframes ghost {
+       0%{
+         opacity:0;
+       }
+       50%{
+        opacity:0;
+        transform: translate(70%);
+       }
+       100%{
+        opacity:1;
+       }
+      
+    }
   
     &-pic{
       border-radius: 50%;
       margin: 2% 0%;
-      border: 1px solid $color;
+      border: 2px solid $color;
       
     }
     &-comment{
@@ -880,16 +899,21 @@ table{
       color: $color;
      
      
-    }
+  }
      
      
+}
+
+
        
        
       
       
 
      
-  }
+
+
+
 
 
 
@@ -971,70 +995,61 @@ table{
 
 
 
-.bg-footer{
-//  background-image: radial-gradient( ellipse at 70% 13%,  transparent 25%,transparent 25%);
-  height: 17vh;
-  width: 100%;
-  bottom: 0%;
-  position: absolute;
-}
-
 .footer{
-  margin:0 auto;
-  position:absolute;
-  bottom: 0%;
-  left: -4%;
-  // background-color: yellow;
-  width:67%;
-  height:10%;
-  border-top:5px solid yellow;
-  border-left:5px solid transparent;
-  border-right:5px dotted transparent;
-  border-right:none;
-  border-top-left-radius:100%;
-  border-top-right-radius:23px;
-  border-bottom-right-radius:60%;
-  float:left;
-  height: 10vh;
-  background-color: yellow;
-}
+  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20vh;
+  background: black;
+  color: $color;
+  @include font(400, 18px);
+ 
+  &1{
 
-
-.bgg{
-  position: absolute;
-  bottom: 70%;
-  left: 60%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    margin: 1% 0% 0% 5%;
+    border-right: 1px solid $color;
   
-  // background-image: radial-gradient( circle at 1% 50%, white 6%,yellowgreen 6%)  ;
-  // border-top-right-radius: -20px;
+    &-headline{
+      @include font(400, 18px);
+    }
+  
+  }
 
-      width: 200px;
-      height: 150px;
-      // margin: 20px 0;
-      background: red;
-      border-radius: 50% / 20%;
-      color: white;
-      text-align: center;
-      text-indent: .1em;
+  
+  &2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $color;
+  }
+  
+  
+  &3{
+    display:flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 5%;
+ 
+ 
+  }
+
+
 }
-// .footer1{
-//   position: relative;
-//   top: -14%; 
-//   left: 59%;
-//   width:45%;
-//   height:10%;
-//   border-bottom:4px solid yellow;
-//   border-right:5px solid transparent;
-//   border-left: none;
-//   border-bottom-right-radius:100%;
-//   border-bottom-left-radius:0%;
-//   height: 10vh;
-//   display: inline-block;
-//   transform: rotate(20px,0px);
-//   // background-color: yellow;
-// }
 
-  //////Tooglebtn......
+  
+
+
+
+
+
+
+//////Tooglebtn......
  
     
 
