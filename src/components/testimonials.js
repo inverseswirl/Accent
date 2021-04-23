@@ -15,13 +15,13 @@ class Testimonials extends React.Component{
   this.handleDecrement=this.handleDecrement.bind(this);
    }
 
-    handleIncrement(){
+handleIncrement(){
     this.setState({increment: this.state.increment + 1 })
 
 }
     
-    handleDecrement(){
-    this.setState({increment: this.state.increment -1 })
+handleDecrement(){
+  this.setState({increment: this.state.increment -1 })
 
 }
     
@@ -30,6 +30,7 @@ class Testimonials extends React.Component{
 
   render(){ 
       const{increment}=this.state;
+      console.log(this.state.increment);
  
   
       
@@ -37,7 +38,6 @@ class Testimonials extends React.Component{
   
    
   
-    console.log(this.state.increment);
     return(
 
         <div className="testimonials-bg" id="testimonials">
@@ -49,7 +49,8 @@ class Testimonials extends React.Component{
       (()=> {
         switch (increment) {
           
-          case 1: return <TestimonialCard
+          case 1: 
+          return <TestimonialCard
 
           src="https://images.pexels.com/photos/712521/pexels-photo-712521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           name="Ms.Rose"
@@ -91,6 +92,7 @@ class Testimonials extends React.Component{
         }
       })()
     }
+    
     
       
      

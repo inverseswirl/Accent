@@ -28,6 +28,7 @@ const{btn}=this.state
             <h1 className="pre-pricing-headline"> Discover the plans</h1>
             <p className="pre-pricing-para">We have created the best packages that will suit the needs of individuals as well as corporate group classes.</p>
            <button onClick={this.handleChange} className="pre-pricing-button"> Check our plans here</button>
+           <hr color="orangered"/>   
         </div>
     )
 }

@@ -19,7 +19,9 @@ constructor(props){
     super(props)
    
     this.pricing = React.createRef();
+    this.about = React.createRef();
     this.handleClick=this.handleClick.bind(this)
+    this.handleAbout=this.handleAbout.bind(this)
 
 }
 
@@ -32,6 +34,15 @@ handleClick(e){
        block:"start"
     });
 }
+
+handleAbout(e){
+  
+this.about.current.scrollIntoView({
+  behaviour:"smooth",
+  block:"start"
+  });
+}
+ 
 
 render(){
 //   const{aboutClick,serviceClick}=this.state;
@@ -46,7 +57,7 @@ return(
               <button type="button" className="button nav-bg ">
                 <a href="#home"> <RiHome2Line className="bg-transparent" color='rgba(26, 72, 110, 0.8)' size={29} /> |Home </a> </button>
               
-              <button  onClick={this.handleClick} type="button" className="button nav-bg ">
+              <button  onClick={this.handleAbout} type="button" className="button nav-bg ">
                <BiComment className="bg-transparent"color='rgba(26, 72, 110, 0.8)' size={29}/> |About us
                </button>
              
@@ -65,7 +76,7 @@ return(
       
        <Home />
       
-       <About />
+       <About reference={this.about}/>
        <Services/>
      <Prepricing reference={this.pricing}/>
       

@@ -28,9 +28,9 @@ constructor(props){
         <br/>
         At Accent we help our clients build techniques and confidence for handling a range of communication styles, people and situations.</p>
      
-
+        <hr color="orangered"/>   
     </div>
-           
+        
            
             
 )
