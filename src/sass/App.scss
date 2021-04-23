@@ -92,14 +92,7 @@ html,body{
 
  
  
-//Menu btn.....
 
-.menu-btn{
-  width: 32px;
-  height: 5px;
-  background-color: black;
-  margin: 6px 2px;
-}
 
 //background components...................
 
@@ -133,26 +126,21 @@ overflow-y: scroll;
     outline: none;
     border:none;
     position: fixed;
-    top:1%;
-    left:1%;
+    padding: 1.5% 0% 0% 2%;
     
-    
+    @include media($background-change-size){
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+    }
+
     @include laptopLarge(){
-      @include font(700, 3rem);
+      @include font(600, 3rem);
     };
 
-    @include laptop() {
-      @include font(600, 3rem);
-    }
-    @include tablet() {
-      @include font(600, 2.5rem);
-    }
-    @include mobileLarge() {
-      @include font(600, 2.3rem);
-    }
      
     @include mobileSmall() {
-      @include font(600, 2.1rem);
+      @include font(600, 2.5rem);
     }
    
    
@@ -386,28 +374,28 @@ overflow-y: scroll;
   flex-direction: column;
   justify-content:flex-start;
   align-items:flex-start;
-  padding: 0.6% 0 1% 1%;
+  padding: 1%;
   width: 100%;
+  top:15%;
   @include media($background-change-size){
     flex-direction: row;
     justify-content: space-evenly;
+    background:linear-gradient(120deg,grey,$bg-color);
+    top: 9%;
+    margin:0%;
+
   }
   
   
    
   
   
-  .nav-bg{
-      background-color: transparent;
-      &:hover{
-        opacity: 0.6;
-       
-      }
-    }
+ 
   
     .button{
       outline: none;
       border: none;
+      background-color: transparent;
       @include font(400, 1.5rem);
       text-transform:uppercase;
       color: white;
@@ -424,14 +412,17 @@ overflow-y: scroll;
 
       }
     }
-
-       
+    
     @include laptopLarge(){
       @include font(400, 1rem);
      }
-     
-     
     }
+
+   
+     
+     
+
+       
     .button a{
       color: inherit;
     }
@@ -446,6 +437,7 @@ overflow-y: scroll;
       border:none;
       text-decoration: none;
       color:inherit;
+    
   }
 
   .button a:focus{
@@ -455,11 +447,11 @@ overflow-y: scroll;
   }
   
 
-  
+   
   
      
- .bg::before{
-   background:linear-gradient(120deg, whitesmoke,$bg-color);
+  .navbar::before{
+   background:white;
    background-size: 100% 100%;
    position:absolute;
    content:'';
@@ -469,29 +461,32 @@ overflow-y: scroll;
    border-radius: 12px;
    animation: wide 0.7s linear;
    @keyframes wide {
-     0%{
-      width: 0%;
-     }
-     100%{
-      width: 20%;
-     }
-   }
-   @include laptopLarge(){
-    width: 21%;
-   }
-   @include media($background-change-size){
-    width: 85%;
-    @keyframes wide {
       0%{
-       width: 0%;
+        width: 0%;
       }
       100%{
-       width: 94%;
+        width: 20%;
       }
     }
-  }
+    @include laptopLarge(){
+      width: 21%;
+    }
+    @include media($background-change-size){
+      display:none;
+    }
+    
+    
   
+
+
+  
+
+
+
+
+
  }
+
 
 
 
@@ -593,7 +588,7 @@ overflow-y: scroll;
         @include media($background-change-size){
           background: none;
           padding: 20% 7% 6% 7%;
-          // overflow-y: hiiden;
+         
          
         }
        

@@ -47,8 +47,8 @@ return(
  <div className=""> 
     
 
-        
-        <nav className="navbar bg" style={window.innerWidth<815? {position: 'sticky',top: '80px'} : this.props.fixedPosition}>
+
+        <nav className="navbar" style={{position: this.props.fixedPosition}}>
               <button type="button" className="button nav-bg ">
                 <a href="#home"> |Home </a> </button>
               

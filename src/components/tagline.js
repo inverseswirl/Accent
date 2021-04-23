@@ -18,14 +18,13 @@ class Tagline extends React.Component{
  }
   
  render(){
-    const{button}=this.state
-     
+    const{button,position}=this.state
+     console.log(button)
     if(button){
        return (
       
            <div>
-            <Navbar fixedPosition={{position: 'fixed',top:'15%',left:'1%'}}
-                /> 
+            <Navbar fixedPosition={position} /> 
             <Footer/>
           </div>
        
@@ -39,7 +38,11 @@ class Tagline extends React.Component{
        
          <h2  className="tagline" style={{display: this.props.dis}}>" We help you communicate better "</h2> 
         
-         <button className="tagline-btn" style={{display: this.props.dis}} onClick={this.handleBtn}>Menu</button>
+         <button 
+         
+         className="tagline-btn" 
+         style={{display: this.props.dis}} 
+         onClick={this.handleBtn}>Menu</button>
          
       </div>
    

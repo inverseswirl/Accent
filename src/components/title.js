@@ -1,4 +1,5 @@
 import React from 'react';
+import Background from '../style/background';
 
 import Navbar from './navbar';
 // import Background from '../style/background';
@@ -17,7 +18,6 @@ class Title extends React.Component{
      
 handletitleBtn(){
   this.setState({titleBtn: true})
-  this.props.backStyle("linear-gradient(90deg, rgba(18,18,18,0.1) 25%,transparent 25%),url('../img/pexels-engin-akyurt-2952871.jpg')")
    
  
 }
@@ -30,7 +30,11 @@ render(){
     return(
 
    <div className="main" >
-     <button style={this.props.styleTitle} onClick={this.handletitleBtn} className="title">A<span className="letter">c</span><span className="letter">c</span>ent  </button>
+     <button  
+     style={this.props.bg && window.innerWidth<815?{backgroundImage:'linear-gradient(180deg,rgb(202, 202, 202) 50%, grey 99%)'}:null}
+     onClick={this.handletitleBtn} 
+     className="title">A<span className="letter">c</span><span className="letter">c</span>ent  
+     </button>
     
     {titleBtn?<Navbar/>:null}
       
