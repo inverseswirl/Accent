@@ -24,7 +24,7 @@ class Tagline extends React.Component{
        return (
       
            <div>
-            <Navbar styleNav={{position: 'fixed',top:'15%',left:'1%'}}
+            <Navbar fixedPosition={{position: 'fixed',top:'15%',left:'1%'}}
                 /> 
             <Footer/>
           </div>

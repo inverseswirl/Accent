@@ -1,5 +1,4 @@
 import React from 'react';
-// import Centreleft from './components/centre-fold';
 import './sass/App.scss';
 
 

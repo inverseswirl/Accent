@@ -92,7 +92,14 @@ html,body{
 
  
  
+//Menu btn.....
 
+.menu-btn{
+  width: 32px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 2px;
+}
 
 //background components...................
 
@@ -381,7 +388,10 @@ overflow-y: scroll;
   align-items:flex-start;
   padding: 0.6% 0 1% 1%;
   width: 100%;
- 
+  @include media($background-change-size){
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
   
   
    
@@ -405,10 +415,13 @@ overflow-y: scroll;
       animation: fadeout 0.7s forwards 1;
       @keyframes fadeout{
         0%{
-          transform: translate(-3rem,0px)
+          transform: translate(-3rem,0px);
+          opacity:0;
         }
        100%{
-        transform: translate(0px,0px)
+        transform: translate(0px,0px);
+        opacity:1;
+
       }
     }
 
@@ -439,21 +452,21 @@ overflow-y: scroll;
     color: inherit;
   }
   
-   }
+  }
   
 
   
   
      
  .bg::before{
-   background-color: white;
+   background:linear-gradient(120deg, whitesmoke,$bg-color);
    background-size: 100% 100%;
    position:absolute;
    content:'';
    bottom:0%;
    width: 20%;
    height:2px;
-   border-radius: 23px;
+   border-radius: 12px;
    animation: wide 0.7s linear;
    @keyframes wide {
      0%{
@@ -464,8 +477,20 @@ overflow-y: scroll;
      }
    }
    @include laptopLarge(){
-    width: 22%;
+    width: 21%;
    }
+   @include media($background-change-size){
+    width: 85%;
+    @keyframes wide {
+      0%{
+       width: 0%;
+      }
+      100%{
+       width: 94%;
+      }
+    }
+  }
+  
  }
 
 
@@ -562,17 +587,34 @@ overflow-y: scroll;
         background-attachment: fixed;
         padding: 5% 6% 7% 30%;
         margin: 0%;
+        opacity:1;
         overflow-y:scroll;
-        text-align: justify;
-        
-
+        // text-align: justify;
+        @include media($background-change-size){
+          background: none;
+          padding: 20% 7% 6% 7%;
+          // overflow-y: hiiden;
+         
+        }
+       
        &-headline{
         font-family: 'Pacifico', cursive;
         @include font(500, 3rem);
+        @include media($background-change-size){
+          @include font(500, 2rem);
+        }
+        @include laptopLarge(){
+          @include font(500, 2.2rem);
+        }
         
-       } 
+       }
+       
+       &-img{
+         border-radius: 12px;
+       }
       &-para{
         color:$color;
+        text-align: justify;
           @include font(500, 1rem);
           @include sansserif-font();
         }
@@ -581,9 +623,8 @@ overflow-y: scroll;
 }
 
   
-     
-    
-   
+
+ 
     
 
 
@@ -600,15 +641,23 @@ overflow-y: scroll;
   background-attachment: fixed;
   margin-top:0;
   overflow-y:scroll;
+  @include media($background-change-size){
+    background: none;
+    padding: 15% 7% 6% 7%;
+
+  }
  
 
   .about-para{
-    @include font(500, 18px);
+    @include font(500, 1rem);
     line-height: 24px !important;
     text-align: justify;
     color:$color;
     @include sansserif-font();
     animation: moveSide 1s linear 1s;
+    @include media($background-change-size){
+      
+    }
     @keyframes moveSide {
       0%{
         transform: translateX(50px);

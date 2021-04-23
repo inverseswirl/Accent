@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {FcBusinessman,FcBusinesswoman} from 'react-icons/fc';
 
 
 
@@ -25,11 +24,11 @@ return (
                  <h3>Meet our Coaches</h3>
                  
                  <div className="about-coaches">
-                   <img className="about-img" src="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={250} height={220}/>
+                   <img alt="person"className="about-img" src="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={250} height={220}/>
                    
-                   <img className="about-img" src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={250} height={220}/>
+                   <img alt="person"className="about-img" src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={250} height={220}/>
                    <br/>
-                   <img className="about-img" src="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={250} height={220}/>
+                   <img alt="person" className="about-img" src="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={250} height={220}/>
 
                 
                  
