@@ -61,13 +61,14 @@ $mobileSmall-screen: 475px;
   font-size: $font-size;
 } 
 
-//other mixins
-@mixin color(){
-  color: rgb(179, 112, 179);
-  
-}
-  
-  
+//miscellaneous mixins
+
+  @mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+  }
 
 
 @mixin center(){
@@ -679,7 +680,8 @@ overflow-y: scroll;
 
   .about-coaches{
     display: flex;
-    width: 100%;
+    justify-content: flex-start;
+    // width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
   
@@ -689,9 +691,9 @@ overflow-y: scroll;
 
     .about-img{
        border-radius: 50%;
-       margin: 0% 5% 1% 0%;
-  
+       margin: 1% 5% 1% 0%;
        border: 1px solid $color;
+  
        
       &:after{
         content:'Mr Jeff';
@@ -769,7 +771,6 @@ overflow-y: scroll;
 .pricing-wrapper{
   background-attachment: fixed;
   background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
-  // padding: 0% 2% 4% 25%;
   padding: 5% 6% 7% 30%;
   @include media($background-change-size){
     background: none;
@@ -916,7 +917,7 @@ overflow-y: scroll;
 
 .testimonials-headline{
   @include font(500, 2.5rem);
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   font-family: 'Pacifico', cursive;
   color: $color;
   @include center();
@@ -994,20 +995,15 @@ overflow-y: scroll;
 
 
 
+.testimonial-container{
+  @include flex(row);
+  
 
 
-
-
-  .card{
+  
+  .tcard{
     
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    width:50%;
-    padding-top: 3%;
-    outline:none;
+    @include flex(column);
     // box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.5);
     border-radius: 12px;
     // animation: ghost 1s linear 1;
@@ -1025,41 +1021,55 @@ overflow-y: scroll;
       
     }
   
-    &-pic{
-      border-radius: 50%;
-      margin: 2% 0%;
-      border: 2px solid $color;
+  
+     
+      &-pic{
+        border-radius:50%;
+        border: 1px solid $color;
+        width: 200px;
+        height:200px;
+       
+      
+      &-pic img{
+        object-fit: cover;
+        
+     
+     }
       
     }
+  
     &-comment{
-      
-      @include font(500, 1.3rem);
+      @include flex(row);
+      @include font(500, 1rem);
+      line-height: 24px !important;
       @include sansserif-font();
       padding:2% 10%;
       color: $color;
+      
+    
     }
     &-name{
-      
-      @include font(700, 1.2rem);
+      padding-top: 9px;
+      @include font(400, 1.4rem);
       @include sansserif-font();
       color: $color ;
       margin:2px;
     }
     &-quote{
       
-      @include font(400, 2.8rem);
+      @include font(500, 2.8rem);
       @include sansserif-font();
       padding:1% 0%;
       color: $color;
+    }
      
      
-  }
      
      
 }
 
 
-       
+}     
        
       
       
