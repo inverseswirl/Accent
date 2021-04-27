@@ -26,7 +26,7 @@ handleClick(e){
 
    this.pricing.current.scrollIntoView({
        behaviour:"smooth",
-       block:"start"
+       block:"center"
     });
 
 }
@@ -67,9 +67,8 @@ return(
            
   
       <Home />
-       {<About reference={this.about}
+       <About reference={this.about}/>
      
-       />}
        <Services/>
      <Prepricing reference={this.pricing}/>
       

@@ -1,27 +1,17 @@
 import React from 'react';
-// import Toggle from '../style/togglebtn';
+import homeImg from '../img/homeImg.jpeg'
 
 
 
-
-class Home extends React.Component{
-constructor(props){
-  super(props)
-   
-}
+const Home =()=>{
 
 
-  render(){
-    
-
-
-
-    return (
+  return (
       <div className="home" id="home">
        
         <h1 className="home-headline">Why effective communication skills training? </h1>
         <br/>
-        <img className="home-img" style={{width: '100%',height: 'auto', objectFit: 'cover'}} src="https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
+        <img className="home-img" alt="homeimg" style={{width: '100%',height: '440px'}} src={homeImg}/>
         
         <p className="home-para">
         <br/>
@@ -39,7 +29,7 @@ constructor(props){
             
 )
 }
-}
+
 
 export default Home;
  

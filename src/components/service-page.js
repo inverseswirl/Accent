@@ -25,8 +25,8 @@ const Services=()=>{
          
 
           
-   
-          
+         <br/>
+          <hr color='white'/>
              </div>
     </div>
     )

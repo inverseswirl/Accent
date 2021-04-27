@@ -5,15 +5,10 @@ import {HiAcademicCap} from 'react-icons/hi';
 import {MdGrade} from 'react-icons/md';
 
 
-class  Pricing  extends React.Component{
-constructor(props){
-  super(props)
-}
+const Pricing =()=>{
 
-render(){
-  
-  
-    return(
+
+  return(
  
       
       <div className="pricing-wrapper" id="pricing">
@@ -56,5 +51,5 @@ render(){
    
     )
 }
-}
+
 export default Pricing;

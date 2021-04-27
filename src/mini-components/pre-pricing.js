@@ -25,8 +25,10 @@ const{btn}=this.state
 
         <div ref={this.props.reference} className="pre-pricing">
             <h1 className="pre-pricing-headline"> Discover the plans</h1>
-            <p className="pre-pricing-para">We have created the best packages that will suit the needs of individuals as well as corporate group classes.</p>
+            <p className="pre-pricing-para">We have created the best packages that will suit the needs of individuals as well as corporate group classes. Our service coordinator will help you find the right plan tailored as per the individual requirements.</p>
            <button onClick={this.handleChange} className="pre-pricing-button"> Check plans</button>
+          <br/>
+          <br/>
            <hr color="white"/>   
         </div>
     )

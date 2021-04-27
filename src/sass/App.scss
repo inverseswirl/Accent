@@ -506,7 +506,7 @@ overflow-y: scroll;
 .service-page{
   background:linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%) ,linear-gradient(grey,#0276FD);
   background-attachment: fixed;
-  padding: 5% 6% 7% 30%;
+  padding:120px 6% 7% 30%;
   color: $color;
 
   @include media($background-change-size){
@@ -613,6 +613,9 @@ overflow-y: scroll;
        &-img{
          border-radius: 12px;
          border:2px solid $color;
+         &-img img{
+           object-fit: cover;
+         }
        }
       &-para{
         @include font(500, 1rem);
@@ -639,7 +642,7 @@ overflow-y: scroll;
 .about-para-wrapper{
   
   background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%),linear-gradient(grey,#0276FD);
-  padding: 5% 6% 7% 30%;
+  padding: 40px 6% 7% 30%;
   text-align: justify;
   color: $color;
   background-attachment: fixed;
@@ -715,17 +718,17 @@ overflow-y: scroll;
 /////prepircing section.........
 .pre-pricing{
   background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
-  padding:  5% 6% 7% 30%;
+  padding:  150px 6% 270px 30%;
   color: $color;
   @include media($background-change-size){
     background: none;
-    padding: 50px 7% 6% 7%;
+    padding:100px 7% 6% 7%;
 
   }
   &-headline{
     @include font(500, 2.5rem);
     font-family: 'Pacifico', cursive;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
     text-align: center;
     @include media($background-change-size){
       @include font(500, 2rem);
@@ -735,7 +738,7 @@ overflow-y: scroll;
   &-para{
     @include sansserif-font();
     @include font(500, 1rem);
- 
+    padding-bottom: 35px;
   
   }
   &-button{
@@ -1018,7 +1021,7 @@ overflow-y: scroll;
   
     &-comment{
       @include flex(row);
-      @include font(500, 1rem);
+      @include font(500, 1.1rem);
       line-height: 24px !important;
       @include sansserif-font();
       padding:2% 10%;
@@ -1026,8 +1029,8 @@ overflow-y: scroll;
       text-align: justify;
       background-image: url('../img/quote.svg') ;
       background-repeat: no-repeat;
-      background-size: 18%;
-      background-position: 32% 50%;
+      background-size: 85px;
+      background-position: 27% 40%;
     
     }
      
