@@ -814,7 +814,7 @@ overflow-y: scroll;
   
 
   border-radius: 23px;
-  box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.5);
+  box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.3);
   margin:4% 1% 1% 1%;
   padding: 3% 5%;
   color:white;
@@ -928,11 +928,8 @@ overflow-y: scroll;
  
 }
 .scroll-buttons{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width:60%;
-  margin-bottom: -1%;
+  @include flex(row);
+  margin-top: 10px;
 }
 
  
@@ -995,39 +992,20 @@ overflow-y: scroll;
 
 
 
-.testimonial-container{
+.testimonials{
   @include flex(row);
-  
-
-
-  
+ 
   .tcard{
     
     @include flex(column);
-    // box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.5);
-    border-radius: 12px;
-    // animation: ghost 1s linear 1;
-    @keyframes ghost {
-       0%{
-         opacity:0;
-       }
-       50%{
-        opacity:0;
-        transform: translate(70%);
-       }
-       100%{
-        opacity:1;
-       }
-      
-    }
-  
-  
-     
-      &-pic{
+    
+    
+    &-pic{
         border-radius:50%;
         border: 1px solid $color;
         width: 200px;
         height:200px;
+        margin-top: 8px;
        
       
       &-pic img{
@@ -1045,15 +1023,46 @@ overflow-y: scroll;
       @include sansserif-font();
       padding:2% 10%;
       color: $color;
-      
+      text-align: justify;
+      background-image: url('../img/quote.svg') ;
+      background-repeat: no-repeat;
+      background-size: 18%;
+      background-position: 32% 50%;
     
     }
+     
+      
+    
     &-name{
       padding-top: 9px;
       @include font(400, 1.4rem);
       @include sansserif-font();
       color: $color ;
       margin:2px;
+      animation: ghost 0.5s ease-in-out 1;
+      @keyframes ghost {
+       0%{
+         opacity:0;
+ 
+       }
+       25%{
+         opacity:0; 
+         transform: scale(0.8,0.8);
+ 
+       }
+       50%{
+        opacity:1;
+        
+        
+       }
+       75%{
+         opacity:1; 
+       }
+       100%{
+        opacity:1;
+       }
+      
+    }
     }
     &-quote{
       
