@@ -30,7 +30,7 @@ handleDecrement(){
 
   render(){ 
       const{increment}=this.state;
-      console.log(this.state.increment);
+
  
   
       

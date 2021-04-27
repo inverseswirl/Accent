@@ -16,9 +16,9 @@ class Title extends React.Component{
     this.handletitleBtn=this.handletitleBtn.bind(this);
 }
      
-handletitleBtn(){
+handletitleBtn(e){
   this.setState({titleBtn: true})
-   
+  
  
 }
  
@@ -31,7 +31,7 @@ render(){
 
    <div className="main" >
      <button  
-     style={this.props.bg && window.innerWidth<815?{backgroundImage:'linear-gradient(180deg,rgb(202, 202, 202) 50%, grey 99%)'}:null}
+     style={ window.innerWidth<815 && this.props.bg ?{backgroundImage:'linear-gradient(150deg, grey ,#0276FD)'}:null}
      onClick={this.handletitleBtn} 
      className="title">A<span className="letter">c</span><span className="letter">c</span>ent  
      </button>

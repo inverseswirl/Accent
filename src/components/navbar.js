@@ -11,7 +11,7 @@ import Prepricing from '../mini-components/pre-pricing';
 class Navbar extends React.Component{
 constructor(props){
     super(props)
-   
+  
     this.pricing = React.createRef();
     this.about = React.createRef();
   
@@ -21,17 +21,17 @@ constructor(props){
 }
 
 
-       
+
 handleClick(e){
 
    this.pricing.current.scrollIntoView({
        behaviour:"smooth",
        block:"start"
     });
+
 }
 
 handleAbout(e){
-  
 this.about.current.scrollIntoView({
   behaviour:"smooth",
   block:"start"
@@ -40,11 +40,11 @@ this.about.current.scrollIntoView({
  
 
 render(){
-//   const{aboutClick,serviceClick}=this.state;
+  // const{offset}=this.state;
 
 
 return(
- <div className=""> 
+ <div  className=""> 
     
 
 
@@ -58,8 +58,6 @@ return(
              
               <button type="button"  className="button nav-bg ">
                   <a href="#services"> |Services</a></button>
-              <button type="button" className="button nav-bg ">
-     |Contact us</button>
               <button onClick={this.handleClick} type="button" className="button nav-bg ">
                   |Pricing</button>
               <button type="button"  className="button nav-bg ">
@@ -69,7 +67,9 @@ return(
            
   
       <Home />
-       <About reference={this.about}/>
+       {<About reference={this.about}
+     
+       />}
        <Services/>
      <Prepricing reference={this.pricing}/>
       

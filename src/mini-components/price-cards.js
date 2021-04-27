@@ -8,9 +8,12 @@ const PriceCard=({packageName,sessions,price,children})=>{
             {children}
             <h2>{packageName} </h2>
             <h3>{sessions}</h3>
-            <div>
-              <p className="shadows">{price}<sup className="pricing-dollar">$</sup></p> 
-              </div>
+            <p className="price shadows">
+                {price}
+            <span className="price-dollar">$</span>
+            </p> 
+
+           
           </div>
     )
 }

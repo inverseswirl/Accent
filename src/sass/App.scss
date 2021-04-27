@@ -173,7 +173,7 @@ overflow-y: scroll;
      
    
     
-  ////tagline.......
+  ////tagline...................
 
 
   .tagline{
@@ -364,7 +364,7 @@ overflow-y: scroll;
 
   
 
-///navbar section..................
+///NAVBAR section..................
   
   
   
@@ -374,14 +374,13 @@ overflow-y: scroll;
   flex-direction: column;
   justify-content:flex-start;
   align-items:flex-start;
-  padding: 1%;
   width: 100%;
   top:15%;
   @include media($background-change-size){
     flex-direction: row;
     justify-content: space-evenly;
     background:linear-gradient(120deg,grey,$bg-color);
-    top: 9%;
+    top: 70px;
     margin:0%;
 
   }
@@ -504,20 +503,35 @@ overflow-y: scroll;
 ////service-page.................
 
 .service-page{
-  background:linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%) ,linear-gradient(grey,#0276FD);
+  background:linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%) ,linear-gradient(grey,#0276FD);
   background-attachment: fixed;
-  padding: 4% 6% 5% 27%;
-  overflow-y:scroll;
+  padding: 5% 6% 7% 30%;
+  color: $color;
+
+  @include media($background-change-size){
+    background:none;
+    padding:50px 7% 6% 7%;
+  }
   
   
+  &-headline{
+    padding-bottom: 30px;
+    font-family: 'Pacifico', cursive;
+    @include font(500, 2.5rem);
+    
+
+    @include media($background-change-size){
+      @include font(500, 2rem);
+    }
+   
+  }
 
   &-para{
-    color: whitesmoke;
-    @include font(500, 18px);
+    @include font(500, 1rem);
     line-height: 24px !important;
     @include sansserif-font();
-    padding: 2%;
     text-align: justify;
+
     @include laptop(){
       @include font(500, 16px);
       padding: 3%;
@@ -525,15 +539,7 @@ overflow-y: scroll;
     }
     
   }
-  &-headline{
-    padding: 2%;
-    color: white;
-    font-family: 'Pacifico', cursive;
-    @include font(500, 3rem);
-    @include laptop(){
-      @include font(500, 2rem);
-    }
-  }
+  
 }
 
 
@@ -570,49 +576,50 @@ overflow-y: scroll;
 }
   
 
-  ///home-content..............................
+  //home-content..............................
   
   
   .home{
-        color: white;
-        font-size: 18px;
-        line-height: 24px !important;
-        @include sansserif-font();
-        background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
-        background-attachment: fixed;
-        padding: 5% 6% 7% 30%;
-        margin: 0%;
-        opacity:1;
-        overflow-y:scroll;
-        // text-align: justify;
-        @include media($background-change-size){
-          background: none;
-          padding: 20% 7% 6% 7%;
-         
-         
-        }
+    color:$color;
+    @include sansserif-font();
+    background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
+    background-attachment: fixed;
+    padding: 5% 6% 7% 30%;
+    
+    @include media($background-change-size){
+      background: none;
+      padding: 190px 7% 6% 7%;
+      
+      
+    }
        
-       &-headline{
-        font-family: 'Pacifico', cursive;
-        @include font(500, 3rem);
-        @include media($background-change-size){
-          @include font(500, 2rem);
-        }
-        @include laptopLarge(){
-          @include font(500, 2.2rem);
-        }
-        
-       }
+    &-headline{
+      padding-bottom: 20px;
+      font-family: 'Pacifico', cursive;
+      @include font(500, 2.5rem);
+      
+      @include laptopLarge(){
+        @include font(500, 2.2rem);
+      }
+      @include media($background-change-size){
+        @include font(500, 2rem);
+        text-align: center;
+      }
+    
+      
+      }
        
        &-img{
          border-radius: 12px;
+         border:2px solid $color;
        }
       &-para{
-        color:$color;
+        @include font(500, 1rem);
+        line-height: 24px !important;
         text-align: justify;
-          @include font(500, 1rem);
-          @include sansserif-font();
-        }
+        @include sansserif-font();
+        
+      }
        
 
 }
@@ -630,52 +637,60 @@ overflow-y: scroll;
   
 .about-para-wrapper{
   
-  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%),linear-gradient(grey,#0276FD);
+  background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%),linear-gradient(grey,#0276FD);
   padding: 5% 6% 7% 30%;
   text-align: justify;
+  color: $color;
   background-attachment: fixed;
-  margin-top:0;
-  overflow-y:scroll;
+ 
+
   @include media($background-change-size){
     background: none;
-    padding: 15% 7% 6% 7%;
+    padding: 50px 7% 6% 7%;
 
   }
  
+  .about-headline{
+    padding-bottom: 30px;
+    font-family: 'Pacifico', cursive;
+    @include font(500, 2.5rem);
+ 
 
+    @include media($background-change-size){
+      @include font(500, 2rem);
+    }
+    
+  }
   .about-para{
     @include font(500, 1rem);
     line-height: 24px !important;
     text-align: justify;
-    color:$color;
     @include sansserif-font();
-    animation: moveSide 1s linear 1s;
-    @include media($background-change-size){
-      
-    }
-    @keyframes moveSide {
-      0%{
-        transform: translateX(50px);
-        opacity:0;
-       }
-       100%{
-        transform: translateX(0px);
-        opacity:1;
-       }
+    
+   
+    
+    .headings{
+      @include font(600, 1.2rem);
+      @include fresh-font();
     }
   }
 
-    .about-headline{
-      padding: 2%;
-      color: inherit;
-      font-family: 'Pacifico', cursive;
-      @include font(500, 3rem);
-      
-    }
+    
+
+  .about-coaches{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  
+
+  
+    
 
     .about-img{
        border-radius: 50%;
-       margin: 0% 1% 1% 0%;
+       margin: 0% 5% 1% 0%;
+  
        border: 1px solid $color;
        
       &:after{
@@ -684,42 +699,58 @@ overflow-y: scroll;
         position:absolute;
         z-index:2;
       }
+
     }
+
+  }
+
+
+
+
 }
 
 
 /////prepircing section.........
 .pre-pricing{
-  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
-  margin: 0%;
-  padding: 2% 0% 2% 27%;
+  background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
+  padding:  5% 6% 7% 30%;
+  color: $color;
+  @include media($background-change-size){
+    background: none;
+    padding: 50px 7% 6% 7%;
 
+  }
   &-headline{
-    @include font(500, 3rem);
+    @include font(500, 2.5rem);
     font-family: 'Pacifico', cursive;
-    color: $color;
-    margin:10% 0% 0% 27%;
-   
+    padding-bottom: 30px;
+    text-align: center;
+    @include media($background-change-size){
+      @include font(500, 2rem);
+    }
+
   }
   &-para{
     @include sansserif-font();
-    @include font(500, 1.1rem);
-    padding:1% 2%;
-    color: $color;
-    padding:10% 2% 4% 2%;
+    @include font(500, 1rem);
+ 
+  
   }
   &-button{
-    border-radius: 12px;
-    padding: 1%;
-    margin-left: 34%;
+    border-radius: 23px;
+    padding: 2px 10px;
+    margin:1% 0% 15px 40%;
     @include font(700, 1rem);
     @include sansserif-font();
     border:none;
     outline: none;
     cursor: pointer;
-    color: orangered;
+    color: rgba(18,18,18,1);
     box-shadow: 1px 2px 5px 2px rgb(100, 100, 100);
-    margin-bottom: 10%;
+  
+  @include media($background-change-size){
+    margin:1% 0% 15px 35%;
+  }
   }
    
   &-button:active, &-button:focus{
@@ -736,31 +767,45 @@ overflow-y: scroll;
 
 /////pricing section............
 .pricing-wrapper{
-  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
- 
+  background-attachment: fixed;
+  background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
+  // padding: 0% 2% 4% 25%;
+  padding: 5% 6% 7% 30%;
+  @include media($background-change-size){
+    background: none;
+    padding: 50px 7% 6% 7%;
+
+  }
 
 }
 
 
 .pricing-headline{
-  @include font(500, 3rem);
+  padding-bottom: 30px;
+  @include font(500, 2.5rem);
   font-family: 'Pacifico', cursive;
   color: $color;
-  @include center();
-  display: flex;
-  justify-content: space-evenly;
 
+
+  @include media($background-change-size){
+    @include font(500, 2rem);
+    @include center();
+  }
 }
 .pricing{
 
 
-  background-attachment: fixed;
+  
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  padding: 4% 2% 4% 25%;
-  overflow-y:scroll;
+ 
+
+  @include media($background-change-size){
+    padding:0;
+  }
+  
   
   
   
@@ -769,10 +814,10 @@ overflow-y: scroll;
 
   border-radius: 23px;
   box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.5);
-  margin:3% 1% 1% 1%;
+  margin:4% 1% 1% 1%;
   padding: 3% 5%;
   color:white;
-  text-align: center;
+  @include center();
   
   
   
@@ -787,24 +832,32 @@ overflow-y: scroll;
 
   h3{
     @include font(700, 1.4rem);
-    color: rgba(18,18,18,1);
+    color: $color;
     @include sansserif-font();
     padding-bottom: 5%;
     
   }
 
-  p {
+ .price {
     @include sansserif-font();
     @include font(900, 2rem);
-    padding:1% 2%;
-    color: rgba(18,18,18,1);
+    padding:1% 0%;
+    color:rgba(18,18,18,0.7);
+ 
     
-  }
+    
+ 
   &-dollar{
-      color:black;
-      @include font(200, 1.5rem);
+      color:rgba(18,18,18,0.7);
+      margin-left: 2px;
+      @include font(500, 16px);
+      vertical-align: top;
+      
+   
     }
   }
+  
+}
       
 }
 
@@ -819,7 +872,7 @@ overflow-y: scroll;
 
 
 .shadows{
-  display: inline-block;
+ 
   border-radius: 23px;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
   background-image: linear-gradient(90deg,rgb(238, 183, 42),rgb(255, 240, 204),hsl(44, 85%, 66%),rgb(255, 199, 56),whitesmoke,rgb(255, 216, 117));
@@ -850,16 +903,28 @@ overflow-y: scroll;
 
 
 .testimonials-bg{
-  background-image: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
+  background-image: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
+  padding: 5% 6% 7% 30%;
+
+  @include media($background-change-size){
+    background: none;
+    padding: 50px 7% 6% 7%;
+
+  }
+
 }
 
 .testimonials-headline{
-  @include font(500, 3rem);
+  @include font(500, 2.5rem);
+  padding-bottom: 30px;
   font-family: 'Pacifico', cursive;
   color: $color;
-  // @include center();
-  display: flex;
-  justify-content: space-evenly;
+  @include center();
+
+  @include media($background-change-size){
+    @include font(500, 2rem);
+  }
+ 
 }
 .scroll-buttons{
   display: flex;
@@ -887,15 +952,16 @@ overflow-y: scroll;
   &:active, &:focus{
   border:none;
   outline: none;
- 
-  
   }
 
   &::after{
     content:'<';
-   
+    
   }
 }
+ 
+  
+
 
 
   
@@ -915,10 +981,10 @@ overflow-y: scroll;
   &:active, &:focus{
     border:none;
     outline: none;
-    }
-    &::after{
-      content:'>'
-    }
+  }
+  &::after{
+    content:'>'
+  }
 
 
 }
@@ -933,15 +999,16 @@ overflow-y: scroll;
 
 
   .card{
-    margin-right: 10px;
+    
     background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2% 0% 2% 32%;
+    
     width:50%;
     padding-top: 3%;
-    border: 2px solid $color;
+    outline:none;
+    // box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.5);
     border-radius: 12px;
     // animation: ghost 1s linear 1;
     @keyframes ghost {

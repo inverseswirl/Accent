@@ -10,7 +10,8 @@ class Tagline extends React.Component{
      this.handleBtn=this.handleBtn.bind(this);
     }
    
- handleBtn(){
+ handleBtn(e){
+   
    this.setState({button:true,position:'fixed'})
   this.props.backStyle(
     "linear-gradient(grey,#0276FD)"
@@ -19,7 +20,7 @@ class Tagline extends React.Component{
   
  render(){
     const{button,position}=this.state
-     console.log(button)
+   
     if(button){
        return (
       
