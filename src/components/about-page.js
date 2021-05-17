@@ -26,13 +26,18 @@ return (
                  <h3 className="headings">Meet our Coaches</h3>
                  
                  <div className="about-coaches">
-                   <div >
-                   <img alt="person"className="about-img" src="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={200} height={200}/>
-                   <p className="about-coaches-name">Jack</p>
+                   <div className="about-coach" >
+                   <img alt="person"className="about-coach-img" src="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={200} height={200}/>
+                   <p className="about-coach-name">Sean</p>
                    </div>
-                   <img alt="person"className="about-img" src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={200} height={200}/>
-                 
-                   <img alt="person" className="about-img" src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width={200} height={200}/>
+                   <div className="about-coach">
+                   <img alt="person"className="about-coach-img" src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width={200} height={200}/>
+                   <p className="about-coach-name">Lila</p>
+                   </div>
+                   <div className="about-coach">
+                   <img alt="person" className="about-coach-img" src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width={200} height={200}/>
+                   <p className="about-coach-name">Ryan</p>
+                   </div>
                 </div>
 
                  

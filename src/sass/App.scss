@@ -686,25 +686,25 @@ overflow-y: scroll;
     // width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
+ 
   
 
-  
-    
+  .about-coach{
+      margin-right:7px;
 
-    .about-img{
-       border-radius: 50%;
-       margin: 1% 5% 1% 0%;
-       border: 1px solid $color;
-  
-       
-      &:after{
-        content:'Mr Jeff';
-        background-image: radial-gradient(transparent 50%, black 50%);
-        position:absolute;
-        z-index:2;
+      &-img{
+        border-radius: 50%;
+        margin: 1% 5% 1% 0%;
+        border: 1px solid $color;
+      
       }
-
-    }
+        
+      &-name{
+        text-align: center;
+      }
+  
+  }   
+       
 
   }
 
