@@ -9,13 +9,12 @@ const slideshare=[
 
   {
  
-          
     src:testimonial1,
     name:'Ms.Rose',
     comment:"My communication has improved so much after using Accent's Platinum package. I would definitely recommend all to try their services."
     
-  
   },
+          
   {
     src:testimonial2,
     name:'Ms.Jess',
@@ -23,11 +22,12 @@ const slideshare=[
            
   },
   {
-    src:testimonial3,
+     src:testimonial3,
      name:"Ms.Rene",
-    comment:"Thanks Kiara for helping me improve my communication skills."
+     comment:"Thanks Kiara for helping me improve my communication skills."
           
   },
+  
 {
   src:testimonial4,
   name:"Mr. Ray",
@@ -45,19 +45,19 @@ class Testimonials extends React.Component{
 
    handleIncrement(){
    this.setState({i: this.state.i===3? 0: this.state.i+ 1})
+  }
       
    
-   }
        
    handleDecrement(){
      this.setState({i: this.state.i===0? 3: this.state.i-1})
+    }
    
-   }
 
   
    render(){ 
        const{i}=this.state;
-console.log(i)
+
 
     
 return(
@@ -72,12 +72,15 @@ return(
         return ( 
           <div  key={index} >
             
-            {index===this.state.i &&(<TestimonialCard 
+            {index=== i && (
+            <TestimonialCard 
+              src={obj.src}
+              name={obj.name}
+              comment={obj.comment}
+            />
+            )
+            }
               
-            src={obj.src}
-            name={obj.name}
-            comment={obj.comment}
-            />)}
         </div>
         )
     })}

@@ -40,7 +40,7 @@ this.about.current.scrollIntoView({
  
 
 render(){
-  // const{offset}=this.state;
+
 
 
 return(
@@ -67,12 +67,12 @@ return(
            
   
       <Home />
-       <About reference={this.about}/>
+      <About reference={this.about}/>
+      <Services/>
+      <Prepricing reference={this.pricing}/>
+      <Testimonials/>
      
-       <Services/>
-     <Prepricing reference={this.pricing}/>
       
-       <Testimonials/>
        
       
               

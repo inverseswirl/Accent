@@ -15,12 +15,12 @@ const  Accent=()=>{
 
     <Background />
     
+    </div>
 
     
    
   
    
-    </div>
   )
 
  }
