@@ -8,8 +8,8 @@ const Footer=()=>{
     return (
         <div className="footer">
             <div className="footer1">
-                <h4 className="footer1-headline"> <BiPhoneCall color="grey" size={30}/>  Contact:0411111111</h4>
-               <address>Address: 204, Random House, Melbourne</address> 
+                <h4 className="footer1-headline"> <BiPhoneCall color="grey" size={16}/>  Contact:0411111111</h4>
+               <address className="footer1-address">Address: 204, Random House, Melbourne</address> 
             </div>
 
            
