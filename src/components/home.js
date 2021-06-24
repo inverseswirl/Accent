@@ -1,5 +1,4 @@
 import React from 'react';
-import homeImg from '../img/homeImg.jpeg'
 
 
 
@@ -11,7 +10,7 @@ const Home =()=>{
        
         <h1 className="home-headline">Why effective communication skills training? </h1>
         <br/>
-        <img className="home-img" alt="homeimg" style={{width: '100%',height: '440px'}} src={homeImg}/>
+        <div className="home-img" ></div>
         
         <p className="home-para">
         <br/>

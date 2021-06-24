@@ -18,7 +18,7 @@ const Services=()=>{
            
                 <ul className="list">
                     { arr.map((item)=>{
-                        return <li key={item} className="list-item"><RiWechatLine color="darkslategrey"/> {item}</li>
+                        return <li key={item} className="list-item"><RiWechatLine style={{marginRight:'6px'}} color="darkslategrey"/> {item}</li>
                         })
                     }
                 </ul>

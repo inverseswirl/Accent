@@ -281,8 +281,8 @@ overflow-y: scroll;
       @media (max-width: 475px) {
         width: 70px;
         height:70px;
-        @include font(400, 1.5rem);
-       
+        @include font(400, 1rem);
+       margin-top: 20px;
       }
 
 
@@ -519,7 +519,10 @@ overflow-y: scroll;
     font-family: 'Pacifico', cursive;
     @include font(500, 2.5rem);
     
-
+    @include mobileSmall{
+      padding-top:100px;
+    }
+   
     @include media($background-change-size){
       @include font(500, 2rem);
     }
@@ -536,6 +539,10 @@ overflow-y: scroll;
       @include font(500, 16px);
       padding: 3%;
 
+    }
+    @include mobileSmall{
+      @include font(500, 14px);
+      text-align: left;
     }
     
   }
@@ -557,12 +564,19 @@ overflow-y: scroll;
    line-height: 24px !important;
    @include sansserif-font();
    color: white;
-   @include laptop(){
-    @include font(500, 0.9rem);
-   }
-   @include tablet(){
-    @include font(500, 13px);  
-  }
+    @include laptop(){
+      @include font(500, 0.9rem);
+    }
+    @include tablet(){
+      @include font(500, 13px);  
+    }
+     @include mobileSmall{
+      @include font(500, 13px);  
+      text-align: left;
+      padding: 1% 0%;
+      display: flex;
+     }
+
   }
 }
 
@@ -610,17 +624,48 @@ overflow-y: scroll;
       }
        
        &-img{
+         background-image: url('../img/homeImg.jpeg');
+         background-size: cover;
+      
          border-radius: 12px;
          border:2px solid $color;
-         &-img img{
-           object-fit: cover;
+         height: 440px;
+         width: 100%;
+         @include flex(row);
+        
+        
+       
+         @include tablet{
+          height:350px;
+          background-position: 30% 20%;
          }
-       }
+
+           @include mobileLarge(){
+            height:350px;
+            background-position: 30% 20%;
+           }
+  
+           @include mobileSmall{
+             height:250px;
+             background-position: 40% 20%;
+             }
+
+
+
+   
+      }
+         
+
+       
       &-para{
         @include font(500, 1rem);
         line-height: 24px !important;
         text-align: justify;
         @include sansserif-font();
+        @include mobileSmall{
+          @include font(500, 14px);
+          text-align: left;
+        }
         
       }
        
@@ -645,6 +690,7 @@ overflow-y: scroll;
   text-align: justify;
   color: $color;
   background-attachment: fixed;
+
  
 
   @include media($background-change-size){
@@ -658,7 +704,10 @@ overflow-y: scroll;
     font-family: 'Pacifico', cursive;
     @include font(500, 2.5rem);
  
-
+    @include mobileSmall{
+      padding-top:100px;
+    }
+   
     @include media($background-change-size){
       @include font(500, 2rem);
     }
@@ -669,6 +718,11 @@ overflow-y: scroll;
     line-height: 24px !important;
     text-align: justify;
     @include sansserif-font();
+
+    @include mobileSmall{
+      @include font(500, 14px);
+      text-align: left;
+    }
     
    
     
@@ -738,6 +792,11 @@ overflow-y: scroll;
     @include sansserif-font();
     @include font(500, 1rem);
     padding-bottom: 35px;
+    text-align: justify;
+    @include mobileSmall{
+      @include font(500, 14px);
+      text-align: left;
+    }
   
   }
   &-button{
@@ -834,6 +893,9 @@ overflow-y: scroll;
     @include sansserif-font();
     @include font(400, 1.8rem);
     padding-bottom: 2%;
+    @include mobileSmall{
+      @include font(400, 1.2rem);
+    }
   }
 
   h3{
@@ -841,6 +903,9 @@ overflow-y: scroll;
     color: $color;
     @include sansserif-font();
     padding-bottom: 5%;
+    @include mobileSmall{
+      @include font(400, 1rem);
+    }
     
   }
 
@@ -849,6 +914,10 @@ overflow-y: scroll;
     @include font(900, 2rem);
     padding:1% 0%;
     color:rgba(18,18,18,0.7);
+    @include mobileSmall{
+      @include font(900, 1.3rem);
+      padding:0.1% ;
+    }
  
     
     
@@ -1011,6 +1080,11 @@ overflow-y: scroll;
         width: 200px;
         height:200px;
         margin-top: 8px;
+
+        @include mobileSmall{
+        width: 100px;
+        height:100px;
+        }
        
       
       &-pic img{
@@ -1033,6 +1107,10 @@ overflow-y: scroll;
       background-repeat: no-repeat;
       background-size: 85px;
       background-position: 27% 40%;
+      @include mobileSmall{
+        @include font(400, 1rem);
+        text-align: left;
+      }
     
     }
      
@@ -1045,6 +1123,10 @@ overflow-y: scroll;
       color: $color ;
       margin:2px;
       animation: ghost 0.5s ease-in-out 1;
+
+      @include mobileSmall{
+        @include font(400, 1.1rem);
+      }
       @keyframes ghost {
        0%{
          opacity:0;
