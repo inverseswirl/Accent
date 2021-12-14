@@ -194,7 +194,8 @@ html, body {
     width: 70px;
     height: 70px;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-top: 20px;
   }
 }
 
@@ -427,6 +428,12 @@ html, body {
   font-size: 2.5rem;
 }
 
+@media (max-width: 475px) {
+  .service-page-headline {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 815px) {
   .service-page-headline {
     font-weight: 500;
@@ -447,6 +454,14 @@ html, body {
     font-weight: 500;
     font-size: 16px;
     padding: 3%;
+  }
+}
+
+@media (max-width: 475px) {
+  .service-page-para {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
   }
 }
 
@@ -475,6 +490,18 @@ html, body {
   .list-item {
     font-weight: 500;
     font-size: 13px;
+  }
+}
+
+@media (max-width: 475px) {
+  .list-item {
+    font-weight: 500;
+    font-size: 13px;
+    text-align: left;
+    padding: 1% 0%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -523,13 +550,46 @@ html, body {
 }
 
 .home-img {
+  background-image: url("../img/homeImg.jpeg");
+  background-size: cover;
   border-radius: 12px;
   border: 2px solid white;
+  height: 440px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.home-img-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+@media (max-width: 745px) {
+  .home-img {
+    height: 350px;
+    background-position: 30% 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-img {
+    height: 350px;
+    background-position: 30% 20%;
+  }
+}
+
+@media (max-width: 475px) {
+  .home-img {
+    height: 250px;
+    background-position: 40% 20%;
+  }
 }
 
 .home-para {
@@ -538,6 +598,14 @@ html, body {
   line-height: 24px !important;
   text-align: justify;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width: 475px) {
+  .home-para {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+  }
 }
 
 .about-para-wrapper {
@@ -563,6 +631,12 @@ html, body {
   font-size: 2.5rem;
 }
 
+@media (max-width: 475px) {
+  .about-para-wrapper .about-headline {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 815px) {
   .about-para-wrapper .about-headline {
     font-weight: 500;
@@ -576,6 +650,14 @@ html, body {
   line-height: 24px !important;
   text-align: justify;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width: 475px) {
+  .about-para-wrapper .about-para {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+  }
 }
 
 .about-para-wrapper .about-para .headings {
@@ -643,6 +725,15 @@ html, body {
   font-weight: 500;
   font-size: 1rem;
   padding-bottom: 35px;
+  text-align: justify;
+}
+
+@media (max-width: 475px) {
+  .pre-pricing-para {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+  }
 }
 
 .pre-pricing-button {
@@ -738,6 +829,13 @@ html, body {
   padding-bottom: 2%;
 }
 
+@media (max-width: 475px) {
+  .pricing-card h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}
+
 .pricing-card h3 {
   font-weight: 700;
   font-size: 1.4rem;
@@ -746,12 +844,27 @@ html, body {
   padding-bottom: 5%;
 }
 
+@media (max-width: 475px) {
+  .pricing-card h3 {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
+
 .pricing-card .price {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 900;
   font-size: 2rem;
   padding: 1% 0%;
   color: rgba(18, 18, 18, 0.7);
+}
+
+@media (max-width: 475px) {
+  .pricing-card .price {
+    font-weight: 900;
+    font-size: 1.3rem;
+    padding: 0.1%;
+  }
 }
 
 .pricing-card .price-dollar {
@@ -934,6 +1047,13 @@ html, body {
   margin-top: 8px;
 }
 
+@media (max-width: 475px) {
+  .testimonials .tcard-pic {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .testimonials .tcard-pic-pic img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -966,6 +1086,14 @@ html, body {
   background-position: 27% 40%;
 }
 
+@media (max-width: 475px) {
+  .testimonials .tcard-comment {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
 .testimonials .tcard-name {
   padding-top: 9px;
   font-weight: 400;
@@ -975,6 +1103,13 @@ html, body {
   margin: 2px;
   -webkit-animation: ghost 0.5s ease-in-out 1;
           animation: ghost 0.5s ease-in-out 1;
+}
+
+@media (max-width: 475px) {
+  .testimonials .tcard-name {
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
 }
 
 @-webkit-keyframes ghost {
