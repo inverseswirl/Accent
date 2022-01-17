@@ -8,7 +8,7 @@ class Title extends React.Component {
     this.handletitleBtn = this.handletitleBtn.bind(this)
   }
 
-  handletitleBtn (e) {
+  handletitleBtn () {
     this.setState({ titleBtn: true })
   }
 

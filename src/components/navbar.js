@@ -14,14 +14,14 @@ class Navbar extends React.Component {
     this.handleAbout = this.handleAbout.bind(this)
   }
 
-  handleClick (e) {
+  handleClick () {
     this.pricing.current.scrollIntoView({
       behaviour: 'smooth',
       block: 'center'
     })
   }
 
-  handleAbout (e) {
+  handleAbout () {
     this.about.current.scrollIntoView({
       behaviour: 'smooth',
       block: 'start'
