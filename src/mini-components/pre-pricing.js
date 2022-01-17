@@ -25,7 +25,7 @@ class Prepricing extends React.Component {
           <br/>
           <br/>
           <hr color="white"/>
-        </div>
+     </div>
     )
   }
 }
