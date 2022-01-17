@@ -1,8 +1,8 @@
 import React from 'react';
 
-const About = ({ reference, event }) => {
+const About = ({ reference }) => {
   return (
-  <div ref={ reference }className="about-para-wrapper" id="about">
+  <div ref={ reference } className="about-para-wrapper" id="about">
           <div className="about-para" >
                 <h2 className="text-center h2 about-headline"> Know more about us!</h2>
                   <p className="text-center">We assist people with better communication </p>
