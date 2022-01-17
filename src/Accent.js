@@ -1,45 +1,16 @@
-import React from 'react';
-import './sass/App.scss';
+import { React } from 'react'
+import './sass/App.scss'
 
+import Background from './style/background'
 
-import Background from './style/background';
-
-
-const  Accent=()=>{
- 
-
-
-    return(
+const Accent = () => {
+  return (
 
 <div className="App">
 
     <Background />
-    
-    </div>
-
-    
-   
-  
-   
+</div>
   )
+}
 
- }
-
- export default Accent;
- 
-
-
-
-
-
-  
-    
-             
-  
-  
-
-
-   
-  
-  
-
+export default Accent

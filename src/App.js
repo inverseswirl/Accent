@@ -1,25 +1,13 @@
-import React from 'react';
+import React from 'react'
 import Accent from './Accent'
-import './sass/App.scss';
+import './sass/App.scss'
 
-function App() {
-
- 
-
+function App () {
   return (
-   
-  
   <div>
      <Accent />
   </div>
-    
-    );
-  }
-  
-     
-      
-export default App;
-        
-     
-     
-   
+  )
+}
+
+export default App
