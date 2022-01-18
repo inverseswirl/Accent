@@ -1,1019 +1,779 @@
-@import './resets';
-@import './variables';
-
+@import "./resets";
+@import "./variables";
 
 //////mixins for media queries
 
-$laptopLarge-screen:1159px;
-$laptop-screen:900px;
-$tablet-screen:745px;
-$mobileLarge-screen:600px;
+$laptopLarge-screen: 1159px;
+$laptop-screen: 900px;
+$tablet-screen: 745px;
+$mobileLarge-screen: 600px;
 $mobileSmall-screen: 475px;
-@mixin laptopLarge{
- @media (max-width:$laptopLarge-screen){
-     @content;
-   }
+@mixin laptopLarge {
+  @media (max-width: $laptopLarge-screen) {
+    @content;
+  }
 }
-@mixin laptop{
- @media (max-width:$laptop-screen){
-     @content;
-   }
+@mixin laptop {
+  @media (max-width: $laptop-screen) {
+    @content;
+  }
 }
-@mixin tablet{
- @media (max-width:$tablet-screen){
-     @content;
-   }
+@mixin tablet {
+  @media (max-width: $tablet-screen) {
+    @content;
+  }
 }
-@mixin mobileLarge{
- @media (max-width:$mobileLarge-screen){
-     @content;
-   }
+@mixin mobileLarge {
+  @media (max-width: $mobileLarge-screen) {
+    @content;
+  }
 }
-@mixin mobileSmall{
- @media (max-width:$mobileSmall-screen){
-     @content;
-   }
+@mixin mobileSmall {
+  @media (max-width: $mobileSmall-screen) {
+    @content;
+  }
 }
 
-@mixin media($size){
-  @media (max-width: $size){
+@mixin media($size) {
+  @media (max-width: $size) {
     @content;
   }
 }
 
 ///font mixins......
-@mixin fresh-font(){
-  
-  font-family: 'Courier Prime', monospace;
-}
-  
-  
-@mixin   serif-font(){
-  font-family: 'EB Garamond', serif;
-}
-@mixin   sansserif-font(){
-  // font-family: 'Oswald', sans-serif;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@mixin fresh-font() {
+  font-family: "Courier Prime", monospace;
 }
 
-@mixin font($font-weight,$font-size){
+@mixin serif-font() {
+  font-family: "EB Garamond", serif;
+}
+@mixin sansserif-font() {
+  // font-family: 'Oswald', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@mixin font($font-weight, $font-size) {
   font-weight: $font-weight;
   font-size: $font-size;
-} 
+}
 
 //miscellaneous mixins
 
-  @mixin flex($direction){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
-  }
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
 
-
-@mixin center(){
+@mixin center() {
   text-align: center;
 }
 
-
-
-
-html,body{
+html,
+body {
   scroll-behavior: smooth;
-  overflow-y:scroll;
+  overflow-y: scroll;
   overflow-x: hidden;
- 
 }
- 
-.App{
+
+.App {
   height: 100vh;
   width: 100vw;
 }
- 
-
- 
- 
-
 
 //background components...................
 
-  
-
-.background{
- 
-background-image:linear-gradient(180deg, rgb(202, 202, 202),rgb(179, 112, 179),rgb(138, 123, 138));
-background-size: cover;
-background-attachment: fixed;
-height: 100vh;
-max-width: 100vw;
-overflow-y: scroll;
+.background {
+  background-image: linear-gradient(
+    180deg,
+    rgb(202, 202, 202),
+    rgb(179, 112, 179),
+    rgb(138, 123, 138)
+  );
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  max-width: 100vw;
+  overflow-y: scroll;
 }
-   
-
-
 
 /////Title.............
 
-.main{
-    
-  
-  .title{
-   
-    color: rgba(18,18,18,0.9);
-    background:transparent;
+.main {
+  .title {
+    color: rgba(18, 18, 18, 0.9);
+    background: transparent;
     @include font(600, 3.2rem);
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     outline: none;
-    border:none;
+    border: none;
     position: fixed;
     padding: 1.5% 0% 0% 2%;
-    
-    @include media($background-change-size){
+
+    @include media($background-change-size) {
       margin: 0%;
       padding: 0%;
       width: 100%;
     }
 
-    @include laptopLarge(){
+    @include laptopLarge() {
       @include font(600, 3rem);
-    };
+    }
 
-     
     @include mobileSmall() {
       @include font(600, 2.5rem);
     }
-   
-   
-   
-     
-     
-      
-    
-    
   }
 
- 
-
-
-  
-
-   
-   
-    
-
-  .letter{
-    
-     @include font(400, 3rem);
-     font-family: 'Pacifico', cursive;
-     color: whitesmoke;
-     
-    }
+  .letter {
+    @include font(400, 3rem);
+    font-family: "Pacifico", cursive;
+    color: whitesmoke;
+  }
 }
-     
-     
-   
-    
-  ////tagline...................
 
+////tagline...................
 
-  .tagline{
-  
-      
-    
-    @include sansserif-font();
-    @include center();
-    @include font(700, 2.7rem);
-    margin-top: 10%;
-    padding-top: 10%;
-    animation: highlight 0.7s linear 1;
-    @keyframes highlight{
-      0%{
-       color:black;
-       opacity:0;
-     }
-     50%{
-      
-      transform:translate(0px,-20px);
+.tagline {
+  @include sansserif-font();
+  @include center();
+  @include font(700, 2.7rem);
+  margin-top: 10%;
+  padding-top: 10%;
+  animation: highlight 0.7s linear 1;
+  @keyframes highlight {
+    0% {
+      color: black;
+      opacity: 0;
+    }
+    50% {
+      transform: translate(0px, -20px);
       color: rgb(78, 70, 85);
-      opacity:0;
+      opacity: 0;
     }
-     100%{
-       color:black;
-     }
+    100% {
+      color: black;
     }
-  
+  }
 
-
-  @media (max-width: $laptopLarge-screen){
+  @media (max-width: $laptopLarge-screen) {
     @include font(700, 2.1rem);
     // margin-top: 24%;
   }
-  @media (max-width: $laptop-screen){
+  @media (max-width: $laptop-screen) {
     @include font(700, 2.1rem);
     margin-top: 24%;
   }
-  
- 
-  
-   
-   
-  
-    @media (max-width: $tablet-screen) {
-      @include font(600, 1.8rem);
-      margin-top: 28%;
-     
+
+  @media (max-width: $tablet-screen) {
+    @include font(600, 1.8rem);
+    margin-top: 28%;
+  }
+  @media (max-width: $mobileLarge-screen) {
+    @include font(600, 1.5rem);
+    margin-top: 32%;
+  }
+  @media (max-width: $mobileSmall-screen) {
+    @include font(600, 1rem);
+    margin-top: 45%;
+  }
+
+  $width: 120px;
+  $height: 120px;
+
+  &-btn {
+    border-radius: 50%;
+    @include font(400, 2.4rem);
+    font-family: "Pacifico", cursive;
+    padding: 1.6% 0.5%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3%;
+    display: block;
+    color: white;
+    width: $width;
+    height: $height;
+    background-color: rgb(175, 121, 206);
+    border: none;
+    outline: none;
+    position: relative;
+
+    @media (max-width: 900px) {
+      width: 100px;
+      height: 100px;
+      @include font(400, 1.5rem);
     }
-    @media (max-width: $mobileLarge-screen) {
-      @include font(600, 1.5rem);
-      margin-top: 32%;
 
-     
-     
+    @media (max-width: 600px) {
+      width: 80px;
+      height: 80px;
+      @include font(400, 1.5rem);
     }
-    @media (max-width: $mobileSmall-screen) {
-      @include font(600, 1rem);
-      margin-top: 45%;
-     
+    @media (max-width: 475px) {
+      width: 70px;
+      height: 70px;
+      @include font(400, 1rem);
+      margin-top: 20px;
     }
-      
-    
-   
+  }
 
+  &-btn::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -4%;
+    border: 2px dotted rgb(236, 203, 255);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    animation: spin 1.9s alternate 1;
 
-    
-  
-   $width:120px;
-   $height:120px;
-  
-      &-btn{
-        
-       border-radius: 50%;
-       @include font(400, 2.4rem);
-       font-family: 'Pacifico', cursive;
-       padding: 1.6% 0.5%;
-       justify-content: center;
-       margin: auto;
-       margin-top: 3%;
-       display: block;
-       color: white;
-       width: $width;
-       height:$height;
-       background-color: rgb(175, 121, 206);
-       border:none;
-       outline: none;
-       position: relative;
+    @include laptop() {
+      top: -5%;
+      left: -5%;
+      width: 110px;
+      height: 110px;
+    }
+    @include mobileLarge() {
+      top: -5%;
+      left: -6%;
+      width: 90px;
+      height: 90px;
+      @include font(400, 1.5rem);
+    }
+    @include mobileSmall() {
+      top: -7%;
+      left: -7%;
+      width: 80px;
+      height: 80px;
+      @include font(400, 1.5rem);
+    }
+  }
 
-       @media (max-width: 900px) {
-       
-        width: 100px;
-        height:100px;
-        @include font(400, 1.5rem);
-      }
-    
-      @media (max-width: 600px) {
-        width: 80px;
-        height:80px;
-        @include font(400, 1.5rem);
-        
-       
-       
-      }
-      @media (max-width: 475px) {
-        width: 70px;
-        height:70px;
-        @include font(400, 1rem);
-       margin-top: 20px;
-      }
+  &-btn:active:focus {
+    color: rgb(185, 41, 221);
+    border: none;
+    outline: none;
+  }
 
-
-      }
- 
-    
-      
-      
-      &-btn::before{
-        content:'';
-        position: absolute;
-        top:-5%;
-        left:-4%;
-        border: 2px dotted rgb(236, 203, 255) ;
-        border-radius: 50%;
-        width: 130px;
-        height:130px;
-        animation: spin 1.9s alternate 1;
-
-        @include laptop() {
-          top:-5%;
-          left:-5%;
-          width: 110px;
-          height:110px;
-          
-        }
-        @include mobileLarge() {
-          top:-5%;
-          left:-6%;
-          width: 90px;
-          height:90px;
-          @include font(400, 1.5rem);
-          
-        }
-        @include mobileSmall() {
-          top:-7%;
-          left:-7%;
-          width: 80px;
-          height:80px;
-          @include font(400, 1.5rem);
-         
-        }
-         
-
-      }
-     
-       
-      &-btn:active:focus{
-        color: rgb(185, 41, 221);
-        border:none;
-        outline: none;
-      
-      }
-
-      @keyframes spin {
-        100%{
-          transform: rotateZ(360deg);
-        }
-          
-      }
-        
-      
-       
-      
-      
+  @keyframes spin {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
 }
-      
-     
-
-
-     
-      
-     
-    
-      
-  
- 
-  
-
-  
 
 ///NAVBAR section..................
-  
-  
-  
-.navbar{
-  
+
+.navbar {
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
-  align-items:flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
-  top:15%;
-  @include media($background-change-size){
+  top: 15%;
+  @include media($background-change-size) {
     flex-direction: row;
     justify-content: space-evenly;
-    background:linear-gradient(120deg,grey,$bg-color);
+    background: linear-gradient(120deg, grey, $bg-color);
     top: 70px;
-    margin:0%;
-
+    margin: 0%;
   }
-  
-  
-   
-  
-  
- 
-  
-    .button{
-      outline: none;
-      border: none;
-      background-color: transparent;
-      @include font(400, 1.5rem);
-      text-transform:uppercase;
-      color: white;
-      @include fresh-font();
-      animation: fadeout 0.7s forwards 1;
-      @keyframes fadeout{
-        0%{
-          transform: translate(-3rem,0px);
-          opacity:0;
-        }
-       100%{
-        transform: translate(0px,0px);
-        opacity:1;
 
+  .button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    @include font(400, 1.5rem);
+    text-transform: uppercase;
+    color: white;
+    @include fresh-font();
+    animation: fadeout 0.7s forwards 1;
+    @keyframes fadeout {
+      0% {
+        transform: translate(-3rem, 0px);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
       }
     }
-    
-    @include laptopLarge(){
+
+    @include laptopLarge() {
       @include font(400, 1rem);
-     }
     }
-
-   
-     
-     
-
-       
-    .button a{
-      color: inherit;
-    }
-     
-    .button a:active{
-      outline:none;
-      text-decoration: none;
-      color:inherit;
-  }
-    .button a:hover{
-      outline:none;
-      border:none;
-      text-decoration: none;
-      color:inherit;
-    
   }
 
-  .button a:focus{
+  .button a {
     color: inherit;
   }
-  
+
+  .button a:active {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
   }
-  
+  .button a:hover {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+  }
 
-   
-  
-     
-  .navbar::before{
-   background:white;
-   background-size: 100% 100%;
-   position:absolute;
-   content:'';
-   bottom:0%;
-   width: 20%;
-   height:2px;
-   border-radius: 12px;
-   animation: wide 0.7s linear;
-   @keyframes wide {
-      0%{
-        width: 0%;
-      }
-      100%{
-        width: 20%;
-      }
+  .button a:focus {
+    color: inherit;
+  }
+}
+
+.navbar::before {
+  background: white;
+  background-size: 100% 100%;
+  position: absolute;
+  content: "";
+  bottom: 0%;
+  width: 20%;
+  height: 2px;
+  border-radius: 12px;
+  animation: wide 0.7s linear;
+  @keyframes wide {
+    0% {
+      width: 0%;
     }
-    @include laptopLarge(){
-      width: 21%;
+    100% {
+      width: 20%;
     }
-    @include media($background-change-size){
-      display:none;
-    }
-    
-    
-  
-
-
-  
-
-
-
-
-
- }
-
-
-
-
- 
-    
-
-
-
-
-
-
-
-
+  }
+  @include laptopLarge() {
+    width: 21%;
+  }
+  @include media($background-change-size) {
+    display: none;
+  }
+}
 
 ////service-page.................
 
-.service-page{
-  background:linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%) ,linear-gradient(grey,#0276FD);
+.service-page {
+  background: linear-gradient(90deg, rgba(18, 18, 18, 0.3) 25%, transparent 25%),
+    linear-gradient(grey, #0276fd);
   background-attachment: fixed;
-  padding:120px 6% 7% 30%;
+  padding: 120px 6% 7% 30%;
   color: $color;
 
-  @include media($background-change-size){
-    background:none;
-    padding:50px 7% 6% 7%;
-  }
-  
-  
-  &-headline{
-    padding-bottom: 30px;
-    font-family: 'Pacifico', cursive;
-    @include font(500, 2.5rem);
-    
-    @include mobileSmall{
-      padding-top:100px;
-    }
-   
-    @include media($background-change-size){
-      @include font(500, 2rem);
-    }
-   
+  @include media($background-change-size) {
+    background: none;
+    padding: 50px 7% 6% 7%;
   }
 
-  &-para{
+  &-headline {
+    padding-bottom: 30px;
+    font-family: "Pacifico", cursive;
+    @include font(500, 2.5rem);
+
+    @include mobileSmall {
+      padding-top: 100px;
+    }
+
+    @include media($background-change-size) {
+      @include font(500, 2rem);
+    }
+  }
+
+  &-para {
     @include font(500, 1rem);
     line-height: 24px !important;
     @include sansserif-font();
     text-align: justify;
 
-    @include laptop(){
+    @include laptop() {
       @include font(500, 16px);
       padding: 3%;
-
     }
-    @include mobileSmall{
+    @include mobileSmall {
       @include font(500, 14px);
       text-align: left;
     }
-    
   }
-  
 }
 
+.list {
+  text-decoration: none;
+  list-style: none;
 
-
-
-.list{
-   text-decoration: none;
-   list-style: none;
-
-  
-  &-item{
-  
-   padding: 1% 2%;
-   @include font(500, 1.1rem);
-   line-height: 24px !important;
-   @include sansserif-font();
-   color: white;
-    @include laptop(){
+  &-item {
+    padding: 1% 2%;
+    @include font(500, 1.1rem);
+    line-height: 24px !important;
+    @include sansserif-font();
+    color: white;
+    @include laptop() {
       @include font(500, 0.9rem);
     }
-    @include tablet(){
-      @include font(500, 13px);  
+    @include tablet() {
+      @include font(500, 13px);
     }
-     @include mobileSmall{
-      @include font(500, 13px);  
+    @include mobileSmall {
+      @include font(500, 13px);
       text-align: left;
       padding: 1% 0%;
       display: flex;
-     }
-
+    }
   }
 }
 
-
-
-  
-
-.service-table{
-  padding:2%;
+.service-table {
+  padding: 2%;
   @include font(500, 1.5rem);
 }
-  
 
-  //home-content..............................
-  
-  
-  .home{
-    color:$color;
-    @include sansserif-font();
-    background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
-    background-attachment: fixed;
-    padding: 5% 6% 7% 30%;
-    
-    @include media($background-change-size){
-      background: none;
-      padding: 190px 7% 6% 7%;
-      
-      
+//home-content..............................
+
+.home {
+  color: $color;
+  @include sansserif-font();
+  background: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0.3) 25%,
+    transparent 25%
+  );
+  background-attachment: fixed;
+  padding: 5% 6% 7% 30%;
+
+  @include media($background-change-size) {
+    background: none;
+    padding: 190px 7% 6% 7%;
+  }
+
+  &-headline {
+    padding-bottom: 20px;
+    font-family: "Pacifico", cursive;
+    @include font(500, 2.5rem);
+
+    @include laptopLarge() {
+      @include font(500, 2.2rem);
     }
-       
-    &-headline{
-      padding-bottom: 20px;
-      font-family: 'Pacifico', cursive;
-      @include font(500, 2.5rem);
-      
-      @include laptopLarge(){
-        @include font(500, 2.2rem);
-      }
-      @include media($background-change-size){
-        @include font(500, 2rem);
-        text-align: center;
-      }
-    
-      
-      }
-       
-       &-img{
-         background-image: url('../img/homeImg.jpeg');
-         background-size: cover;
-      
-         border-radius: 12px;
-         border:2px solid $color;
-         height: 440px;
-         width: 100%;
-         @include flex(row);
-        
-        
-       
-         @include tablet{
-          height:350px;
-          background-position: 30% 20%;
-         }
+    @include media($background-change-size) {
+      @include font(500, 2rem);
+      text-align: center;
+    }
+  }
 
-           @include mobileLarge(){
-            height:350px;
-            background-position: 30% 20%;
-           }
-  
-           @include mobileSmall{
-             height:250px;
-             background-position: 40% 20%;
-             }
+  &-img {
+    background-image: url("../img/homeImg.jpeg");
+    background-size: cover;
 
+    border-radius: 12px;
+    border: 2px solid $color;
+    height: 440px;
+    width: 100%;
+    @include flex(row);
 
+    @include tablet {
+      height: 350px;
+      background-position: 30% 20%;
+    }
 
-   
-      }
-         
+    @include mobileLarge() {
+      height: 350px;
+      background-position: 30% 20%;
+    }
 
-       
-      &-para{
-        @include font(500, 1rem);
-        line-height: 24px !important;
-        text-align: justify;
-        @include sansserif-font();
-        @include mobileSmall{
-          @include font(500, 14px);
-          text-align: left;
-        }
-        
-      }
-       
+    @include mobileSmall {
+      height: 250px;
+      background-position: 40% 20%;
+    }
+  }
 
+  &-para {
+    @include font(500, 1rem);
+    line-height: 24px !important;
+    text-align: justify;
+    @include sansserif-font();
+    @include mobileSmall {
+      @include font(500, 14px);
+      text-align: left;
+    }
+  }
 }
 
-  
-
- 
-    
-
-
-    
-
 ///about-us section..............
-  
-  
-.about-para-wrapper{
-  
-  background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%),linear-gradient(grey,#0276FD);
+
+.about-para-wrapper {
+  background: linear-gradient(90deg, rgba(18, 18, 18, 0.3) 25%, transparent 25%),
+    linear-gradient(grey, #0276fd);
   padding: 40px 6% 7% 30%;
   text-align: justify;
   color: $color;
   background-attachment: fixed;
 
- 
-
-  @include media($background-change-size){
+  @include media($background-change-size) {
     background: none;
     padding: 50px 7% 6% 7%;
-
   }
- 
-  .about-headline{
+
+  .about-headline {
     padding-bottom: 30px;
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     @include font(500, 2.5rem);
- 
-    @include mobileSmall{
-      padding-top:100px;
+
+    @include mobileSmall {
+      padding-top: 100px;
     }
-   
-    @include media($background-change-size){
+
+    @include media($background-change-size) {
       @include font(500, 2rem);
     }
-    
   }
-  .about-para{
+  .about-para {
     @include font(500, 1rem);
     line-height: 24px !important;
     text-align: justify;
     @include sansserif-font();
 
-    @include mobileSmall{
+    @include mobileSmall {
       @include font(500, 14px);
       text-align: left;
     }
-    
-   
-    
-    .headings{
+
+    .headings {
       @include font(600, 1.2rem);
       @include fresh-font();
     }
   }
 
-    
-
-  .about-coaches{
+  .about-coaches {
     display: flex;
     justify-content: flex-start;
     // width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
- 
-  
 
-  .about-coach{
-      margin-right:7px;
+    .about-coach {
+      margin-right: 7px;
 
-      &-img{
+      &-img {
         border-radius: 50%;
         margin: 1% 5% 1% 0%;
         border: 1px solid $color;
-      
       }
-        
-      &-name{
+
+      &-name {
         text-align: center;
       }
-  
-  }   
-       
-
+    }
   }
-
-
-
-
 }
 
-
 /////prepircing section.........
-.pre-pricing{
-  background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
-  padding:  150px 6% 270px 30%;
+.pre-pricing {
+  background: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0.3) 25%,
+    transparent 25%
+  );
+  padding: 150px 6% 270px 30%;
   color: $color;
-  @include media($background-change-size){
+  @include media($background-change-size) {
     background: none;
-    padding:100px 7% 6% 7%;
-
+    padding: 100px 7% 6% 7%;
   }
-  &-headline{
+  &-headline {
     @include font(500, 2.5rem);
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     padding-bottom: 35px;
     text-align: center;
-    @include media($background-change-size){
+    @include media($background-change-size) {
       @include font(500, 2rem);
     }
-
   }
-  &-para{
+  &-para {
     @include sansserif-font();
     @include font(500, 1rem);
     padding-bottom: 35px;
     text-align: justify;
-    @include mobileSmall{
+    @include mobileSmall {
       @include font(500, 14px);
       text-align: left;
     }
-  
   }
-  &-button{
+  &-button {
     border-radius: 23px;
     padding: 2px 10px;
-    margin:1% 0% 15px 40%;
+    margin: 1% 0% 15px 40%;
     @include font(700, 1rem);
     @include sansserif-font();
-    border:none;
+    border: none;
     outline: none;
     cursor: pointer;
-    color: rgba(18,18,18,1);
+    color: rgba(18, 18, 18, 1);
     box-shadow: 1px 2px 5px 2px rgb(100, 100, 100);
-  
-  @include media($background-change-size){
-    margin:1% 0% 15px 35%;
-  }
-  }
-   
-  &-button:active, &-button:focus{
-  border:none;
-  outline: none;
+
+    @include media($background-change-size) {
+      margin: 1% 0% 15px 35%;
+    }
   }
 
+  &-button:active,
+  &-button:focus {
+    border: none;
+    outline: none;
+  }
 }
-
-
-
-
-
 
 /////pricing section............
-.pricing-wrapper{
+.pricing-wrapper {
   background-attachment: fixed;
-  background: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
+  background: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0.3) 25%,
+    transparent 25%
+  );
   padding: 5% 6% 7% 30%;
-  @include media($background-change-size){
+  @include media($background-change-size) {
     background: none;
     padding: 50px 7% 6% 7%;
-
   }
-
 }
 
-
-.pricing-headline{
+.pricing-headline {
   padding-bottom: 30px;
   @include font(500, 2.5rem);
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   color: $color;
   text-align: center;
 
-
-  @include media($background-change-size){
+  @include media($background-change-size) {
     @include font(500, 2rem);
     @include center();
   }
-  
-
 }
-.pricing{
-
-
-  
+.pricing {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
- 
 
-  @include media($background-change-size){
-    padding:0;
-  }
-  
-  
-  
-  
-  &-card{
-  
-
-  border-radius: 23px;
-  box-shadow: 1px 1px 4px 2px rgba(18,18,18,0.3);
-  margin:4% 1% 1% 1%;
-  padding: 3% 5%;
-  color:white;
-  @include center();
-  
-  
-  
-
-  
-
-  h2{
-    @include sansserif-font();
-    @include font(400, 1.8rem);
-    padding-bottom: 2%;
-    @include mobileSmall{
-      @include font(400, 1.2rem);
-    }
+  @include media($background-change-size) {
+    padding: 0;
   }
 
-  h3{
-    @include font(700, 1.4rem);
-    color: $color;
-    @include sansserif-font();
-    padding-bottom: 5%;
-    @include mobileSmall{
-      @include font(400, 1rem);
-    }
-    
-  }
+  &-card {
+    border-radius: 23px;
+    box-shadow: 1px 1px 4px 2px rgba(18, 18, 18, 0.3);
+    margin: 4% 1% 1% 1%;
+    padding: 3% 5%;
+    color: white;
+    @include center();
 
- .price {
-    @include sansserif-font();
-    @include font(900, 2rem);
-    padding:1% 0%;
-    color:rgba(18,18,18,0.7);
-    @include mobileSmall{
-      @include font(900, 1.3rem);
-      padding:0.1% ;
+    h2 {
+      @include sansserif-font();
+      @include font(400, 1.8rem);
+      padding-bottom: 2%;
+      @include mobileSmall {
+        @include font(400, 1.2rem);
+      }
     }
- 
-    
-    
- 
-  &-dollar{
-      color:rgba(18,18,18,0.7);
-      margin-left: 2px;
-      @include font(500, 16px);
-      vertical-align: top;
-      
-   
+
+    h3 {
+      @include font(700, 1.4rem);
+      color: $color;
+      @include sansserif-font();
+      padding-bottom: 5%;
+      @include mobileSmall {
+        @include font(400, 1rem);
+      }
+    }
+
+    .price {
+      @include sansserif-font();
+      @include font(900, 2rem);
+      padding: 1% 0%;
+      color: rgba(18, 18, 18, 0.7);
+      @include mobileSmall {
+        @include font(900, 1.3rem);
+        padding: 0.1%;
+      }
+
+      &-dollar {
+        color: rgba(18, 18, 18, 0.7);
+        margin-left: 2px;
+        @include font(500, 16px);
+        vertical-align: top;
+      }
     }
   }
-  
-}
-      
 }
 
-
-
-
-
-
- 
-  
-  
-
-
-.shadows{
- 
+.shadows {
   border-radius: 23px;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
-  background-image: linear-gradient(90deg,rgb(238, 183, 42),rgb(255, 240, 204),hsl(44, 85%, 66%),rgb(255, 199, 56),whitesmoke,rgb(255, 216, 117));
-  background-position: 0 50%;  
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+  background-image: linear-gradient(
+    90deg,
+    rgb(238, 183, 42),
+    rgb(255, 240, 204),
+    hsl(44, 85%, 66%),
+    rgb(255, 199, 56),
+    whitesmoke,
+    rgb(255, 216, 117)
+  );
+  background-position: 0 50%;
   background-size: 300% 300%;
   animation: moveGradient 2s ease-in-out 2.5s infinite;
 
   @keyframes moveGradient {
-      0%{
-          background-position: 0 50%;  
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100%{
-          background-position: 0% 50%;
-      }
+    0% {
+      background-position: 0 50%;
     }
-  
-  
-  
-  
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
-
-
 
 //////testimonials.............
 
-
-.testimonials-bg{
-  background-image: linear-gradient(90deg, rgba(18,18,18,0.3) 25%,transparent 25%);
+.testimonials-bg {
+  background-image: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0.3) 25%,
+    transparent 25%
+  );
   padding: 5% 6% 7% 30%;
 
-  @include media($background-change-size){
+  @include media($background-change-size) {
     background: none;
     padding: 50px 7% 6% 7%;
-
   }
-
 }
 
-.testimonials-headline{
+.testimonials-headline {
   @include font(500, 2.5rem);
   padding-bottom: 40px;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   color: $color;
   @include center();
 
-  @include media($background-change-size){
+  @include media($background-change-size) {
     @include font(500, 2rem);
   }
- 
 }
-.scroll-buttons{
+.scroll-buttons {
   @include flex(row);
   margin-top: 10px;
 }
 
- 
-  
-
-.left-btn{
+.left-btn {
   border-radius: 4px;
   @include font(400, 2rem);
-  font-family: 'Pacifico', cursive;
-  border:none;
+  font-family: "Pacifico", cursive;
+  border: none;
   outline: none;
   color: orangered;
   box-shadow: 1px 2px 5px 2px rgb(100, 100, 100);
@@ -1021,374 +781,215 @@ overflow-y: scroll;
   margin-top: 10px;
   margin-bottom: 5%;
 
-  &:active, &:focus{
-  border:none;
-  outline: none;
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
   }
 
-  &::after{
-    content:'<';
-    
+  &::after {
+    content: "<";
   }
 }
- 
-  
 
-
-
-  
- 
-.right-btn{
+.right-btn {
   border-radius: 4px;
   @include font(400, 2rem);
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   justify-content: center;
   box-shadow: 2px 1px 5px 2px rgb(100, 100, 100);
-  border:none;
+  border: none;
   outline: none;
   color: orangered;
   margin-top: 10px;
   margin-bottom: 5%;
 
-  &:active, &:focus{
-    border:none;
+  &:active,
+  &:focus {
+    border: none;
     outline: none;
   }
-  &::after{
-    content:'>'
+  &::after {
+    content: ">";
   }
-
-
 }
 
-
-
-
-
-
-.testimonials{
+.testimonials {
   @include flex(row);
- 
-  .tcard{
-    
-    @include flex(column);
-    
-    
-    &-pic{
-        border-radius:50%;
-        border: 1px solid $color;
-        width: 200px;
-        height:200px;
-        margin-top: 8px;
 
-        @include mobileSmall{
+  .tcard {
+    @include flex(column);
+
+    &-pic {
+      border-radius: 50%;
+      border: 1px solid $color;
+      width: 200px;
+      height: 200px;
+      margin-top: 8px;
+
+      @include mobileSmall {
         width: 100px;
-        height:100px;
-        }
-       
-      
-      &-pic img{
+        height: 100px;
+      }
+
+      &-pic img {
         object-fit: cover;
-        
-     
-     }
-      
+      }
     }
-  
-    &-comment{
+
+    &-comment {
       @include flex(row);
       @include font(500, 1.1rem);
       line-height: 24px !important;
       @include sansserif-font();
-      padding:2% 10%;
+      padding: 2% 10%;
       color: $color;
       text-align: justify;
-      background-image: url('../img/quote.svg') ;
+      background-image: url("../img/quote.svg");
       background-repeat: no-repeat;
       background-size: 85px;
       background-position: 27% 40%;
-      @include mobileSmall{
+      @include mobileSmall {
         @include font(400, 1rem);
         text-align: left;
       }
-    
     }
-     
-      
-    
-    &-name{
+
+    &-name {
       padding-top: 9px;
       @include font(400, 1.4rem);
       @include sansserif-font();
-      color: $color ;
-      margin:2px;
+      color: $color;
+      margin: 2px;
       animation: ghost 0.5s ease-in-out 1;
 
-      @include mobileSmall{
+      @include mobileSmall {
         @include font(400, 1.1rem);
       }
       @keyframes ghost {
-       0%{
-         opacity:0;
- 
-       }
-       25%{
-         opacity:0; 
-         transform: scale(0.8,0.8);
- 
-       }
-       50%{
-        opacity:1;
-        
-        
-       }
-       75%{
-         opacity:1; 
-       }
-       100%{
-        opacity:1;
-       }
-      
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+          transform: scale(0.8, 0.8);
+        }
+        50% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     }
-    }
-    &-quote{
-      
+    &-quote {
       @include font(500, 2.8rem);
       @include sansserif-font();
-      padding:1% 0%;
+      padding: 1% 0%;
       color: $color;
     }
-     
-     
-     
-     
+  }
 }
-
-
-}     
-       
-      
-      
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-  
-  
-    
-
-
-
-
-    
-      
-   
-
-
-    
-
-
-
-
-
-
-
-  
-
-   
-
-
-
-    
-  
-   
-
-
-
-
-   
-
-  
-
-
-
-
-
-  
-  
-
-
-
-
-  
-  
-
-
-
-
-
-     
-
-
-
-
-
 
 //footer...............................
 
-
-
-
-.footer{
-  background: linear-gradient(90deg, rgba(18,18,18,0.2) 25%,transparent 25%);
-  display:grid;
+.footer {
+  background: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0.2) 25%,
+    transparent 25%
+  );
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 18vh;
   background: black;
   color: $color;
   @include font(400, 18px);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- 
-  @include tablet{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  @include tablet {
     grid-template-rows: 15vh;
   }
-  @include mobileSmall(){
+  @include mobileSmall() {
     grid-template-columns: 1.5fr 1.5fr 0.6fr;
   }
 
-
-  &1{
-
-    display:flex;
+  &1 {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: right;
     margin: 1% 0% 0% 5%;
     border-right: 1px solid $color;
-  
-    &-headline{
+
+    &-headline {
       @include font(400, 18px);
-       padding-top: 20px;
-       padding-right: 2px;
+      padding-top: 20px;
+      padding-right: 2px;
 
-
-      @include tablet(){
+      @include tablet() {
         @include font(400, 15px);
       }
-      @include mobileSmall{
+      @include mobileSmall {
         @include font(400, 9px);
-       
       }
     }
 
-    &-address{
+    &-address {
       @include font(400, 18px);
 
-      @include tablet(){
+      @include tablet() {
         @include font(400, 15px);
       }
-      @include mobileSmall{
+      @include mobileSmall {
         @include font(400, 9px);
-       
       }
-
     }
-  
   }
 
-  
-  &2{
-    display:flex;
+  &2 {
+    display: flex;
     justify-content: center;
     align-items: center;
     border-right: 1px solid $color;
-  
 
-    @include tablet{
+    @include tablet {
       @include font(400, 15px);
     }
-    @include mobileLarge(){
+    @include mobileLarge() {
       @include font(400, 12px);
     }
-    @include mobileSmall{
+    @include mobileSmall {
       @include font(400, 9px);
-     
     }
-
   }
-  
-  
-  &3{
-    display:flex;
-   flex-direction: column;
+
+  &3 {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     margin-right: 5%;
- 
-    @include tablet{
+
+    @include tablet {
       @include font(400, 15px);
     }
-    @include mobileLarge(){
+    @include mobileLarge() {
       @include font(400, 12px);
     }
-    @include mobileSmall{
+    @include mobileSmall {
       @include font(400, 9px);
       flex-direction: row;
-      justify-content:space-around;
+      justify-content: space-around;
       align-items: center;
       padding-right: 15%;
-     
     }
- 
   }
-
-
 }
 
-  
-
-
-
-
-
-
 //////Tooglebtn......
- 
-    
-
-
-
-
-
-
-
-
- 
-  
-  
-
-  
-   
- 
- 
-
-  
-  
-  
